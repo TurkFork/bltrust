@@ -1,4 +1,4 @@
-/* Reset & base */
+/* Reset & Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,9 +9,12 @@
 body {
   background-color: #1e1e1e;
   color: white;
+  text-align: center;
+  padding: 5rem 2rem;
   line-height: 1.6;
 }
 
+/* Header */
 header {
   padding: 1rem 2rem;
   background-color: #111;
@@ -27,16 +30,25 @@ header {
   justify-content: space-between;
 }
 
+.logo {
+  height: 40px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Navigation Buttons */
 .nav-buttons button,
 .footer-buttons button {
   margin: 0 0.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.25rem;
   border: none;
   background-color: #333;
   color: white;
   border-radius: 1rem;
   cursor: pointer;
   font-weight: 600;
+  min-width: 90px;
+  white-space: nowrap;
   transition: background-color 0.2s ease;
 }
 
@@ -54,37 +66,39 @@ header {
   font-size: 1rem;
 }
 
-.logo {
-  height: 32px;
-}
-
-/* --- Hero layout & text centering --- */
+/* Hero Section */
 main .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   gap: 2rem;
   padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
 }
 
-/* Hero logo */
 .hero-logo {
   max-width: 300px;
+  height: auto;
 }
 
-/* Hero text */
 .hero-text h1 {
   font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .hero-text p {
   font-size: 1.25rem;
   margin: 1rem 0;
   color: #ccc;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Primary button */
+/* Primary Button */
 .primary-button {
   padding: 0.5rem 1rem;
   background: white;
@@ -94,23 +108,30 @@ main .hero {
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
+  transition: background-color 0.2s ease;
+  min-width: 90px;
+  white-space: nowrap;
 }
 
-/* Highlight text */
+.primary-button:hover {
+  background-color: #ddd;
+}
+
 .highlight {
   color: white;
 }
 
-/* Spacing between major sections */
-.hero,
-.features,
-.launch-teaser,
-.testimonial,
-.cta {
+/* Sections Spacing */
+section,
+.hero {
   margin-bottom: 4rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
 }
 
-/* Footer spacing */
+/* Footer */
 footer {
   background-color: #000;
   padding: 2rem;
@@ -133,6 +154,7 @@ footer {
 
 .footer-logo {
   width: 50px;
+  height: auto;
 }
 
 .footer-buttons {
@@ -141,24 +163,53 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Responsive fixes */
+.footer-buttons button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.footer-buttons button:hover {
+  background-color: #444;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   main .hero {
     padding: 3rem 1.5rem;
   }
 
-  .hero-logo {
-    max-width: 200px;
+  .hero-logo,
+  .logo,
+  .footer-logo {
+    height: 32px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-buttons,
+  .footer-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  section,
+  .hero {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
   }
 
   .footer-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .nav-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
