@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blacklink Trust</title>
+   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h3>Blacklink Trust</h3>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark/light theme">🌙</button>
+      <button onclick="Account()">Account</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Sources</h2>
+    <p>The source for finding sources.</p>
+
+   <div class="toolbar">
+  <input
+    type="search"
+    id="search-input"
+    placeholder="Search sources..."
+    aria-label="Search sources"
+    autocomplete="off"
+  />
+
+  <div class="filter-sort-row">
+    <div class="filter-container" role="group" aria-label="Filter sources by trust level">
+      <button type="button" class="active" data-filter="all">All</button>
+      <button type="button" data-filter="trusted">Trusted</button>
+      <button type="button" data-filter="mostly-trusted">Mostly Trusted</button>
+      <button type="button" data-filter="not-trusted">Not Trusted</button>
+    </div>
+
+    <select id="sort-select" aria-label="Sort sources">
+      <option value="default">Sort By</option>
+      <option value="trust-desc">Trust Level ↓</option>
+      <option value="trust-asc">Trust Level ↑</option>
+      <option value="name-asc">Name A → Z</option>
+      <option value="name-desc">Name Z → A</option>
+      <option value="category-asc">Category A → Z</option>
+      <option value="category-desc">Category Z → A</option>
+    </select>
+  </div>
+</div>
+
+    <div id="resource-list" aria-live="polite" aria-relevant="additions removals">
+      <!-- Each resource item -->
+      <div class="resource-item" data-trust="trusted" data-name="NASA" data-category="Science" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/nasa.gov" alt="NASA logo" class="source-logo" loading="lazy" />
+            <div class="verified" title="Verified source" aria-label="Verified source"></div>
+            NASA
+            <span class="source-tag" aria-label="Category: Science">Science</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://nasa.gov" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit NASA website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy NASA source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Trusted source" tabindex="0" aria-label="Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <h3>Description of NASA:</h3> <b> <p>
+NASA (National Aeronautics and Space Administration) is the United States government agency responsible for the nation’s civilian space program and for aeronautics and aerospace research. Founded in 1958, NASA has been a global leader in space exploration, scientific discovery, and technological innovation.
+
+<h3>Why NASA is Trusted: </h3>
+NASA is trusted because it conducts rigorous, peer-reviewed scientific research and exploration with transparency and collaboration across international agencies and scientific communities. Their data and findings are widely used by scientists, educators, and governments worldwide.</p>
+        </div>
+      </div>
+
+      <div class="resource-item" data-trust="mostly-trusted" data-name="Wikipedia" data-category="General" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/wikipedia.org" alt="Wikipedia logo" class="source-logo" loading="lazy" />
+            Wikipedia
+            <span class="source-tag" aria-label="Category: General">General</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit Wikipedia website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy Wikipedia source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Mostly Trusted source" tabindex="0" aria-label="Mostly Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="resource-item" data-trust="not-trusted" data-name="RealRawNews" data-category="News" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/realrawnews.com" alt="RealRawNews logo" class="source-logo" loading="lazy" />
+            RealRawNews
+            <span class="source-tag" aria-label="Category: News">News</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://realrawnews.com" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit RealRawNews website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy RealRawNews source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Not Trusted source" tabindex="0" aria-label="Not Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+      </div>
+
+      <!-- Added sources -->
+      <div class="resource-item" data-trust="trusted" data-name="CDC" data-category="Health" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/cdc.gov" alt="CDC logo" class="source-logo" loading="lazy" />
+            <div class="verified" title="Verified source" aria-label="Verified source"></div>
+            CDC
+            <span class="source-tag" aria-label="Category: Health">Health</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://cdc.gov" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit CDC website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy CDC source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Trusted source" tabindex="0" aria-label="Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </div>
+      </div>
+
+      <div class="resource-item" data-trust="mostly-trusted" data-name="The Guardian" data-category="News" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/theguardian.com" alt="The Guardian logo" class="source-logo" loading="lazy" />
+            The Guardian
+            <span class="source-tag" aria-label="Category: News">News</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://theguardian.com" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit The Guardian website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy The Guardian source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Mostly Trusted source" tabindex="0" aria-label="Mostly Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <p>Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+        </div>
+      </div>
+
+      <div class="resource-item" data-trust="not-trusted" data-name="Natural News" data-category="Health" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/naturalnews.com" alt="Natural News logo" class="source-logo" loading="lazy" />
+            Natural News
+            <span class="source-tag" aria-label="Category: Health">Health</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://naturalnews.com" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit Natural News website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy Natural News source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Not Trusted source" tabindex="0" aria-label="Not Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        </div>
+      </div>
+
+      <div class="resource-item" data-trust="trusted" data-name="WHO" data-category="Health" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/who.int" alt="WHO logo" class="source-logo" loading="lazy" />
+            <div class="verified" title="Verified source" aria-label="Verified source"></div>
+            WHO
+            <span class="source-tag" aria-label="Category: Health">Health</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://who.int" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit WHO website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy WHO source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Trusted source" tabindex="0" aria-label="Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <p>Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>
+      </div>
+
+      <div class="resource-item" data-trust="mostly-trusted" data-name="Reuters" data-category="News" tabindex="0" role="button" aria-expanded="false">
+        <div class="top-row">
+          <div class="name">
+            <img src="https://logo.clearbit.com/reuters.com" alt="Reuters logo" class="source-logo" loading="lazy" />
+            Reuters
+            <span class="source-tag" aria-label="Category: News">News</span>
+          </div>
+          <div class="right-controls">
+            <a href="https://reuters.com" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" aria-label="Visit Reuters website">
+              <button type="button">Visit</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy Reuters source link to clipboard" title="Copy URL">📋</button>
+            <div class="trust-circle" title="Mostly Trusted source" tabindex="0" aria-label="Mostly Trusted source"></div>
+          </div>
+        </div>
+        <div class="details" aria-hidden="true">
+          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer style="text-align:center; padding: 2rem; color: #666; user-select:none;">
+    ©2025 Blacklink Education, LLC · Licensed under CC BY-NC-SA 4.0
+  </footer>
+
+  <script>
+    document.querySelectorAll('.resource-item').forEach(item => {
+  item.addEventListener('click', e => {
+    if (e.target.closest('button') || e.target.closest('a')) return;
+
+    const details = item.querySelector('.details');
+    const isExpanded = item.classList.toggle('expanded');
+
+    // Update aria-expanded for the whole item
+    item.setAttribute('aria-expanded', isExpanded);
+
+    if (isExpanded) {
+      // Show details: set aria-hidden false and expand height
+      details.setAttribute('aria-hidden', 'false');
+      details.style.maxHeight = details.scrollHeight + "px";
+    } else {
+      // Hide details: set aria-hidden true and collapse height
+      details.setAttribute('aria-hidden', 'true');
+      details.style.maxHeight = "0";
+    }
+  });
+
+  item.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      item.click();
+    }
+  });
+});
+
+    // Filter buttons logic
+    const filterButtons = document.querySelectorAll('.filter-container button');
+    const resourceList = document.getElementById('resource-list');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterSources(btn.dataset.filter);
+      });
+    });
+
+    function filterSources(level) {
+      const items = document.querySelectorAll('.resource-item');
+      items.forEach(item => {
+        if (level === 'all' || item.dataset.trust === level) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Search input logic
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      document.querySelectorAll('.resource-item').forEach(item => {
+        const name = item.dataset.name.toLowerCase();
+        if(name.includes(query)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+
+    // Sort select logic
+    const sortSelect = document.getElementById('sort-select');
+    sortSelect.addEventListener('change', () => {
+      sortSources(sortSelect.value);
+    });
+
+function sortSources(mode) {
+  const container = resourceList;
+  const items = Array.from(container.querySelectorAll('.resource-item'));
+  let sorted;
+
+  if (mode === 'name-asc') {
+    sorted = items.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
+  } else if (mode === 'name-desc') {
+    sorted = items.sort((a, b) => b.dataset.name.localeCompare(a.dataset.name));
+  } else if (mode === 'trust-desc') {
+    const order = ['trusted', 'mostly-trusted', 'not-trusted'];
+    sorted = items.sort((a, b) => order.indexOf(a.dataset.trust) - order.indexOf(b.dataset.trust));
+  } else if (mode === 'trust-asc') {
+    const order = ['not-trusted', 'mostly-trusted', 'trusted'];
+    sorted = items.sort((a, b) => order.indexOf(a.dataset.trust) - order.indexOf(b.dataset.trust));
+  } else if (mode === 'category-asc') {
+    sorted = items.sort((a, b) => a.dataset.category.localeCompare(b.dataset.category));
+  } else if (mode === 'category-desc') {
+    sorted = items.sort((a, b) => b.dataset.category.localeCompare(a.dataset.category));
+  } else {
+    sorted = items;
+  }
+
+  sorted.forEach(item => container.appendChild(item));
+}
+
+      sorted.forEach(item => container.appendChild(item));
+
+    // Copy link button logic
+    document.querySelectorAll('.copy-link-btn').forEach(button => {
+      button.addEventListener('click', e => {
+        e.stopPropagation();
+        const url = button.previousElementSibling.href;
+        navigator.clipboard.writeText(url).then(() => {
+          button.textContent = '✅';
+          setTimeout(() => button.textContent = '📋', 1500);
+        }).catch(() => {
+          alert('Failed to copy link');
+        });
+      });
+    });
+
+    // Theme toggle logic
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light');
+      themeToggle.setAttribute('aria-pressed', isLight);
+      themeToggle.textContent = isLight ? '🌞' : '🌙';
+    });
+
+    // Account placeholder
+    function Account() {
+      alert('Blacklink Account Management System is offline. Try again later.');
+    }
+    document.querySelectorAll('.resource-item').forEach(item => {
+  item.addEventListener('click', e => {
+    if(e.target.closest('button') || e.target.closest('a')) return;
+
+    const details = item.querySelector('.details');
+    const isExpanded = item.classList.toggle('expanded');
+    item.setAttribute('aria-expanded', isExpanded);
+
+    if (isExpanded) {
+      // expand: set max-height to scrollHeight to fit content
+      details.style.maxHeight = details.scrollHeight + "px";
+      details.setAttribute('aria-hidden', 'false');
+    } else {
+      // collapse: set max-height back to 0
+      details.style.maxHeight = "0";
+      details.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Keyboard toggle with Enter or Space keys
+  item.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      item.click();
+    }
+  });
+});
+document.querySelectorAll('.resource-item').forEach(item => {
+  // Remove 'expanded' class on load to ensure collapsed state
+  item.classList.remove('expanded');
+  item.setAttribute('aria-expanded', false);
+
+  const details = item.querySelector('.details');
+  if (details) {
+    // Make sure details are collapsed on load
+    details.style.maxHeight = "0";
+    details.setAttribute('aria-hidden', 'true');
+  }
+});
+  </script>
+</body>
+</html>

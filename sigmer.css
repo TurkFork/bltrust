@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+header {
+  padding: 1rem 2rem;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-buttons button,
+.footer-buttons button {
+  margin: 0 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.nav-right .icon-button {
+  background-color: #222;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.logo {
+  height: 32px;
+}
+
+main .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+}
+
+.hero-logo {
+  max-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  color: #ccc;
+}
+
+.primary-button {
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #111;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.highlight {
+  color: white;
+}
+
+footer {
+  background-color: #000;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 50px;
+}
