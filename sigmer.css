@@ -213,3 +213,12 @@ footer {
     text-align: center;
   }
 }
+
+body, button, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
