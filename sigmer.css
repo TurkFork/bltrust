@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -12,6 +12,15 @@ body {
   text-align: center;
   padding: 5rem 2rem;
   line-height: 1.6;
+}
+
+body, button, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Header */
@@ -49,13 +58,14 @@ header {
   font-weight: 600;
   min-width: 90px;
   white-space: nowrap;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .nav-buttons button:hover,
 .footer-buttons button:hover,
 .primary-button:hover {
   background-color: #444;
+  transform: translateY(-2px);
 }
 
 .nav-right .icon-button {
@@ -67,20 +77,28 @@ header {
 }
 
 /* Hero Section */
-main .hero {
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  height: 100vh;
   padding: 4rem 2rem;
-  max-width: 900px;
-  margin: 0 auto 4rem;
+  background: linear-gradient(to bottom, #1e1e1e 0%, #111 100%);
+}
+
+.hero-content {
+  text-align: center;
 }
 
 .hero-logo {
   max-width: 300px;
   height: auto;
+}
+
+.hero-text {
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -113,22 +131,69 @@ main .hero {
   white-space: nowrap;
 }
 
-.primary-button:hover {
-  background-color: #ddd;
+/* Section Container */
+.container {
+  max-width: 1000px;
+  padding: 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-.highlight {
-  color: white;
-}
-
-/* Sections Spacing */
+/* Sections */
 section,
 .hero {
   margin-bottom: 4rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 1.5rem;
+}
+
+/* Feature List */
+.feature-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.feature {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1 1 calc(33% - 2rem);
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Testimonial Block */
+.testimonial-block {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* CTA Section */
+.cta {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+/* Launch Teaser */
+.launch-teaser {
+  text-align: center;
+}
+
+/* Divider Styling */
+hr, .hr-divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 2rem auto;
+  width: 80%;
 }
 
 /* Footer */
@@ -145,11 +210,12 @@ footer {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 900px;
   width: 100%;
   gap: 2rem;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .footer-logo {
@@ -163,25 +229,25 @@ footer {
   flex-wrap: wrap;
 }
 
-.footer-buttons button {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
+/* Footnote */
+.footnote {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 2rem;
 }
 
-.footer-buttons button:hover {
-  background-color: #444;
+/* Superscript Styling */
+.dagger {
+  font-size: 0.6em;
+  vertical-align: super;
+  opacity: 0.7;
+  margin-left: 2px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  main .hero {
+  .hero {
     padding: 3rem 1.5rem;
   }
 
@@ -212,13 +278,9 @@ footer {
     align-items: center;
     text-align: center;
   }
-}
 
-body, button, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea {
-  font-family: "Segoe UI", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  .feature {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }

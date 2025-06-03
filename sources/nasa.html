@@ -84,15 +84,30 @@
       margin-top: 1rem;
       color: var(--text-secondary);
     }
+        .back-button {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: "Segoe UI", sans-serif;
+}
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo"><h3>Blacklink Trust</h3></div>
-    <div class="nav-right">
-      <button>Back</button>
-    </div>
-  </header>
+ <header>
+    <div style="display: flex; align-items: center;">
+  <img src="../trust-logo.svg" alt="Blacklink Trust Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+  <h3>Blacklink Trust</h3>
+</div>
+  <div class="nav-right">
+    <a href="../trust.html" class="back-button">Back</a>
+  </div>
+</header>
 
   <main class="container">
     <div class="source-profile">
