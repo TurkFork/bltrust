@@ -1,0 +1,61 @@
+Source Name,Trust Level, Verification (Y/N)
+NASA, Trusted, Yes
+Wikipedia, Mostly Trusted, No
+Blacklink News, Trusted,  No
+RealRawNews, Not Trusted, No
+CDC, Trusted, Yes
+The Guardian, Mostly Trusted, No
+Natural News, Not Trusted, No
+WHO, Trusted, Yes
+Reuters, Mostly Trusted, No
+Britannica, Trusted, No
+National Geographic, Trusted, No
+Khan Academy, Trusted, No
+Discovery Education, Mostly Trusted, No
+Library Of Congress, Trusted, Yes
+<!-- NOT ADDED YET --!>
+NOAA, Trusted, Yes
+National Institutes of Health, Trusted, Yes
+Stanford University, Trusted, Yes
+MIT OpenCourseWare, Trusted, Yes
+Mayo Clinic, Trusted, No
+Pew Research Center, Trusted, No
+Science News, Mostly Trusted, No
+AP News, Mostly Trusted, No
+Fox News, Not Trusted, No
+CNN, Mostly Trusted, No
+Snopes, Trusted, No
+The New York Times, Mostly Trusted, No
+PBS, Trusted, No
+CrashCourse, Mostly Trusted, No
+Edutopia, Mostly Trusted, No
+NPR, Trusted, No
+The Conversation, Trusted, No
+Brookings Institution, Mostly Trusted, No
+Harvard University, Trusted, Yes
+Yale University, Trusted, Yes
+University of Oxford, Trusted, No
+University of Cambridge, Trusted, No
+American Psychological Association, Trusted, No
+American Medical Association, Trusted, No
+U.S. Department of Education, Trusted, Yes
+U.S. Census Bureau, Trusted, Yes
+U.S. Geological Survey, Trusted, Yes
+FDA, Trusted, Yes
+FEMA, Trusted, Yes
+Department of Homeland Security, Trusted, Yes
+National Science Foundation, Trusted, Yes
+Smithsonian Institution, Trusted, No
+ScienceDirect, Mostly Trusted, No
+JSTOR, Trusted, No
+Google Scholar, Mostly Trusted, No
+Education Week, Mostly Trusted, No
+TeachThought, Mostly Trusted, No
+Scholastic, Mostly Trusted, No
+Common Sense Media, Mostly Trusted, No
+Newsela, Mostly Trusted, No
+TED-Ed, Mostly Trusted, No
+EBSCOhost, Trusted, No
+Gale, Trusted, No
+ProQuest, Trusted, No
+BBC, Mostly Trusted, No

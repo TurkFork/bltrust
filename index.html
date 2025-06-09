@@ -4,33 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blacklink Trust</title>
+  <meta name="description" content="Blacklink Trust helps students find reliable sources with verified trust scores. Built by students, for students." />
   <link rel="stylesheet" href="sigmer.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
   <header>
     <div class="navbar">
       <img src="Logo.svg" alt="Blacklink Logo" class="logo" />
+      <div class="nav-tagline">The source for finding sources.</div>
       <div class="nav-buttons">
-       <a><button>Home</button> </a>
-        <a><button>About</button> </a>
-        <a href="help.html"><button>Help</button> </a>
+        <a href="#"><button>Home</button></a>
+        <a href="#"><button>About</button></a>
+        <a href="help.html"><button>Help</button></a>
       </div>
       <div class="nav-right">
-        <button class="icon-button">←</button>
-        <button class="icon-button">👤</button>
+        <button class="icon-button" aria-label="Go Back">←</button>
+        <button class="icon-button" aria-label="Profile">👤</button>
       </div>
     </div>
   </header>
 
-<main>
-  <div class="container">
-    <div class="hero">
+  <main>
+    <div class="hero fade-in">
       <div class="hero-content">
         <img src="trust-logo.svg" alt="Trust Logo" class="hero-logo" />
         <div class="hero-text">
-       <h1>
-  Introducing <span class="highlight"><b>Trust<sup class="dagger">†</sup></b></span>.
-</h1>
+          <h1>
+            Introducing <span class="highlight"><b>Trust</b></span>
+          </h1>
           <p>The source for finding sources.</p>
           <a href="trust.html">
             <button class="primary-button">Launch Trust</button>
@@ -38,61 +40,86 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    <section class="features">
-      <h2>Why use Trust?</h2>
-      <div class="feature-list">
-        <div class="feature">
-          <h3>🔍 Smart Search</h3>
-          <p>Find sources fast, filter by trust level, and get real-time results.</p>
+    <div class="container">
+      <section class="features fade-in">
+        <h2>Why use Trust?</h2>
+        <div class="feature-list">
+          <div class="feature">
+            <h3>🔍 Smart Search</h3>
+            <p>Find sources fast, filter by trust level, and get real-time results.</p>
+          </div>
+          <div class="feature">
+            <h3>🛡️ Verified Trust Scores</h3>
+            <p>Each source is reviewed, labeled, and scored for reliability — no guesswork.</p>
+          </div>
+          <div class="feature">
+            <h3>⚡ Lightning Fast</h3>
+            <p>Designed with performance in mind. Trust loads instantly, even on school Wi-Fi.</p>
+          </div>
         </div>
-        <div class="feature">
-          <h3>🛡️ Verified Trust Scores</h3>
-          <p>Each source is reviewed, labeled, and scored for reliability — no guesswork.</p>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="testimonial fade-in">
+        <div class="testimonial-block">
+          <blockquote>
+            “I literally found a better source in 10 seconds than my teacher gave me all year.”
+          </blockquote>
+          <cite>– A real 8th grader, probably</cite>
         </div>
-        <div class="feature">
-          <h3>⚡ Lightning Fast</h3>
-          <p>Designed with performance in mind. Trust loads instantly, even on school Wi-Fi.</p>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="container">
-    <section class="testimonial">
-      <div class="testimonial-block">
-        <blockquote>
-          “I literally found a better source in 10 seconds than my teacher gave me all year.”
-        </blockquote>
-        <cite>– A real 8th grader, probably</cite>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <div class="container">
-    <section class="cta">
-      <h2>Be the first to fact check better.</h2>
-      <a href="trust.html">
-        <button class="primary-button">Preview Trust</button>
-      </a>
-    </section>
-  </div>
-  <div class="container">
-  <section class="faq">
-    <h2>FAQ</h2>
-    <h3>Is Trust powered by AI?</h3>
-    <p>No. Trust is built by humans — students, educators, and researchers who care about source quality and clarity.</p>
+    <div class="container">
+      <section class="cta fade-in">
+        <h2>Be the first to fact check better.</h2>
+        <a href="trust.html">
+          <button class="primary-button">Preview Trust</button>
+        </a>
+      </section>
+    </div>
 
-    <h3>How do you decide what's trustworthy?</h3>
-    <p>We look at source reliability, factual consistency, author background, and cross-checks with academic and journalistic standards.</p>
+    <div class="container">
+      <section class="faq fade-in">
+        <h2>FAQ</h2>
+        <h3>Is Trust powered by AI?</h3>
+        <p>No. Trust is built by humans — students, educators, and researchers who care about source quality and clarity.</p>
 
-    <h3>Can I submit a source for review?</h3>
-    <p>Yes! Just send it to <a href="mailto:contact@blacklink.net">contact@blacklink.net</a> and our team will review it manually.</p>
-  </section>
-</div>
-</main>
-<p class="footnote">†Trust is a pending trademark of Blacklink Education, LLC.</p>
+        <h3>How do you decide what's trustworthy?</h3>
+        <p>We look at source reliability, factual consistency, author background, and cross-checks with academic and journalistic standards.</p>
+
+        <h3>Can I submit a source for review?</h3>
+        <p>Yes! Just send it to <a href="mailto:contact@blacklink.net">contact@blacklink.net</a> and our team will review it manually.</p>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="about-blacklink fade-in">
+        <h2>About Blacklink</h2>
+        <p>
+          Blacklink Education is an independent student-founded company on a mission to make digital learning better — not just flashier. We build tools students actually want to use (like <b>Trust</b>), and we believe education tech should be as intuitive as TikTok but as reliable as a textbook.
+        </p>
+        <p>
+          From school networks to AI-free source checks, we focus on real-world problems students face every day — and we build solutions from the inside out.
+        </p>
+        <p>
+          We're based in the U.S., but powered by students and educators across the world. Want to partner, suggest a feature, or just say hey? Email us at <a href="mailto:contact@blacklink.net">contact@blacklink.net</a>.
+        </p>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="movement fade-in">
+        <h2>Join the Movement</h2>
+        <p>We're more than a platform — we're a student-powered movement to take back learning. If you want to help change the way schools find information, you're in the right place.</p>
+        <a href="mailto:contact@blacklink.net">
+          <button>Get Involved</button>
+        </a>
+      </section>
+    </div>
+  </main>
 
   <footer>
     <div class="footer-content">
@@ -102,10 +129,10 @@
         <p>©2025 Blacklink Education, LLC.</p>
       </div>
       <div class="footer-buttons">
-        <button>Main Site</button>
-        <button>Trust</button>
-        <button>.edu</button>
-        <button>AeroAI</button>
+        <a href="https://blacklink.net"><button>Main Site</button></a>
+        <a href="trust.html"><button>Trust</button></a>
+        <a href="#"><button>.edu</button></a>
+        <a href="#"><button>AeroAI</button></a>
       </div>
     </div>
   </footer>

@@ -1,0 +1,52 @@
+Timestamp,Trust Level,Source Name,URL,Notes
+5/13/2025 9:08:27,Trusted,Nature,https://www.nature.com,N/A
+5/13/2025 9:10:06,Trusted,Science.gov,https://www.science.gov,N/A
+5/13/2025 9:11:15,Trusted,Digital Commons Network,https://network.bepress.com/,Academic open access
+5/13/2025 9:12:27,Trusted,PubMed Central,https://pmc.ncbi.nlm.nih.gov/,Medical and scientific articles
+5/13/2025 10:01:52,Trusted,ChatGPT,idk,AI-based answers (verify separately)
+5/13/2025 10:13:51,Mostly Trusted,AeroAI,https://aero.blacklink.net,Experimental AI from Blacklink
+5/13/2025 10:14:22,Trusted,National Geographic,https://www.nationalgeographic.com,Excellent science + nature info
+5/13/2025 10:14:42,Trusted,National Weather Service,https://www.weather.gov,Trusted government source
+5/13/2025 12:46:22,Trusted,Centers for Disease Control,https://www.cdc.gov,Official health data and advice
+5/14/2025 9:05:14,Trusted,Discovery Education,https://www.discoveryeducation.com,Strong K-12 content
+5/14/2025 9:20:10,Trusted,Khan Academy,https://www.khanacademy.org,Great for learning + explanations
+5/14/2025 9:21:33,Trusted,Britannica,https://www.britannica.com,Fact-checked encyclopedia
+5/14/2025 9:22:10,Trusted,Library of Congress,https://www.loc.gov,Historical and government documents
+5/14/2025 9:23:03,Trusted,Pew Research Center,https://www.pewresearch.org,Nonpartisan data + research
+5/14/2025 9:24:45,Trusted,Google Scholar,https://scholar.google.com,Academic article finder (verify individual results)
+5/14/2025 9:25:22,Trusted,Smithsonian Institution,https://www.si.edu,Extensive museum collections and research
+5/14/2025 9:26:50,Trusted,World Health Organization,https://www.who.int,Global health authority
+5/14/2025 9:27:35,Trusted,United Nations,https://www.un.org,International organization data and reports
+5/14/2025 9:28:11,Trusted,National Aeronautics and Space Administration,https://www.nasa.gov,Space exploration and science
+5/14/2025 9:29:42,Trusted,The New York Times,https://www.nytimes.com,Reputable journalism (verify opinion pieces)
+5/14/2025 9:30:15,Trusted,The Guardian,https://www.theguardian.com,Global news with fact-checking
+5/14/2025 9:31:48,Mostly Trusted,Reddit Science,https://www.reddit.com/r/science,User-submitted but moderated community
+5/14/2025 9:32:30,Trusted,MIT OpenCourseWare,https://ocw.mit.edu,Free courses from MIT
+5/14/2025 9:33:55,Trusted,Harvard University Online,https://online-learning.harvard.edu,University lectures and courses
+5/14/2025 9:34:44,Trusted,Stanford Online,https://online.stanford.edu,Free and paid courses
+5/14/2025 9:35:20,Trusted,Scientific American,https://www.scientificamerican.com,Popular science magazine
+5/14/2025 9:36:47,Trusted,National Institutes of Health,https://www.nih.gov,Health research authority
+5/14/2025 9:37:29,Trusted,Environmental Protection Agency,https://www.epa.gov,Environmental data and regulations
+5/14/2025 9:38:01,Trusted,OpenStax,https://openstax.org,Free peer-reviewed textbooks
+5/14/2025 9:39:12,Trusted,FactCheck.org,https://www.factcheck.org,Political fact-checking site
+5/14/2025 9:40:00,Trusted,Snopes,https://www.snopes.com,Urban legend and rumor debunking
+5/14/2025 9:41:26,Trusted,National Public Radio,https://www.npr.org,Trusted news and cultural stories
+5/14/2025 9:42:10,Trusted,Coursera,https://www.coursera.org,Online courses from universities
+5/14/2025 9:42:53,Trusted,edX,https://www.edx.org,Massive Open Online Courses (MOOCs)
+5/14/2025 9:43:35,Trusted,Wolfram Alpha,https://www.wolframalpha.com,Computation and data answers
+5/14/2025 9:44:12,Mostly Trusted,Medium Science,https://medium.com/topic/science,User-written articles, some are great, verify facts
+5/14/2025 9:45:00,Trusted,National Gallery of Art,https://www.nga.gov,Art and history resources
+5/14/2025 9:46:21,Trusted,The Economist,https://www.economist.com,Global economics and politics
+5/14/2025 9:47:05,Trusted,UNESCO,https://en.unesco.org,Education, science, and culture programs
+5/14/2025 9:48:33,Trusted,The Conversation,https://theconversation.com,Academic articles written for public
+5/14/2025 9:49:50,Trusted,Science Daily,https://www.sciencedaily.com,Latest scientific research news
+5/14/2025 9:50:22,Trusted,National Science Foundation,https://www.nsf.gov,Federal funding agency for research
+5/14/2025 9:51:15,Trusted,American Psychological Association,https://www.apa.org,Psychology research and resources
+5/14/2025 9:52:40,Trusted,United States Geological Survey,https://www.usgs.gov,Earth science and mapping
+5/14/2025 9:53:20,Trusted,Project Gutenberg,https://www.gutenberg.org,Free public domain books
+5/14/2025 9:54:10,Trusted,MIT Media Lab,https://www.media.mit.edu,Innovation in media and technology
+5/14/2025 9:55:00,Trusted,The Lancet,https://www.thelancet.com,Leading medical journal
+5/14/2025 9:56:22,Trusted,National Institutes of Standards and Technology,https://www.nist.gov,Standards and technology research
+5/14/2025 9:57:35,Trusted,Smithsonian National Air and Space Museum,https://airandspace.si.edu,Aviation and space exhibits and info
+5/14/2025 9:58:55,Trusted,United States Census Bureau,https://www.census.gov,Demographic data and stats
+5/14/2025 10:00:00,Trusted,The World Bank,https://www.worldbank.org,Global economic data and reports
