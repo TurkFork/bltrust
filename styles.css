@@ -7,12 +7,15 @@
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: #0b0f1a;
+  background-image: radial-gradient(ellipse at top left, rgba(40,60,100,0.2), transparent), 
+                    radial-gradient(ellipse at bottom right, rgba(120,80,200,0.15), transparent);
   color: white;
   padding-top: 60px;
   transition: background-color 0.3s ease, color 0.3s ease;
   min-height: 100vh;
   line-height: 1.4;
+  backdrop-filter: blur(0);
 }
 
 body.light {
@@ -27,8 +30,9 @@ header {
   left: 0;
   right: 0;
   height: 60px;
-  background-color: #111;
-  border-bottom: 1px solid #333;
+  background: rgba(20, 20, 30, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,8 +71,9 @@ button,
   font-size: 0.95rem;
   padding: 0.4rem 1rem;
   border-radius: 1rem;
-  border: none;
-  background-color: #333;
+  border: 1px solid rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -88,6 +93,7 @@ body.light button,
 body.light #sort-select {
   background-color: #ddd;
   color: #222;
+  border: none;
 }
 
 body.light button:hover,
@@ -146,9 +152,10 @@ body.light p {
   height: 40px;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
   font-size: 1rem;
-  background-color: #333;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -241,7 +248,10 @@ body.light .source-tag {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
   padding: 1rem 1.25rem;
   margin-bottom: 1rem;
   border-radius: 12px;
@@ -386,7 +396,9 @@ body.light .copy-link-btn:focus {
   box-sizing: border-box;
   color: #ccc;
   font-size: 0.9rem;
-  background-color: rgba(255 255 255 / 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 8px;
 }
 
@@ -404,7 +416,9 @@ body.light .copy-link-btn:focus {
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333;
+  background-color: rgba(20, 20, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.05);
   color: white;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;

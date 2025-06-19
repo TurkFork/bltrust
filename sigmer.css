@@ -7,11 +7,14 @@
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: #0b0f1a;
+  background-image: radial-gradient(ellipse at top left, rgba(40,60,100,0.2), transparent),
+                    radial-gradient(ellipse at bottom right, rgba(120,80,200,0.15), transparent);
   color: white;
   text-align: center;
   padding: 5rem 2rem;
   line-height: 1.6;
+  backdrop-filter: blur(0);
 }
 
 body, button, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea {
@@ -24,34 +27,45 @@ body, button, h1, h2, h3, h4, h5, h6, p, a, input, select, textarea {
 }
 
 /* Header */
-header {
+header,
+footer {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  margin: 1rem auto;
   padding: 1rem 2rem;
-  background-color: #111;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: calc(100% - 3rem);
+  max-width: 1200px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .navbar {
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  height: 40px;
-  width: auto;
-  max-width: 100%;
+.logo,
+.footer-logo {
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  padding: 0.3rem;
 }
 
 /* Navigation Buttons */
 .nav-buttons button,
-.footer-buttons button {
+.footer-buttons button,
+.primary-button {
   margin: 0 0.25rem;
   padding: 0.6rem 1.25rem;
-  border: none;
-  background-color: #333;
+  border: 1px solid rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
   color: white;
   border-radius: 1rem;
   cursor: pointer;
@@ -59,24 +73,53 @@ header {
   min-width: 90px;
   white-space: nowrap;
   transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 1rem;
 }
 
 .nav-buttons button:hover,
 .footer-buttons button:hover,
 .primary-button:hover {
-  background-color: #444;
+  background-color: rgba(255,255,255,0.1);
   transform: translateY(-2px);
 }
 
 .nav-right .icon-button {
-  background-color: #222;
-  margin-left: 0.5rem;
-  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 50%;
+  padding: 0.5rem;
   font-size: 1rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-right .icon-button::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
+  transform: rotate(15deg);
+  pointer-events: none;
 }
 
 /* Hero Section */
+.hero,
+.feature,
+.testimonial-block,
+.cta {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -86,6 +129,7 @@ header {
   height: 100vh;
   padding: 4rem 2rem;
   background: linear-gradient(to bottom, #1e1e1e 0%, #111 100%);
+  border-radius: 12px;
 }
 
 .hero-content {
@@ -119,16 +163,17 @@ header {
 /* Primary Button */
 .primary-button {
   padding: 0.5rem 1rem;
-  background: white;
-  color: #111;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
   border-radius: 8px;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.1);
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
   transition: background-color 0.2s ease;
   min-width: 90px;
   white-space: nowrap;
+  color: white;
 }
 
 /* Section Container */
@@ -157,9 +202,12 @@ section,
 }
 
 .feature {
-  background-color: #2a2a2a;
-  padding: 1.5rem;
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  padding: 1.75rem;
+  border-radius: 12px;
   flex: 1 1 calc(33% - 2rem);
   max-width: 300px;
   margin: 0 auto;
@@ -168,19 +216,28 @@ section,
 
 /* Testimonial Block */
 .testimonial-block {
-  background-color: #2a2a2a;
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem auto;
   max-width: 600px;
   font-style: italic;
   text-align: center;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
 
 /* CTA Section */
 .cta {
   margin: 4rem 0;
   text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
 
 /* Launch Teaser */
@@ -198,13 +255,16 @@ hr, .hr-divider {
 
 /* Footer */
 footer {
-  background-color: #000;
+  background-color: rgba(20, 20, 30, 0.7);
   padding: 2rem;
   display: flex;
   justify-content: center;
   margin-top: 4rem;
   color: #888;
   font-size: 0.95rem;
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-content {
@@ -223,6 +283,7 @@ footer {
   height: auto;
 }
 
+/* Footer Buttons */
 .footer-buttons {
   display: flex;
   gap: 0.5rem;
@@ -283,4 +344,27 @@ footer {
     flex: 1 1 100%;
     max-width: 100%;
   }
+}
+
+/* Glass Gloss Utility */
+.glass-gloss {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-gloss::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.logo {
+  width: 75px;
+  height: auto;
 }
