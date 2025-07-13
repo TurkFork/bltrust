@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blacklink Trust 1.2</title>
+
+  <!-- NOVA base layer -->
+  <link rel="stylesheet" href="nova-main.css" />
+
+  <!-- Trust 1.2 extension (place the CSS you pasted above here) -->
+  <link rel="stylesheet" href="trust-ext.css" />
+</head>
+
+<body>
+  <!-- ─────── HEADER ──────────────────────────────────────────────── -->
+  <header>
+    <div class="logo" style="display:flex;align-items:center;gap:10px;">
+      <img src="trust-logo.svg" alt="Blacklink Trust logo" width="40" height="40" />
+      <h3>Blacklink Trust</h3>
+    </div>
+
+    <div class="nav-right">
+      <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark/light theme">🌙</button>
+      <button onclick="openAccount()">Account</button>
+    </div>
+  </header>
+
+  <!-- ─────── MAIN CONTENT ────────────────────────────────────────── -->
+  <main class="container trust-extension">
+
+    <h2>Sources</h2>
+    <p>The source for finding sources.</p>
+
+    <!-- ── Toolbar ─────────────────────────────────────────────── -->
+    <div class="toolbar">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search sources…"
+        aria-label="Search sources"
+        autocomplete="off"
+      />
+
+      <div class="filter-sort-row">
+        <div class="filter-container" role="group" aria-label="Filter sources by trust level">
+          <button type="button" class="active" data-filter="all">All</button>
+          <button type="button" data-filter="trusted">Trusted</button>
+          <button type="button" data-filter="mostly-trusted">Mostly Trusted</button>
+          <button type="button" data-filter="not-trusted">Not Trusted</button>
+        </div>
+
+        <select id="sort-select" aria-label="Sort sources">
+          <option value="default">Sort By</option>
+          <option value="trust-desc">Trust Level ↓</option>
+          <option value="trust-asc">Trust Level ↑</option>
+          <option value="name-asc">Name A → Z</option>
+          <option value="name-desc">Name Z → A</option>
+          <option value="category-asc">Category A → Z</option>
+          <option value="category-desc">Category Z → A</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ── Resource list ────────────────────────────────────────── -->
+    <div id="resource-list" aria-live="polite" aria-relevant="additions removals">
+
+      <!-- NASA -->
+      <div class="resource-item"
+           data-trust="trusted"
+           data-name="NASA"
+           data-category="Science"
+           tabindex="0"
+           role="button"
+           aria-expanded="false">
+        <div class="top-row" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+          <div class="name" style="display:flex;align-items:center;gap:8px;">
+            <img src="https://logo.clearbit.com/nasa.gov" alt="NASA logo" class="source-logo" loading="lazy" />
+            <strong>NASA</strong>
+            <span class="source-tag" aria-label="Category: Science">Science</span>
+          </div>
+
+          <div class="right-controls" style="display:flex;align-items:center;gap:8px;">
+            <a href="https://nasa.gov" target="_blank" rel="noopener" aria-label="Visit NASA website">
+              <button type="button">Visit</button>
+            </a>
+            <a href="sources/nasa.html" target="_blank" rel="noopener" aria-label="Expand NASA details">
+              <button type="button">Expand</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy NASA link">📋</button>
+            <div class="trust-circle" title="Trusted source" aria-label="Trusted source"></div>
+          </div>
+        </div>
+
+        <div class="details" aria-hidden="true">
+          <p>U.S. government agency leading space exploration and aeronautics research.</p>
+        </div>
+      </div>
+
+      <!-- Wikipedia -->
+      <div class="resource-item"
+           data-trust="mostly-trusted"
+           data-name="Wikipedia"
+           data-category="General"
+           tabindex="0"
+           role="button"
+           aria-expanded="false">
+        <div class="top-row" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+          <div class="name" style="display:flex;align-items:center;gap:8px;">
+            <img src="https://logo.clearbit.com/wikipedia.org" alt="Wikipedia logo" class="source-logo" loading="lazy" />
+            <strong>Wikipedia</strong>
+            <span class="source-tag" aria-label="Category: General">General</span>
+          </div>
+
+          <div class="right-controls" style="display:flex;align-items:center;gap:8px;">
+            <a href="https://wikipedia.org" target="_blank" rel="noopener" aria-label="Visit Wikipedia website">
+              <button type="button">Visit</button>
+            </a>
+            <a href="sources/wikipedia.html" target="_blank" rel="noopener" aria-label="Expand Wikipedia details">
+              <button type="button">Expand</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy Wikipedia link">📋</button>
+            <div class="trust-circle" title="Mostly trusted source" aria-label="Mostly trusted source"></div>
+          </div>
+        </div>
+
+        <div class="details" aria-hidden="true">
+          <p>Free online encyclopedia collaboratively edited by volunteers worldwide.</p>
+        </div>
+      </div>
+
+      <!-- Blacklink News -->
+      <div class="resource-item"
+           data-trust="trusted"
+           data-name="Blacklink News"
+           data-category="Education"
+           tabindex="0"
+           role="button"
+           aria-expanded="false">
+        <div class="top-row" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+          <div class="name" style="display:flex;align-items:center;gap:8px;">
+            <img src="Logo.png" alt="Blacklink News logo" class="source-logo" loading="lazy" />
+            <strong>Blacklink News</strong>
+            <span class="source-tag" aria-label="Category: Education">Education</span>
+          </div>
+
+          <div class="right-controls" style="display:flex;align-items:center;gap:8px;">
+            <a href="https://blacklink.net/news" target="_blank" rel="noopener" aria-label="Visit Blacklink News">
+              <button type="button">Visit</button>
+            </a>
+            <a href="sources/news.html" target="_blank" rel="noopener" aria-label="Expand Blacklink News details">
+              <button type="button">Expand</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy Blacklink News link">📋</button>
+            <div class="trust-circle" title="Trusted source" aria-label="Trusted source"></div>
+          </div>
+        </div>
+
+        <div class="details" aria-hidden="true">
+          <p>Official news outlet of Blacklink Education, delivering verified educational updates and company insights.</p>
+        </div>
+      </div>
+
+      <!-- RealRawNews -->
+      <div class="resource-item"
+           data-trust="not-trusted"
+           data-name="RealRawNews"
+           data-category="News"
+           tabindex="0"
+           role="button"
+           aria-expanded="false">
+        <div class="top-row" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+          <div class="name" style="display:flex;align-items:center;gap:8px;">
+            <img src="https://www.svgrepo.com/show/379925/alert-error.svg" alt="RealRawNews icon" class="source-logo" loading="lazy" />
+            <strong>RealRawNews</strong>
+            <span class="source-tag" aria-label="Category: News">News</span>
+          </div>
+
+          <div class="right-controls" style="display:flex;align-items:center;gap:8px;">
+            <a href="https://realrawnews.com" target="_blank" rel="noopener" aria-label="Visit RealRawNews">
+              <button type="button">Visit</button>
+            </a>
+            <a href="sources/realrawnews.html" target="_blank" rel="noopener" aria-label="Expand RealRawNews details">
+              <button type="button">Expand</button>
+            </a>
+            <button type="button" class="copy-link-btn" aria-label="Copy RealRawNews link">📋</button>
+            <div class="trust-circle" title="Not trusted source" aria-label="Not trusted source"></div>
+          </div>
+        </div>
+
+        <div class="details" aria-hidden="true">
+          <p>Unreliable news site known for spreading misinformation.</p>
+        </div>
+      </div>
+
+    </div><!-- /#resource-list -->
+  </main>
+
+  <!-- ─────── FOOTER ──────────────────────────────────────────────── -->
+  <footer style="text-align:center;padding:2rem;color:#666;user-select:none;">
+    © 2025 Blacklink Education, Inc. · Licensed under CC BY-NC-SA 4.0
+  </footer>
+
+  <!-- ─────── SCRIPTS ─────────────────────────────────────────────── -->
+  <script>
+    /* ================================
+       Utility helpers
+    ==================================*/
+    function qs(sel, ctx = document)  { return ctx.querySelector(sel); }
+    function qsa(sel, ctx = document) { return Array.from(ctx.querySelectorAll(sel)); }
+
+    /* ================================
+       Expand / collapse resource cards
+    ==================================*/
+    qsa(".resource-item").forEach(item => {
+      const details = qs(".details", item);
+
+      item.addEventListener("click", e => {
+        if (e.target.closest("button,a")) return; // ignore inner buttons/links
+        const expanded = item.classList.toggle("expanded");
+        item.setAttribute("aria-expanded", expanded);
+        details.setAttribute("aria-hidden", !expanded);
+        details.style.maxHeight = expanded ? details.scrollHeight + "px" : "0";
+      });
+
+      item.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+
+    /* ================================
+       Filter buttons
+    ==================================*/
+    const filterButtons = qsa(".filter-container button");
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        filterSources(btn.dataset.filter);
+      });
+    });
+
+    function filterSources(level) {
+      qsa(".resource-item").forEach(item => {
+        item.style.display =
+          level === "all" || item.dataset.trust === level ? "flex" : "none";
+      });
+    }
+
+    /* ================================
+       Search
+    ==================================*/
+    qs("#search-input").addEventListener("input", e => {
+      const query = e.target.value.toLowerCase();
+      qsa(".resource-item").forEach(item => {
+        const name = item.dataset.name.toLowerCase();
+        item.style.display = name.includes(query) ? "flex" : "none";
+      });
+    });
+
+    /* ================================
+       Sorting
+    ==================================*/
+    qs("#sort-select").addEventListener("change", e => sortSources(e.target.value));
+
+    function sortSources(mode) {
+      const orderDesc = ["trusted", "mostly-trusted", "not-trusted"];
+      const orderAsc  = [...orderDesc].reverse();
+      const container = qs("#resource-list");
+      const items = qsa(".resource-item", container);
+
+      const sorted = items.sort((a, b) => {
+        switch (mode) {
+          case "name-asc":        return a.dataset.name.localeCompare(b.dataset.name);
+          case "name-desc":       return b.dataset.name.localeCompare(a.dataset.name);
+          case "trust-desc":      return orderDesc.indexOf(a.dataset.trust) - orderDesc.indexOf(b.dataset.trust);
+          case "trust-asc":       return orderAsc.indexOf(a.dataset.trust)  - orderAsc.indexOf(b.dataset.trust);
+          case "category-asc":    return a.dataset.category.localeCompare(b.dataset.category);
+          case "category-desc":   return b.dataset.category.localeCompare(a.dataset.category);
+          default:                return 0;
+        }
+      });
+
+      sorted.forEach(item => container.appendChild(item));
+    }
+
+    /* ================================
+       Copy link buttons
+    ==================================*/
+    qsa(".copy-link-btn").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.stopPropagation();
+        const url = btn.parentElement.querySelector("a").href;
+        navigator.clipboard.writeText(url).then(() => {
+          btn.textContent = "✅";
+          setTimeout(() => (btn.textContent = "📋"), 1500);
+        });
+      });
+    });
+
+    /* ================================
+       Theme toggle
+    ==================================*/
+    const themeToggle = qs("#theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      const light = document.body.classList.toggle("light");
+      themeToggle.setAttribute("aria-pressed", light);
+      themeToggle.textContent = light ? "🌞" : "🌙";
+    });
+
+    /* ================================
+       Account placeholder
+    ==================================*/
+    function openAccount() {
+      alert("Blacklink Account Management System is offline. Try again later.");
+    }
+  </script>
+</body>
+</html>
