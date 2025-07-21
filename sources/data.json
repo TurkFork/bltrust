@@ -1,0 +1,54 @@
+[
+  {
+    "name": "NASA",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nasa.gov",
+        "alt": "NASA logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://nasa.gov",
+      "detailsPage": "sources/nasa.html",
+      "description": "U.S. government agency leading space exploration and aeronautics research."
+    }
+  },
+  {
+    "name": "Wikipedia",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/wikipedia.org",
+        "alt": "Wikipedia logo"
+      },
+      "category": "General",
+      "visitUrl": "https://wikipedia.org",
+      "detailsPage": "sources/wikipedia.html",
+      "description": "Free online encyclopedia collaboratively edited by volunteers worldwide."
+    }
+  },
+  {
+    "name": "Blacklink News",
+    "details": {
+      "logo": {
+        "src": "Logo.png",
+        "alt": "Blacklink News logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://blacklink.net/news",
+      "detailsPage": "sources/news.html",
+      "description": "Official news outlet of Blacklink Education, delivering verified educational updates and company insights."
+    }
+  },
+  {
+    "name": "RealRawNews",
+    "details": {
+      "logo": {
+        "src": "https://www.svgrepo.com/show/379925/alert-error.svg",
+        "alt": "RealRawNews icon"
+      },
+      "category": "News",
+      "visitUrl": "https://realrawnews.com",
+      "detailsPage": "sources/realrawnews.html",
+      "description": "Unreliable news site known for spreading misinformation."
+    }
+  }
+]

@@ -1,0 +1,740 @@
+/* Reset and Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #111);
+  color: #e3dee9;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fafafa;
+}
+h2 {
+  font-size: 2.2rem;
+  color: #e3dee9;
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  background: #121212;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section p {
+  color: #bbb;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- NOVA BUTTON STYLES --- */
+
+.cta {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--nova-accent, #5f9fff);
+  background-color: var(--nova-accent, #5f9fff);
+  color: white;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.cta:hover {
+  background-color: #417ee3;
+  border-color: #417ee3;
+  transform: scale(1.04);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+.button-disabled {
+  background-color: #aaa;
+  color: #eee;
+  border: 1px solid #999;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* --- MAGNETIC BUTTON EFFECT (optional) --- */
+.cta.magnetic {
+  transition: transform 0.15s ease;
+  will-change: transform;
+}
+.cta.magnetic:hover {
+  animation: magneticPulse 0.25s ease-in-out forwards;
+}
+
+@keyframes magneticPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+/* Tooltip */
+.tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted #ccc;
+}
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  z-index: 10;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Alerts */
+.alert {
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 600px;
+  color: #fff;
+}
+.alert-error { background: #e74c3c; }
+.alert-success { background: #4caf50; }
+.alert-info { background: #3178c6; }
+.alert-warning {
+  background: #f39c12;
+  color: #222;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+.modal.show {
+  display: flex;
+}
+.modal-content {
+  background: #222;
+  color: #fff;
+  padding: 35px;
+  border-radius: 14px;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+.modal-content button {
+  background: #edddd1;
+  color: #0a0a0a;
+  padding: 10px 24px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Spinner */
+.spinner {
+  margin: 40px auto;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #333;
+  border-top: 5px solid #edddd1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  background: #111;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+}
+.footer a {
+  color: #edddd1;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Table */
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  background: #181818;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  overflow: hidden;
+}
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #2a2a2a;
+}
+th {
+  background: #1f1f1f;
+  font-weight: 700;
+}
+tr:hover {
+  background: #2e2e2e;
+}
+
+/* --- Form Enhancements --- */
+form {
+  background-color: #181818;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 0 auto 50px;
+  max-width: 700px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  color: #ddd;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #ccc;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px 14px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #edddd1;
+  background: #2a2a2a;
+  outline: none;
+}
+
+/* Submit button */
+form button,
+button.cta,
+input[type="submit"] {
+  display: inline-block;
+  background: #edddd1;
+  color: #0a0a0a;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none !important;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover,
+button.cta:hover,
+input[type="submit"]:hover {
+  background-color: #e4cdbc;
+  transform: scale(1.03);
+}
+
+button:focus,
+.cta:focus {
+  outline: none;
+}
+
+/* --- Fix Button Underlines --- */
+a.cta,
+button,
+input[type="submit"] {
+  text-decoration: none !important;
+}
+
+/* --- Fancy Tabs --- */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px auto;
+  max-width: 700px;
+  background: #121212;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #1a1a1a;
+  color: #ccc;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.tab:hover,
+.tab:focus {
+  background: #edddd1;
+  color: #0a0a0a;
+}
+
+.tab.active {
+  background: #edddd1;
+  color: #0a0a0a;
+  font-weight: 800;
+  box-shadow: 0 2px 12px rgba(237, 221, 209, 0.5);
+}
+
+.tab-content {
+  background: #222;
+  border-radius: 10px;
+  margin: 0 auto 40px;
+  padding: 24px;
+  max-width: 700px;
+  color: #ccc;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
+}
+
+/* Accessibility */
+.tab:focus-visible {
+  outline: 2px solid #edddd1;
+  outline-offset: 4px;
+}
+.cta.magnetic {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta.magnetic:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(237, 221, 209, 0.5);
+}
+
+.cta.magnetic:active {
+  transform: scale(0.98);
+}
+/* HTML: <div class="loader"></div> */
+.main-spinner {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #edddd1 #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
+
+/* TRUST 1.2+ COMPATIBILITY CSS. */
+
+/* Trust Extension — NOVA-Compatible Layer */
+
+/* Use NOVA's font + color */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #e3dee9;
+  background: linear-gradient(135deg, #0a0a0a, #111);
+}
+
+body.light {
+  background-color: #f1f1f1;
+  color: #111;
+}
+
+/* Header override */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: #121212e0;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* reduce padding to 1rem from 2rem */
+  border-bottom: 1px solid #333;
+  z-index: 1000;
+  box-sizing: border-box; /* ensure padding is included in width */
+  overflow-x: hidden; /* prevent horizontal scroll if any */
+}
+
+body.light header {
+  background-color: #eee;
+  border-bottom-color: #ccc;
+}
+
+/* Logo */
+.logo h3 {
+  font-weight: 800;
+  color: #edddd1;
+  margin: 0;
+}
+body.light .logo h3 {
+  color: #222;
+}
+
+/* Container from NOVA */
+.container {
+  max-width: 1000px;
+  margin: 80px auto 60px;
+  padding: 0 20px;
+}
+
+
+.filter-sort-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Buttons adopt NOVA cta look */
+button,
+#sort-select {
+  font: inherit;
+  background: #edddd1;
+  color: #0a0a0a;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover,
+#sort-select:hover {
+  background: #e4cdbc;
+  transform: scale(1.02);
+}
+body.light button,
+body.light #sort-select {
+  background: #222;
+  color: #f1f1f1;
+}
+
+/* Search Input (NOVA style) */
+#search-input {
+  width: 100%;
+  background: #222;
+  border: 1px solid #444;
+  color: #eee;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+#search-input::placeholder {
+  color: #888;
+}
+#search-input:focus {
+  border-color: #edddd1;
+  background: #2a2a2a;
+  outline: none;
+}
+body.light #search-input {
+  background: #eee;
+  color: #222;
+}
+
+/* Filter Buttons */
+.filter-container button {
+  background: #1a1a1a;
+  color: #ccc;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.filter-container button.active {
+  background: #edddd1;
+  color: #0a0a0a;
+  box-shadow: 0 2px 10px rgba(237, 221, 209, 0.4);
+}
+body.light .filter-container button.active {
+  background: #222;
+  color: #f1f1f1;
+}
+
+/* Source cards */
+.resource-item {
+  background: #121212;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.4);
+  transition: background 0.3s ease;
+}
+.resource-item:hover {
+  background: #1a1a1a;
+}
+body.light .resource-item {
+  background: #fff;
+  color: #222;
+}
+
+/* Trust Dot Colors */
+.trust-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+[data-trust="trusted"] .trust-circle {
+  background: #4caf50;
+}
+[data-trust="mostly-trusted"] .trust-circle {
+  background: #f39c12;
+}
+[data-trust="not-trusted"] .trust-circle {
+  background: #e74c3c;
+}
+
+/* Details panel */
+.details {
+  background: #222;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+body.light .details {
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* Copy button */
+.copy-link-btn {
+  background: #444;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.copy-link-btn:hover {
+  background: #666;
+}
+body.light .copy-link-btn {
+  background: #ccc;
+  color: #000;
+}
+.source-logo {
+  width: 40px;        /* Set a consistent width */
+  height: 40px;       /* Set a consistent height */
+  object-fit: contain; /* Keep aspect ratio, no cropping */
+  border-radius: 8px; /* Rounded corners to match NOVA’s style */
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+  flex-shrink: 0;      /* Prevent shrinking in flex layouts */
+  background: #222;    /* Optional: subtle background for transparent logos */
+  transition: filter 0.3s ease;
+}
+
+body.light .source-logo {
+  background: #eee;    /* Light bg in light mode */
+  filter: none;
+}
+.details {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+  color: #ccc;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  pointer-events: none; /* disables interaction when hidden */
+  user-select: none; /* optional, prevent accidental selection */
+}
+
+.resource-item.expanded .details {
+  max-height: 500px; /* or a big enough value to show content */
+  opacity: 1;
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  pointer-events: auto; /* enable interaction */
+  user-select: auto;
+}
+
+
+/* 🔮 Neon Glow Cards */
+.card-glow {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(237, 221, 209, 0.15),
+              0 0 40px rgba(237, 221, 209, 0.1) inset;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 25px rgba(237, 221, 209, 0.4),
+              0 0 60px rgba(237, 221, 209, 0.3) inset;
+  transform: translateY(-4px);
+}
+
+/* 🌈 Rainbow Underline Hover */
+.rainbow-underline {
+  display: inline-block;
+  position: relative;
+  color: #edddd1;
+  cursor: pointer;
+}
+.rainbow-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff4d4d, #f9cb28, #2fff81, #28a9f9, #ed4df9);
+  background-size: 200% 100%;
+  animation: rainbowSlide 3s linear infinite;
+  border-radius: 2px;
+}
+@keyframes rainbowSlide {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* 🌟 Glow Pulse Button */
+.button-glow {
+  position: relative;
+  z-index: 1;
+}
+.button-glow::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -5px; left: -5px;
+  right: -5px; bottom: -5px;
+  background: linear-gradient(45deg, #edddd1, #e4cdbc);
+  border-radius: inherit;
+  filter: blur(12px);
+  opacity: 0.4;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* 🌀 Tilt-on-Hover for Images */
+.tilt-img {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+.tilt-img:hover {
+  transform: rotate3d(1, 1, 0, 8deg) scale(1.03);
+}
+
+/* 🪩 Bouncy Fade-in Animation */
+.bounce-in {
+  animation: bounceIn 0.8s ease forwards;
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 📱 Responsive Font Scaling */
+html {
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* 🕶️ Retro CRT-style Text Flicker */
+.flicker {
+  animation: flickerAnim 2s infinite;
+}
+@keyframes flickerAnim {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.4; }
+  50% { opacity: 1; }
+  55% { opacity: 0.3; }
+}
+
+/* 🌌 Starry Background Option */
+body.starry {
+  background: #0a0a0a url('https://transparenttextures.com/patterns/stardust.png') repeat;
+}
+
+/* 📜 Typewriter Effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #edddd1;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
