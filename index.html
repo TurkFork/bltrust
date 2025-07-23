@@ -2,11 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blacklink Trust</title>
   <meta name="description" content="Blacklink Trust helps students find reliable sources with verified trust scores. Built by students, for students." />
   <link rel="stylesheet" href="sigmer.css" />
   <link rel="icon" href="favicon.ico" />
+  <style>
+    /* Simple styles for new sections */
+    .newsletter {
+      background: rgba(185, 142, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 2rem auto 4rem auto;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(185, 142, 255, 0.15);
+    }
+    .newsletter input[type="email"] {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      width: 70%;
+      font-size: 1rem;
+      outline: none;
+    }
+    .newsletter button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background: #b98eff;
+      color: white;
+      font-weight: bold;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .newsletter button:hover {
+      background: #8a65cc;
+    }
+    .team {
+      max-width: 900px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+    .team h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    .team-members {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .member {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      flex: 1 1 200px;
+      max-width: 220px;
+      box-shadow: 0 4px 16px rgba(120, 80, 200, 0.2);
+      transition: transform 0.2s ease;
+    }
+    .member:hover {
+      transform: translateY(-8px);
+    }
+    .member img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #b98eff;
+    }
+    .member h3 {
+      margin-bottom: 0.25rem;
+    }
+    .member p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin: 4rem 0;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .stat {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #b98eff;
+    }
+    .stat-label {
+      font-size: 1rem;
+      color: #aaa;
+    }
+    /* Back to top */
+    #backToTop {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #b98eff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(185, 142, 255, 0.7);
+      display: none;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    #backToTop:hover {
+      background: #8a65cc;
+    }
+    /* Dark Mode Toggle */
+    #darkModeToggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(185, 142, 255, 0.8);
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #0b0f1a;
+      box-shadow: 0 4px 12px rgba(185, 142, 255, 0.7);
+      z-index: 1001;
+      transition: background 0.3s ease;
+    }
+    #darkModeToggle:hover {
+      background: #8a65cc;
+      color: white;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background: #fafafa;
+      color: #222;
+    }
+    body.dark-mode header,
+    body.dark-mode footer,
+    body.dark-mode .card,
+    body.dark-mode .navbar {
+      background: rgba(40, 40, 50, 0.9);
+      color: #ddd;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+    body.dark-mode .primary-button {
+      background: #5533cc;
+      color: white;
+      box-shadow: 0 4px 12px rgba(85, 51, 204, 0.7);
+    }
+    body.dark-mode .primary-button:hover {
+      background-color: #704ddb;
+      box-shadow: 0 0 20px rgba(112, 77, 219, 0.8);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -76,7 +236,7 @@
           <blockquote>
             “I literally found a better source in 10 seconds than my teacher gave me all year.”
           </blockquote>
-          <cite>– A real 8th grader, probably</cite>
+          <cite> Harper Helbing, 7th grader</cite>
         </div>
       </section>
     </div>
@@ -95,6 +255,45 @@
           </a>
         </div>
       </section>
+    </div>
+ 
+
+    <!-- New Team Section -->
+    <div class="team fade-in">
+      <h2>Meet the Team</h2>
+      <div class="team-members">
+        <div class="member">
+          <img src="team1.jpg" alt="Adrian" />
+          <h3>Aidan Walford</h3>
+          <p>Founder & Lead Developer</p>
+        </div>
+        <div class="member">
+          <img src="team2.jpg" alt="Drew" />
+          <h3>Jacob Gawedzinski</h3>
+          <p>Creative Director</p>
+        </div>
+        <div class="member">
+          <img src="team3.jpg" alt="Emily" />
+          <h3>Hunter Merganthal</h3>
+          <p>COO</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Stats Section -->
+    <div class="stats fade-in">
+      <div>
+        <div class="stat">1,200+</div>
+        <div class="stat-label">Trusted Sources</div>
+      </div>
+      <div>
+        <div class="stat">50,000+</div>
+        <div class="stat-label">Students Served</div>
+      </div>
+      <div>
+        <div class="stat">15+</div>
+        <div class="stat-label">Countries</div>
+      </div>
     </div>
 
     <div class="container">
@@ -150,7 +349,46 @@
         <a href="#"><button>.edu</button></a>
         <a href="#"><button>AeroAI</button></a>
       </div>
+      <!-- Social Media Links -->
+      <div style="display:flex; gap:1rem; justify-content:center; width:100%; margin-top:1rem;">
+        <a href="https://twitter.com/blacklinkllc" target="_blank" aria-label="Twitter" style="color:#1da1f2; font-size:1.5rem;">🐦</a>
+        <a href="https://facebook.com/blacklinkllc" target="_blank" aria-label="Facebook" style="color:#1877f2; font-size:1.5rem;">📘</a>
+        <a href="https://instagram.com/blacklinkllc" target="_blank" aria-label="Instagram" style="color:#e4405f; font-size:1.5rem;">📸</a>
+        <a href="https://linkedin.com/company/blacklinkllc" target="_blank" aria-label="LinkedIn" style="color:#0077b5; font-size:1.5rem;">🔗</a>
+      </div>
     </div>
   </footer>
+
+  <!-- Back to top button -->
+  <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Dark mode toggle -->
+  <button id="darkModeToggle" aria-label="Toggle dark mode">🌓</button>
+
+  <script>
+    // Back to top button behavior
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Dark mode toggle behavior
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if(document.body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = '☀️';
+      } else {
+        darkModeToggle.textContent = '🌓';
+      }
+    });
+  </script>
 </body>
 </html>

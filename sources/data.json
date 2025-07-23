@@ -9,7 +9,8 @@
       "category": "Science",
       "visitUrl": "https://nasa.gov",
       "detailsPage": "sources/nasa.html",
-      "description": "U.S. government agency leading space exploration and aeronautics research."
+      "description": "U.S. government agency leading space exploration and aeronautics research.",
+      "trust": "trusted"
     }
   },
   {
@@ -22,7 +23,8 @@
       "category": "General",
       "visitUrl": "https://wikipedia.org",
       "detailsPage": "sources/wikipedia.html",
-      "description": "Free online encyclopedia collaboratively edited by volunteers worldwide."
+      "description": "Free online encyclopedia collaboratively edited by volunteers worldwide.",
+      "trust": "mostly-trusted"
     }
   },
   {
@@ -35,7 +37,8 @@
       "category": "Education",
       "visitUrl": "https://blacklink.net/news",
       "detailsPage": "sources/news.html",
-      "description": "Official news outlet of Blacklink Education, delivering verified educational updates and company insights."
+      "description": "Official news outlet of Blacklink Education, delivering verified educational updates and company insights.",
+      "trust": "trusted"
     }
   },
   {
@@ -48,7 +51,64 @@
       "category": "News",
       "visitUrl": "https://realrawnews.com",
       "detailsPage": "sources/realrawnews.html",
-      "description": "Unreliable news site known for spreading misinformation."
+      "description": "Unreliable news site known for spreading misinformation.",
+      "trust": "not-trusted"
+    }
+  },
+  {
+    "name": "National Geographic",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nationalgeographic.com",
+        "alt": "National Geographic logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://nationalgeographic.com",
+      "detailsPage": "sources/natgeo.html",
+      "description": "World-renowned resource for science, nature, and exploration.",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "The New York Times",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nytimes.com",
+        "alt": "NY Times logo"
+      },
+      "category": "News",
+      "visitUrl": "https://nytimes.com",
+      "detailsPage": "sources/nytimes.html",
+      "description": "Leading global news organization with verified reporting.",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "Snopes",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/snopes.com",
+        "alt": "Snopes logo"
+      },
+      "category": "Fact-Checking",
+      "visitUrl": "https://snopes.com",
+      "detailsPage": "sources/snopes.html",
+      "description": "Fact-checking website dedicated to debunking misinformation.",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "The Onion",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/theonion.com",
+        "alt": "The Onion logo"
+      },
+      "category": "Satire",
+      "visitUrl": "https://theonion.com",
+      "detailsPage": "sources/theonion.html",
+      "description": "Satirical news site not meant to be taken seriously.",
+      "trust": "not-trusted"
     }
   }
 ]
