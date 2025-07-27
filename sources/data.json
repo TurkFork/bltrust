@@ -2,113 +2,292 @@
   {
     "name": "NASA",
     "details": {
-      "logo": {
-        "src": "https://logo.clearbit.com/nasa.gov",
-        "alt": "NASA logo"
-      },
+      "logo": { "src": "https://logo.clearbit.com/nasa.gov", "alt": "NASA logo" },
       "category": "Science",
       "visitUrl": "https://nasa.gov",
       "detailsPage": "sources/nasa.html",
-      "description": "U.S. government agency leading space exploration and aeronautics research.",
-      "trust": "trusted"
+      "trust": "trusted",
+      "description": "test."
     }
   },
   {
     "name": "Wikipedia",
     "details": {
-      "logo": {
-        "src": "https://logo.clearbit.com/wikipedia.org",
-        "alt": "Wikipedia logo"
-      },
+      "logo": { "src": "https://logo.clearbit.com/wikipedia.org", "alt": "Wikipedia logo" },
       "category": "General",
       "visitUrl": "https://wikipedia.org",
       "detailsPage": "sources/wikipedia.html",
-      "description": "Free online encyclopedia collaboratively edited by volunteers worldwide.",
       "trust": "mostly-trusted"
     }
   },
   {
     "name": "Blacklink News",
     "details": {
-      "logo": {
-        "src": "Logo.png",
-        "alt": "Blacklink News logo"
-      },
+      "logo": { "src": "Logo.png", "alt": "Blacklink News logo" },
       "category": "Education",
       "visitUrl": "https://blacklink.net/news",
       "detailsPage": "sources/news.html",
-      "description": "Official news outlet of Blacklink Education, delivering verified educational updates and company insights.",
       "trust": "trusted"
     }
   },
   {
     "name": "RealRawNews",
     "details": {
-      "logo": {
-        "src": "https://www.svgrepo.com/show/379925/alert-error.svg",
-        "alt": "RealRawNews icon"
-      },
+      "logo": { "src": "https://www.svgrepo.com/show/379925/alert-error.svg", "alt": "RealRawNews icon" },
       "category": "News",
       "visitUrl": "https://realrawnews.com",
       "detailsPage": "sources/realrawnews.html",
-      "description": "Unreliable news site known for spreading misinformation.",
       "trust": "not-trusted"
     }
   },
   {
     "name": "National Geographic",
     "details": {
-      "logo": {
-        "src": "https://logo.clearbit.com/nationalgeographic.com",
-        "alt": "National Geographic logo"
-      },
+      "logo": { "src": "https://logo.clearbit.com/nationalgeographic.com", "alt": "National Geographic logo" },
       "category": "Science",
       "visitUrl": "https://nationalgeographic.com",
       "detailsPage": "sources/natgeo.html",
-      "description": "World-renowned resource for science, nature, and exploration.",
       "trust": "trusted"
     }
   },
   {
     "name": "The New York Times",
     "details": {
-      "logo": {
-        "src": "https://logo.clearbit.com/nytimes.com",
-        "alt": "NY Times logo"
-      },
+      "logo": { "src": "https://logo.clearbit.com/nytimes.com", "alt": "NY Times logo" },
       "category": "News",
       "visitUrl": "https://nytimes.com",
       "detailsPage": "sources/nytimes.html",
-      "description": "Leading global news organization with verified reporting.",
       "trust": "mostly-trusted"
     }
   },
   {
     "name": "Snopes",
     "details": {
-      "logo": {
-        "src": "https://logo.clearbit.com/snopes.com",
-        "alt": "Snopes logo"
-      },
+      "logo": { "src": "https://logo.clearbit.com/snopes.com", "alt": "Snopes logo" },
       "category": "Fact-Checking",
       "visitUrl": "https://snopes.com",
       "detailsPage": "sources/snopes.html",
-      "description": "Fact-checking website dedicated to debunking misinformation.",
       "trust": "trusted"
     }
   },
   {
     "name": "The Onion",
     "details": {
-      "logo": {
-        "src": "https://logo.clearbit.com/theonion.com",
-        "alt": "The Onion logo"
-      },
+      "logo": { "src": "https://logo.clearbit.com/theonion.com", "alt": "The Onion logo" },
       "category": "Satire",
       "visitUrl": "https://theonion.com",
       "detailsPage": "sources/theonion.html",
-      "description": "Satirical news site not meant to be taken seriously.",
       "trust": "not-trusted"
+    }
+  },
+  {
+    "name": "Scientific American",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/scientificamerican.com", "alt": "Scientific American logo" },
+      "category": "Science",
+      "visitUrl": "https://scientificamerican.com",
+      "detailsPage": "sources/scientificamerican.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "Reuters",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/reuters.com", "alt": "Reuters logo" },
+      "category": "News",
+      "visitUrl": "https://reuters.com",
+      "detailsPage": "sources/reuters.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "BuzzFeed News",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/buzzfeednews.com", "alt": "BuzzFeed News logo" },
+      "category": "News",
+      "visitUrl": "https://buzzfeednews.com",
+      "detailsPage": "sources/buzzfeednews.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "FactCheck.org",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/factcheck.org", "alt": "FactCheck.org logo" },
+      "category": "Fact-Checking",
+      "visitUrl": "https://factcheck.org",
+      "detailsPage": "sources/factcheck.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "Politifact",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/politifact.com", "alt": "Politifact logo" },
+      "category": "Fact-Checking",
+      "visitUrl": "https://politifact.com",
+      "detailsPage": "sources/politifact.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "Daily Mail",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/dailymail.co.uk", "alt": "Daily Mail logo" },
+      "category": "News",
+      "visitUrl": "https://dailymail.co.uk",
+      "detailsPage": "sources/dailymail.html",
+      "trust": "not-trusted"
+    }
+  },
+  {
+    "name": "The Verge",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/theverge.com", "alt": "The Verge logo" },
+      "category": "Tech",
+      "visitUrl": "https://theverge.com",
+      "detailsPage": "sources/theverge.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "Wired",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/wired.com", "alt": "Wired logo" },
+      "category": "Tech",
+      "visitUrl": "https://wired.com",
+      "detailsPage": "sources/wired.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "The Guardian",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/theguardian.com", "alt": "The Guardian logo" },
+      "category": "News",
+      "visitUrl": "https://theguardian.com",
+      "detailsPage": "sources/guardian.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "CNN",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/cnn.com", "alt": "CNN logo" },
+      "category": "News",
+      "visitUrl": "https://cnn.com",
+      "detailsPage": "sources/cnn.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "Fox News",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/foxnews.com", "alt": "Fox News logo" },
+      "category": "News",
+      "visitUrl": "https://foxnews.com",
+      "detailsPage": "sources/foxnews.html",
+      "trust": "not-trusted"
+    }
+  },
+  {
+    "name": "The Washington Post",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/washingtonpost.com", "alt": "Washington Post logo" },
+      "category": "News",
+      "visitUrl": "https://washingtonpost.com",
+      "detailsPage": "sources/washingtonpost.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "BBC News",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/bbc.com", "alt": "BBC News logo" },
+      "category": "News",
+      "visitUrl": "https://bbc.com/news",
+      "detailsPage": "sources/bbcnews.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "American Psychological Association",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/apa.org", "alt": "APA logo" },
+      "category": "Education",
+      "visitUrl": "https://apa.org",
+      "detailsPage": "sources/apa.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "MIT Technology Review",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/technologyreview.com", "alt": "MIT Technology Review logo" },
+      "category": "Technology",
+      "visitUrl": "https://technologyreview.com",
+      "detailsPage": "sources/mittechreview.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "ProPublica",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/propublica.org", "alt": "ProPublica logo" },
+      "category": "News",
+      "visitUrl": "https://propublica.org",
+      "detailsPage": "sources/propublica.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "Science Daily",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/sciencedaily.com", "alt": "Science Daily logo" },
+      "category": "Science",
+      "visitUrl": "https://sciencedaily.com",
+      "detailsPage": "sources/sciencedaily.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "Healthline",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/healthline.com", "alt": "Healthline logo" },
+      "category": "Health",
+      "visitUrl": "https://healthline.com",
+      "detailsPage": "sources/healthline.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "MIT OpenCourseWare",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/ocw.mit.edu", "alt": "MIT OpenCourseWare logo" },
+      "category": "Education",
+      "visitUrl": "https://ocw.mit.edu",
+      "detailsPage": "sources/mitocw.html",
+      "trust": "trusted"
+    }
+  },
+  {
+    "name": "The Economist",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/economist.com", "alt": "The Economist logo" },
+      "category": "News",
+      "visitUrl": "https://economist.com",
+      "detailsPage": "sources/economist.html",
+      "trust": "mostly-trusted"
+    }
+  },
+  {
+    "name": "PBS NewsHour",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/pbs.org", "alt": "PBS NewsHour logo" },
+      "category": "News",
+      "visitUrl": "https://pbs.org/newshour",
+      "detailsPage": "sources/pbsnewshour.html",
+      "trust": "trusted"
     }
   }
 ]

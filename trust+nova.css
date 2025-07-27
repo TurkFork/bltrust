@@ -738,3 +738,138 @@ body.starry {
 @keyframes blink {
   50% { border-color: transparent; }
 }
+    /* Additional styles for new features */
+    #source-count {
+      margin: 1rem 0;
+      color: #ccc;
+      font-weight: 600;
+    }
+    #clear-filters {
+      background: #edddd1;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background 0.3s ease;
+    }
+    #clear-filters:hover {
+      background: #e4cdbc;
+    }
+    #retry-btn {
+      background: #e74c3c;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    #retry-btn:hover {
+      background: #c0392b;
+    }
+    /* Autocomplete dropdown */
+    #autocomplete-list {
+      position: absolute;
+      background: #222;
+      border: 1px solid #444;
+      max-height: 200px;
+      overflow-y: auto;
+      width: 100%;
+      z-index: 10000;
+      border-radius: 10px;
+      color: #eee;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    }
+    #autocomplete-list div {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    #autocomplete-list div:hover, #autocomplete-list .autocomplete-active {
+      background-color: #edddd1;
+      color: #0a0a0a;
+    }
+    /* Tooltip */
+    .tooltip-text {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+    }
+    /* Container for the expanded details inside each source */
+.resource-expanded-details {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border-color, #ccc);
+  font-size: 0.9rem;
+  color: var(--text-secondary, #555);
+}
+
+/* Label + progress bar container */
+.progress-bar-wrapper {
+  margin: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Label text for each metric */
+.progress-bar-wrapper label {
+  flex-shrink: 0;
+  width: 120px;
+  font-weight: 600;
+  color: var(--text-primary, #222);
+}
+
+/* Progress bar background */
+.progress-bar {
+  position: relative;
+  flex-grow: 1;
+  height: 14px;
+  background: var(--progress-bg, #eee);
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Progress bar fill */
+.progress-bar-fill {
+  height: 100%;
+  background: var(--progress-fill, #3b82f6); /* default to blue */
+  border-radius: 7px 0 0 7px;
+  transition: width 0.5s ease;
+}
+
+/* Different colors for progress bars by metric */
+.progress-bar-fill.trust-amount {
+  background: #16a34a; /* green */
+}
+
+.progress-bar-fill.bias-amount {
+  background: #dc2626; /* red */
+}
+
+.progress-bar-fill.data-accuracy {
+  background: #2563eb; /* blue */
+}
+
+.progress-bar-fill.transparency {
+  background: #f59e0b; /* amber */
+}
+
+.progress-bar-fill.update-frequency {
+  background: #6366f1; /* indigo */
+}
+
+/* Expanded description text */
+.resource-expanded-details p {
+  margin-top: 0.6rem;
+  line-height: 1.4;
+  color: var(--text-secondary, #555);
+}
+
+/* Accessibility: focus style for resource items */
+.resource-item:focus-visible {
+  outline: 3px solid var(--focus-color, #2563eb);
+  outline-offset: 3px;
+}
