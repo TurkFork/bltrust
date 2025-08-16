@@ -289,5 +289,280 @@
       "detailsPage": "sources/pbsnewshour.html",
       "trust": "trusted"
     }
+  },
+  {
+    "name": "Associated Press",
+    "details": {
+      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Associated_Press_logo.svg", "alt": "Associated Press logo" },
+      "category": "News",
+      "visitUrl": "https://apnews.com",
+      "detailsPage": "sources/associatedpress.html",
+      "trust": "trusted",
+      "description": "Global independent news agency founded in 1846" 
+    }
+  },
+  {
+    "name": "Live Science",
+    "details": {
+      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Live_Science_logo.svg", "alt": "Live Science logo" },
+      "category": "Science",
+      "visitUrl": "https://livescience.com",
+      "detailsPage": "sources/livescience.html",
+      "trust": "trusted",
+      "description": "Popular science news with expert journalists reporting on space, health, archaeology, and more" 
+    }
+  },
+  {
+    "name": "ScienceDaily",
+    "details": {
+      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/ScienceDaily_logo.png", "alt": "ScienceDaily logo" },
+      "category": "Science",
+      "visitUrl": "https://sciencedaily.com",
+      "detailsPage": "sources/sciencedaily.html",
+      "trust": "trusted",
+      "description": "Aggregates lightly edited press releases on research across disciplines" 
+    }
+  },
+  {
+    "name": "Australian Associated Press",
+    "details": {
+      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/c/c7/AAP-logo.svg", "alt": "AAP logo" },
+      "category": "News",
+      "visitUrl": "https://aap.com.au",
+      "detailsPage": "sources/aap.html",
+      "trust": "trusted",
+      "description": "Australia’s leading not‑for‑profit news wire agency" 
+    }
+  },
+  {
+    "name": "Ask A Biologist",
+    "details": {
+      "logo": { "src": "http://askabiologist.asu.edu/sites/default/files/logo_0.png", "alt": "Ask A Biologist logo" },
+      "category": "Education",
+      "visitUrl": "http://askabiologist.asu.edu",
+      "detailsPage": "sources/askabiologist.html",
+      "trust": "trusted",
+      "description": "Arizona State University life science outreach Q&A program" 
+    }
+  },
+  {
+    "name": "Nature",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/nature.com", "alt": "Nature logo" },
+      "category": "Science",
+      "visitUrl": "https://www.nature.com",
+      "detailsPage": "sources/nature.html",
+      "trust": "trusted",
+      "description": "Leading international science journal publishing peer-reviewed research"
+    }
+  },
+  {
+    "name": "Harvard Gazette",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/news.harvard.edu", "alt": "Harvard Gazette logo" },
+      "category": "Education",
+      "visitUrl": "https://news.harvard.edu/gazette",
+      "detailsPage": "sources/harvardgazette.html",
+      "trust": "trusted",
+      "description": "Official news outlet of Harvard University"
+    }
+  },
+  {
+    "name": "Stanford News",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/news.stanford.edu", "alt": "Stanford News logo" },
+      "category": "Education",
+      "visitUrl": "https://news.stanford.edu",
+      "detailsPage": "sources/stanfordnews.html",
+      "trust": "trusted",
+      "description": "Official news and research updates from Stanford University"
+    }
+  },
+  {
+    "name": "Medical News Today",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/medicalnewstoday.com", "alt": "Medical News Today logo" },
+      "category": "Health",
+      "visitUrl": "https://medicalnewstoday.com",
+      "detailsPage": "sources/medicalnewstoday.html",
+      "trust": "mostly-trusted",
+      "description": "Health information and medical research reporting"
+    }
+  },
+  {
+    "name": "Verywell Health",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/verywellhealth.com", "alt": "Verywell Health logo" },
+      "category": "Health",
+      "visitUrl": "https://verywellhealth.com",
+      "detailsPage": "sources/verywellhealth.html",
+      "trust": "mostly-trusted",
+      "description": "Consumer health information reviewed by medical professionals"
+    }
+  },
+  {
+    "name": "Axios",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/axios.com", "alt": "Axios logo" },
+      "category": "News",
+      "visitUrl": "https://axios.com",
+      "detailsPage": "sources/axios.html",
+      "trust": "mostly-trusted",
+      "description": "Concise, bullet-point style reporting across politics, tech, and business"
+    }
+  },
+  {
+    "name": "TechCrunch",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/techcrunch.com", "alt": "TechCrunch logo" },
+      "category": "Tech",
+      "visitUrl": "https://techcrunch.com",
+      "detailsPage": "sources/techcrunch.html",
+      "trust": "mostly-trusted",
+      "description": "Startup and tech industry news"
+    }
+  },
+  {
+    "name": "The Intercept",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/theintercept.com", "alt": "The Intercept logo" },
+      "category": "News",
+      "visitUrl": "https://theintercept.com",
+      "detailsPage": "sources/theintercept.html",
+      "trust": "mostly-trusted",
+      "description": "Investigative journalism with a focus on transparency and accountability"
+    }
+  },
+  {
+    "name": "New Scientist",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/newscientist.com", "alt": "New Scientist logo" },
+      "category": "Science",
+      "visitUrl": "https://newscientist.com",
+      "detailsPage": "sources/newscientist.html",
+      "trust": "trusted",
+      "description": "Magazine offering accessible science and tech updates"
+    }
+  },
+  {
+    "name": "CNET",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/cnet.com", "alt": "CNET logo" },
+      "category": "Tech",
+      "visitUrl": "https://cnet.com",
+      "detailsPage": "sources/cnet.html",
+      "trust": "mostly-trusted",
+      "description": "Consumer tech reviews, news, and buying guides"
+    }
+  },
+  {
+    "name": "Space.com",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/space.com", "alt": "Space.com logo" },
+      "category": "Science",
+      "visitUrl": "https://space.com",
+      "detailsPage": "sources/space.html",
+      "trust": "trusted",
+      "description": "Popular space science news and astronomy updates"
+    }
+  },
+  {
+    "name": "NPR",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/npr.org", "alt": "NPR logo" },
+      "category": "News",
+      "visitUrl": "https://npr.org",
+      "detailsPage": "sources/npr.html",
+      "trust": "trusted",
+      "description": "U.S. nonprofit media organization with trusted news and storytelling"
+    }
+  },
+  {
+    "name": "Vox",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/vox.com", "alt": "Vox logo" },
+      "category": "News",
+      "visitUrl": "https://vox.com",
+      "detailsPage": "sources/vox.html",
+      "trust": "mostly-trusted",
+      "description": "Explanatory journalism site covering politics, policy, and culture"
+    }
+  },
+  {
+    "name": "The Atlantic",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/theatlantic.com", "alt": "The Atlantic logo" },
+      "category": "News",
+      "visitUrl": "https://theatlantic.com",
+      "detailsPage": "sources/theatlantic.html",
+      "trust": "trusted",
+      "description": "Magazine focusing on politics, culture, and society"
+    }
+  },
+  {
+    "name": "The Conversation",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/theconversation.com", "alt": "The Conversation logo" },
+      "category": "Education",
+      "visitUrl": "https://theconversation.com",
+      "detailsPage": "sources/theconversation.html",
+      "trust": "trusted",
+      "description": "Academic and research news written by scholars"
+    }
+  },
+  {
+    "name": "History.com",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/history.com", "alt": "History.com logo" },
+      "category": "Education",
+      "visitUrl": "https://history.com",
+      "detailsPage": "sources/history.html",
+      "trust": "mostly-trusted",
+      "description": "Documentary-style history news and articles"
+    }
+  },
+  {
+    "name": "Quartz",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/qz.com", "alt": "Quartz logo" },
+      "category": "News",
+      "visitUrl": "https://qz.com",
+      "detailsPage": "sources/quartz.html",
+      "trust": "mostly-trusted",
+      "description": "Global business news with an analytical edge"
+    }
+  },
+  {
+    "name": "FiveThirtyEight",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/fivethirtyeight.com", "alt": "FiveThirtyEight logo" },
+      "category": "News",
+      "visitUrl": "https://fivethirtyeight.com",
+      "detailsPage": "sources/fivethirtyeight.html",
+      "trust": "trusted",
+      "description": "Data journalism site known for polling and statistical analysis"
+    }
+  },
+  {
+    "name": "Al Jazeera",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/aljazeera.com", "alt": "Al Jazeera logo" },
+      "category": "News",
+      "visitUrl": "https://aljazeera.com",
+      "detailsPage": "sources/aljazeera.html",
+      "trust": "mostly-trusted",
+      "description": "International news network based in Qatar"
+    }
+  },
+  {
+    "name": "Scientific Reports",
+    "details": {
+      "logo": { "src": "https://logo.clearbit.com/nature.com", "alt": "Scientific Reports logo" },
+      "category": "Science",
+      "visitUrl": "https://www.nature.com/srep",
+      "detailsPage": "sources/scientificreports.html",
+      "trust": "trusted",
+      "description": "Open access journal from Nature Portfolio"
+    }
   }
 ]

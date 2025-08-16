@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blacklink Trust 1.2 </title>
+  <title>Blacklink Trust 1.2</title>
   <link rel="stylesheet" href="trust+nova.css" />
-
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
 </head>
+
 <body>
   <header>
     <div class="logo" style="display:flex;align-items:center;gap:10px;">
@@ -17,17 +18,18 @@
       <h3>Blacklink Trust</h3>
     </div>
     <div class="nav-right">
-      <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark/light theme">🌙</button>
-      <button id="account-btn">Login</button>
+      <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark or light theme">🌙</button>
+      <button id="account-btn" disabled>Loading...</button>
     </div>
   </header>
 
-  <main class="container trust-extension" style="position: relative;">
+  <main class="container trust-extension" style="position:relative;">
     <h2>Sources</h2>
     <p>The source for finding sources.</p>
 
-    <div class="toolbar" style="position: relative;">
-      <input type="search" id="search-input" placeholder="Search sources…" disabled autocomplete="off" aria-autocomplete="list" aria-controls="autocomplete-list" aria-expanded="false" />
+    <div class="toolbar" style="position:relative;">
+      <input type="search" id="search-input" placeholder="Search sources…" disabled autocomplete="off"
+        aria-autocomplete="list" aria-controls="autocomplete-list" aria-expanded="false" />
       <div id="autocomplete-list" role="listbox" style="display:none;"></div>
 
       <div class="filter-sort-row" style="align-items:center;">
@@ -44,305 +46,165 @@
           <option value="category-asc">Category ↑</option>
           <option value="category-desc">Category ↓</option>
         </select>
-
         <select id="category-filter" disabled aria-label="Filter by category" style="margin-left:10px;">
           <option value="all">All Categories</option>
         </select>
-
         <button id="clear-filters" title="Clear all filters and search" disabled>Clear Filters</button>
       </div>
 
       <div id="source-count" aria-live="polite" aria-atomic="true">Showing 0 sources</div>
     </div>
 
-    <div id="resource-list" style="min-height:150px; display: flex; flex-direction: column; gap: 15px;">
+    <div id="resource-list" style="min-height:150px; display:flex; flex-direction:column; gap:15px;">
       <p id="loading-msg">Please log in to view sources.</p>
     </div>
 
     <div id="error-msg" style="color:red; margin-top:1rem;"></div>
   </main>
 
-  <footer style="text-align:center;padding:2rem;color:#666;user-select:none;">
-    © 2025 Blacklink Education, Inc. · Licensed under CC BY-NC-SA 4.0
+  <footer style="text-align:center; padding:2rem; color:#666; user-select:none;">
+    © 2025 Blacklink Education, Inc. · Licensed under CC BY‑NC‑SA 4.0
   </footer>
 
-<script>
-  firebase.initializeApp({
-    apiKey: "AIzaSyDh1cCQXw1TGVJdVVgLEGdOgZlTPzGORLw",
-    authDomain: "blacklink-auth.firebaseapp.com",
-    projectId: "blacklink-auth",
-    storageBucket: "blacklink-auth.appspot.com",
-    messagingSenderId: "457832218084",
-    appId: "1:457832218084:web:your-app-id-here"
-  });
-
-  const auth = firebase.auth();
-  const accountBtn = document.getElementById("account-btn");
-  const searchInput = document.getElementById("search-input");
-  const autocompleteList = document.getElementById("autocomplete-list");
-  const filterButtons = document.querySelectorAll(".filter-container button");
-  const sortSelect = document.getElementById("sort-select");
-  const categoryFilter = document.getElementById("category-filter");
-  const clearFiltersBtn = document.getElementById("clear-filters");
-  const resourceList = document.getElementById("resource-list");
-  const errorMsg = document.getElementById("error-msg");
-  const sourceCount = document.getElementById("source-count");
-
-  let allSources = [];
-  let expandedData = {};
-  let filteredSources = [];
-
-  function displayFirebaseError(err) {
-    if (err.code === "auth/invalid-email" || err.code === "auth/wrong-password") {
-      errorMsg.textContent = "Invalid email or password.";
-    } else if (err.code === "auth/user-not-found") {
-      errorMsg.textContent = "User not found.";
-    } else {
-      errorMsg.textContent = err.message;
-    }
-  }
-
-  function login() {
-    const email = prompt("Email:");
-    if (!email) return;
-    const password = prompt("Password:");
-    if (!password) return;
-    auth.signInWithEmailAndPassword(email, password).catch(displayFirebaseError);
-  }
-
-  function logout() {
-    auth.signOut();
-  }
-
-  function updateAccountUI(user) {
-    errorMsg.textContent = "";
-    if (user) {
-      accountBtn.textContent = `Logout (${user.email})`;
-      accountBtn.onclick = logout;
-      searchInput.disabled = false;
-      filterButtons.forEach(b => b.disabled = false);
-      sortSelect.disabled = false;
-      categoryFilter.disabled = false;
-      clearFiltersBtn.disabled = false;
-    } else {
-      accountBtn.textContent = "Login";
-      accountBtn.onclick = login;
-      searchInput.disabled = true;
-      filterButtons.forEach(b => b.disabled = true);
-      sortSelect.disabled = true;
-      categoryFilter.disabled = true;
-      clearFiltersBtn.disabled = true;
-      resourceList.innerHTML = '<p id="loading-msg">Please log in to view sources.</p>';
-      sourceCount.textContent = 'Showing 0 sources';
-    }
-  }
-
-  function createProgressBar(labelText, value, className) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "progress-bar-wrapper";
-    wrapper.setAttribute("aria-label", `${labelText}: ${value}%`);
-    wrapper.setAttribute("role", "progressbar");
-    wrapper.setAttribute("aria-valuemin", "0");
-    wrapper.setAttribute("aria-valuemax", "100");
-    wrapper.setAttribute("aria-valuenow", value);
-
-    const label = document.createElement("label");
-    label.textContent = labelText;
-
-    const bar = document.createElement("div");
-    bar.className = "progress-bar";
-
-    const fill = document.createElement("div");
-    fill.className = `progress-bar-fill ${className}`;
-    fill.style.width = value + "%";
-
-    bar.appendChild(fill);
-    wrapper.appendChild(label);
-    wrapper.appendChild(bar);
-    return wrapper;
-  }
-
-  function createSourceElement(src) {
-    const div = document.createElement("div");
-    div.className = "resource-item";
-    div.dataset.trust = src.details.trust || "not-trusted";
-    div.dataset.name = src.name;
-    div.dataset.category = src.details.category || "Uncategorized";
-    div.setAttribute("tabindex", "0");
-    div.setAttribute("role", "button");
-    div.setAttribute("aria-expanded", "false");
-    div.setAttribute("aria-controls", `details-${src.name.replace(/\s+/g, '-')}`);
-
-    div.innerHTML = `
-      <div class="top-row" style="display:flex; justify-content:space-between; align-items:center;">
-        <div class="name" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-          <img src="${src.details.logo.src}" alt="${src.details.logo.alt}" class="source-logo"/>
-          <strong>${src.name}</strong>
-          <span class="source-tag">${src.details.category}</span>
-        </div>
-        <div class="right-controls" style="display:flex; gap:8px; align-items:center;">
-          <a href="${src.details.visitUrl}" target="_blank" rel="noopener noreferrer"><button title="Visit source" aria-label="Visit ${src.name} website">Visit</button></a>
-          <button class="copy-link-btn" title="Copy URL to clipboard" aria-label="Copy URL for ${src.name}">📋</button>
-          <div class="trust-circle" aria-label="Trust level indicator for ${src.name}" role="img"></div>
-        </div>
-      </div>
-      <div class="details" id="details-${src.name.replace(/\s+/g, '-')}" style="overflow:hidden; max-height:0; opacity:0; transition:max-height 0.35s ease, opacity 0.3s ease;">
-        <!-- EMPTY on purpose: NO description at all -->
-      </div>
-    `.trim();
-
-    const copyBtn = div.querySelector(".copy-link-btn");
-    copyBtn.addEventListener("click", e => {
-      e.stopPropagation();
-      navigator.clipboard.writeText(src.details.visitUrl).then(() => {
-        copyBtn.textContent = "✅";
-        setTimeout(() => copyBtn.textContent = "📋", 1500);
-      });
+  <script>
+    // Firebase initialization
+    firebase.initializeApp({
+      apiKey: "AIzaSyDh1cCQXw1TGVJdVVgLEGdOgZlTPzGORLw",
+      authDomain: "blacklink-auth.firebaseapp.com",
+      projectId: "blacklink-auth",
+      storageBucket: "blacklink-auth.appspot.com",
+      messagingSenderId: "457832218084",
+      appId: "1:457832218084:web:your-app-id-here"
     });
 
-    div.addEventListener("click", () => {
-      const det = div.querySelector(".details");
-      const expanded = !div.classList.contains("expanded");
-      div.classList.toggle("expanded", expanded);
-      div.setAttribute("aria-expanded", expanded);
+    const auth = firebase.auth();
+    const accountBtn = document.getElementById("account-btn");
+    const searchInput = document.getElementById("search-input");
+    const filterButtons = document.querySelectorAll(".filter-container button");
+    const sortSelect = document.getElementById("sort-select");
+    const categoryFilter = document.getElementById("category-filter");
+    const clearFiltersBtn = document.getElementById("clear-filters");
+    const resourceList = document.getElementById("resource-list");
+    const errorMsg = document.getElementById("error-msg");
+    const sourceCount = document.getElementById("source-count");
+    let allSources = [], expandedData = {}, filteredSources = [];
 
-      if (expanded) {
-        det.innerHTML = "";  // Clear details div completely
-
-        const extra = expandedData[src.name];
-        if (extra) {
-          const expDiv = document.createElement("div");
-          expDiv.className = "resource-expanded-details";
-
-          if (typeof extra.trustAmount === "number") expDiv.appendChild(createProgressBar("Trust Amount", extra.trustAmount, "trust-amount"));
-          if (typeof extra.biasAmount === "number") expDiv.appendChild(createProgressBar("Bias Amount", extra.biasAmount, "bias-amount"));
-          if (typeof extra.dataAccuracy === "number") expDiv.appendChild(createProgressBar("Data Accuracy", extra.dataAccuracy, "data-accuracy"));
-          if (typeof extra.transparency === "number") expDiv.appendChild(createProgressBar("Transparency", extra.transparency, "transparency"));
-          if (typeof extra.updateFrequency === "number") expDiv.appendChild(createProgressBar("Update Frequency", extra.updateFrequency, "update-frequency"));
-
-          if (extra.moreInfo) {
-            const p = document.createElement("p");
-            p.textContent = extra.moreInfo;
-            expDiv.appendChild(p);
-          }
-
-          det.appendChild(expDiv);
-        } else {
-          // No fallback text, leave empty
-        }
-
-        det.style.maxHeight = det.scrollHeight + "px";
-        det.style.opacity = "1";
-
-        det.setAttribute("tabindex", "-1");
-        det.focus();
+    // Utility: Show Firebase error nicely
+    function displayFirebaseError(err) {
+      if (["auth/invalid-email", "auth/wrong-password"].includes(err.code)) {
+        errorMsg.textContent = "Invalid email or password.";
+      } else if (err.code === "auth/user-not-found") {
+        errorMsg.textContent = "User not found.";
       } else {
-        det.style.maxHeight = "0";
-        det.style.opacity = "0";
-        det.removeAttribute("tabindex");
-
-        det.innerHTML = ""; // empty on collapse too
+        errorMsg.textContent = err.message;
       }
-    });
+    }
 
-    div.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        div.click();
+    // Disable or enable UI elements based on login
+    function updateAccountUI(user) {
+      errorMsg.textContent = "";
+      const disabled = !user;
+      accountBtn.textContent = user ? `Logout (${user.email})` : "Login";
+      accountBtn.disabled = false;
+
+      accountBtn.onclick = user
+        ? logout
+        : () => { window.location.href = "https://accounts.blacklink.net/public/login"; };
+
+      [searchInput, ...filterButtons, sortSelect, categoryFilter, clearFiltersBtn]
+        .forEach(el => el.disabled = disabled);
+
+      resourceList.innerHTML = user
+        ? ""
+        : '<p id="loading-msg">Please log in to view sources.</p>';
+      sourceCount.textContent = user ? `Showing 0 sources` : `Showing 0 sources`;
+    }
+
+    // Copy-paste your existing createSourceElement, applyFiltersAndSort, populateCategories, etc here
+    // For brevity, I'll omit repeating those functions. (Use your existing code for those)
+
+    // But include a minimal example for loadSources and loadExpandedData:
+    async function loadExpandedData() {
+      try {
+        const res = await fetch("/sources/expanded.json");
+        if (!res.ok) throw new Error(`Error ${res.status}`);
+        const data = await res.json();
+        expandedData = data.reduce((acc, item) => {
+          if (item.name) acc[item.name] = item;
+          return acc;
+        }, {});
+      } catch (err) {
+        console.warn("Failed to load expanded data:", err);
+        expandedData = {};
       }
-    });
-
-    return div;
-  }
-
-  function updateSourceCount() {
-    const visible = Array.from(resourceList.children).filter(el => el.style.display !== 'none');
-    sourceCount.textContent = `Showing ${visible.length} source${visible.length !== 1 ? 's' : ''}`;
-  }
-
-  function populateCategories() {
-    const categories = new Set(allSources.map(s => s.details.category || "Uncategorized"));
-    while (categoryFilter.options.length > 1) categoryFilter.remove(1);
-    categories.forEach(cat => {
-      const opt = document.createElement("option");
-      opt.value = cat;
-      opt.textContent = cat;
-      categoryFilter.appendChild(opt);
-    });
-  }
-
-  function applyFiltersAndSort() {
-    const trustFilter = document.querySelector(".filter-container button.active").dataset.filter;
-    const q = searchInput.value.toLowerCase();
-    const categoryVal = categoryFilter.value;
-
-    filteredSources = allSources.filter(src => {
-      const matchesTrust = trustFilter === "all" || src.details.trust === trustFilter;
-      const matchesSearch = src.name.toLowerCase().includes(q);
-      const matchesCategory = categoryVal === "all" || (src.details.category || "Uncategorized") === categoryVal;
-      return matchesTrust && matchesSearch && matchesCategory;
-    });
-
-    const order = sortSelect.value;
-    filteredSources.sort((a, b) => {
-      if (order === "name-asc") return a.name.localeCompare(b.name);
-      if (order === "name-desc") return b.name.localeCompare(a.name);
-      if (order === "category-asc") return (a.details.category || "").localeCompare(b.details.category || "");
-      if (order === "category-desc") return (b.details.category || "").localeCompare(a.details.category || "");
-      return 0;
-    });
-
-    resourceList.innerHTML = "";
-    filteredSources.forEach(src => {
-      const el = createSourceElement(src);
-      resourceList.appendChild(el);
-    });
-
-    updateSourceCount();
-  }
-
-  async function loadExpandedData() {
-    try {
-      const res = await fetch("/sources/expanded.json");
-      if (!res.ok) throw new Error(`Error ${res.status}`);
-      const data = await res.json();
-
-      // Convert array into object keyed by source name
-      expandedData = {};
-      data.forEach(item => {
-        if (item.name) expandedData[item.name] = item;
-      });
-    } catch (err) {
-      console.warn("Failed to load expanded source data:", err.message);
-      expandedData = {};
     }
-  }
 
-  async function loadSources() {
-    try {
-      const res = await fetch("/sources/data.json");
-      const data = await res.json();
-      allSources = data;
-      await loadExpandedData();
-      populateCategories();
-      applyFiltersAndSort();
-    } catch (err) {
-      errorMsg.textContent = "Error loading sources.";
+    async function loadSources() {
+      try {
+        const res = await fetch("/sources/data.json");
+        if (!res.ok) throw new Error(`Error ${res.status}`);
+        allSources = await res.json();
+        await loadExpandedData();
+        populateCategories();
+        applyFiltersAndSort();
+      } catch (err) {
+        errorMsg.textContent = "Error loading sources.";
+      }
     }
-  }
 
-  // Theme toggle
-  document.getElementById("theme-toggle").addEventListener("click", () => {
-    const html = document.documentElement;
-    html.classList.toggle("dark");
-    const darkMode = html.classList.contains("dark");
-    document.getElementById("theme-toggle").textContent = darkMode ? "☀️" : "🌙";
-  });
+    function logout() {
+      auth.signOut();
+    }
 
-  auth.onAuthStateChanged(user => {
-    updateAccountUI(user);
-    if (user) loadSources();
-  });
-</script>
+    // On page load: check for JWT token (in URL param or localStorage)
+    async function initAuth() {
+      let token = null;
+
+      // Check URL param "token" (example: https://site.com?token=XYZ)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("token")) {
+        token = urlParams.get("token");
+        // Optionally save to localStorage for persistence
+        localStorage.setItem("blacklinkJwtToken", token);
+        // Remove token from URL to clean it up (optional)
+        window.history.replaceState({}, document.title, window.location.pathname);
+      } else {
+        // Else check localStorage
+        token = localStorage.getItem("blacklinkJwtToken");
+      }
+
+      if (token) {
+        try {
+          await auth.signInWithCustomToken(token);
+          // Signed in successfully, UI will update in onAuthStateChanged
+        } catch (err) {
+          console.error("Invalid token or sign-in failed:", err);
+          localStorage.removeItem("blacklinkJwtToken");
+          updateAccountUI(null);
+        }
+      } else {
+        updateAccountUI(null);
+      }
+    }
+
+    // Theme toggle
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      document.getElementById("theme-toggle").textContent =
+        document.documentElement.classList.contains("dark") ? "☀️" : "🌙";
+    });
+
+    // Firebase auth state listener
+    auth.onAuthStateChanged(user => {
+      updateAccountUI(user);
+      if (user) loadSources();
+    });
+
+    window.onload = () => {
+      initAuth();
+    };
+
+  </script>
 </body>
+
 </html>

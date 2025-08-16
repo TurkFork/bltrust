@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PragerU - Blacklink Trust</title>
+    <link rel="stylesheet" href="../trust+nova.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo" style="display:flex;align-items:center;gap:10px;">
+            <img src="../trust-logo.svg" alt="Blacklink Trust logo" width="40" height="40" />
+            <h3>Blacklink Trust</h3>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark or light theme">🌙</button>
+            <a href="../" class="cta">Back to Sources</a>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 100px;">
+        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+            <img src="https://www.svgrepo.com/show/379925/alert-error.svg" alt="PragerU logo"
+                style="width: 64px; height: 64px;">
+            <div>
+                <h1 style="margin: 0; color: #edddd1;">PragerU</h1>
+                <p style="margin: 5px 0; color: #ccc;">Education • Not Trusted</p>
+                <div style="width: 20px; height: 20px; background: #e74c3c; border-radius: 50%; margin-top: 10px;">
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #121212; border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+            <h2 style="color: #edddd1; margin-bottom: 20px;">Why PragerU Must Be Removed from Schools</h2>
+            <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
+                At Blacklink Education, we believe that organizations entrusted with shaping young minds must uphold the
+                highest standards of truth, integrity, and equity. PragerU fails these basic requirements and poses a
+                direct threat to educational quality and student wellbeing.
+            </p>
+            <p style="color: #ccc; line-height: 1.6;">
+                The recent White House collaboration with PragerU for educational content represents a dangerous
+                precedent that prioritizes ideology over educational integrity. This is not about politics—this is about
+                protecting our students from harmful, misleading content disguised as education.
+            </p>
+        </div>
+
+        <div style="background: #121212; border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+            <h2 style="color: #edddd1; margin-bottom: 20px;">Documented Harm to Students</h2>
+
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #e74c3c; margin-bottom: 10px;">Attacking LGBTQIA+ Students</h3>
+                <p style="color: #ccc; margin-bottom: 10px;">GLAAD has documented PragerU's "horrific anti-LGBTQ
+                    record." The Southern Poverty Law Center confirms that PragerU "perpetrates far-right ideology
+                    vilifying the LGBTQ+ community." This content creates hostile environments for vulnerable students
+                    who deserve safe, inclusive learning spaces.</p>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #e74c3c; margin-bottom: 10px;">Rewriting History to Harm Students of Color</h3>
+                <p style="color: #ccc; margin-bottom: 10px;">Historians have repeatedly condemned PragerU's materials
+                    for "downplaying the role of slavery and racism in America." Critics identify their content as
+                    "anti-Black, far-right propaganda" packaged for children. This actively harms students of color by
+                    minimizing their history and experiences.</p>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #e74c3c; margin-bottom: 10px;">Spreading Misinformation</h3>
+                <p style="color: #ccc; margin-bottom: 10px;">PragerU has been "long criticized for being misleading or
+                    factually inaccurate." They present partisan political propaganda as educational fact, deceiving
+                    students and undermining their ability to think critically. This is educational malpractice.</p>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #e74c3c; margin-bottom: 10px;">Bypassing Educational Standards</h3>
+                <p style="color: #ccc; margin-bottom: 10px;">PragerU's content lacks the rigorous review, fact-checking,
+                    and balanced perspectives required for legitimate educational materials. Allowing unvetted political
+                    content into classrooms sets a dangerous precedent that puts all students at risk.</p>
+            </div>
+        </div>
+
+        <div style="background: #e74c3c; border-radius: 12px; padding: 30px; color: white; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 15px;">URGENT: Remove PragerU from Schools NOW</h2>
+            <p style="margin-bottom: 15px;"><strong>Students deserve better.</strong> They deserve fact-based education
+                that prepares them for a diverse world, not propaganda that divides and misleads.</p>
+            <p style="margin-bottom: 15px;"><strong>Parents:</strong> Demand your school remove PragerU content
+                immediately.</p>
+            <p style="margin-bottom: 15px;"><strong>Educators:</strong> Refuse to use materials that harm your students.
+            </p>
+            <p><strong>Administrators:</strong> Protect your students' futures by choosing verified, inclusive
+                educational resources.</p>
+        </div>
+
+        <div style="background: #121212; border-radius: 12px; padding: 30px;">
+            <h2 style="color: #edddd1; margin-bottom: 20px;">What Real Education Looks Like</h2>
+            <p style="color: #ccc; line-height: 1.6;">
+                Quality educational content encourages critical thinking, presents multiple perspectives, maintains
+                factual accuracy, and creates inclusive environments where all students can thrive. PragerU fails on
+                every measure. We will continue fighting for educational materials that build students up instead of
+                tearing them down.
+            </p>
+        </div>
+    </main>
+
+    <footer style="text-align:center; padding:2rem; color:#666; user-select:none;">
+        © 2025 Blacklink Education, Inc. · Licensed under CC BY‑NC‑SA 4.0
+    </footer>
+
+    <script>
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            const toggle = document.getElementById("theme-toggle");
+            toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+        });
+    </script>
+</body>
+
+</html>
