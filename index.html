@@ -1,107 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blacklink Trust</title>
-  <meta name="description" content="Blacklink Trust helps students find reliable sources with verified trust scores. Built by students, for students." />
-  <link rel="stylesheet" href="sigmer.css" />
+  <meta name="description"
+    content="Blacklink Trust helps students find reliable sources with verified trust scores. Built by students, for students." />
   <link rel="icon" href="favicon.ico" />
   <style>
-    /* Simple styles for new sections */
-    .newsletter {
-      background: rgba(185, 142, 255, 0.1);
-      border-radius: 12px;
-      padding: 2rem;
-      max-width: 600px;
-      margin: 2rem auto 4rem auto;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(185, 142, 255, 0.15);
+    /* ========== Reset & Base Styles ========== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .newsletter input[type="email"] {
-      padding: 0.8rem;
-      border: none;
-      border-radius: 8px 0 0 8px;
-      width: 70%;
-      font-size: 1rem;
-      outline: none;
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: #111;
+      color: #eee;
+      scroll-behavior: smooth;
+      transition: background 0.5s, color 0.5s;
     }
-    .newsletter button {
-      padding: 0.8rem 1.5rem;
-      border: none;
-      background: #b98eff;
-      color: white;
-      font-weight: bold;
-      border-radius: 0 8px 8px 0;
-      cursor: pointer;
-      transition: background 0.3s ease;
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .newsletter button:hover {
-      background: #8a65cc;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-weight: 700;
     }
-    .team {
-      max-width: 900px;
-      margin: 3rem auto;
-      text-align: center;
+
+    img {
+      max-width: 100%;
+      display: block;
     }
-    .team h2 {
-      margin-bottom: 2rem;
-      font-size: 2rem;
-    }
-    .team-members {
+
+    /* ========== Navbar ========== */
+    .navbar {
       display: flex;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(12px);
+      background: rgba(30, 30, 40, 0.8);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      transition: background 0.5s;
+    }
+
+    .navbar .logo {
+      width: 120px;
+    }
+
+    .nav-tagline {
+      font-weight: 600;
+      color: #bbb;
+      margin-left: 1rem;
+    }
+
+    .nav-buttons button {
+      background: linear-gradient(135deg, #5533cc, #704ddb);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .nav-buttons button:hover {
+      background: linear-gradient(135deg, #704ddb, #8658ff);
+    }
+
+    /* ========== Hero Section ========== */
+    .hero {
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #2a1b40, #1f1f2a);
+      border-radius: 20px;
+      margin: 2rem auto;
+      max-width: 1200px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease forwards;
     }
-    .member {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 1.5rem;
-      flex: 1 1 200px;
-      max-width: 220px;
-      box-shadow: 0 4px 16px rgba(120, 80, 200, 0.2);
-      transition: transform 0.2s ease;
-    }
-    .member:hover {
-      transform: translateY(-8px);
-    }
-    .member img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
+
+    .hero-logo {
+      width: 150px;
       margin-bottom: 1rem;
-      border: 3px solid #b98eff;
+      animation: float 4s ease-in-out infinite;
+      border-radius: 15px;
     }
-    .member h3 {
-      margin-bottom: 0.25rem;
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #b98eff, #8a65cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .member p {
-      font-size: 0.9rem;
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
       color: #ccc;
     }
+
+    .hero small {
+      color: #aaa;
+    }
+
+    .hero .primary-button {
+      padding: 0.8rem 2rem;
+      border-radius: 15px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, #5533cc, #704ddb);
+      color: white;
+      transition: 0.4s;
+      margin-top: 0.5rem;
+      box-shadow: 0 8px 24px rgba(85, 51, 204, 0.5);
+    }
+
+    .hero .primary-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(120, 80, 200, 0.6);
+    }
+
+    /* ========== Features ========== */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .feature {
+      background: rgba(40, 40, 50, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2rem;
+      flex: 1 1 250px;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+    }
+
+    .feature h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #b98eff;
+    }
+
+    .feature p {
+      color: #ccc;
+    }
+
+    /* ========== Stats ========== */
     .stats {
       display: flex;
       justify-content: center;
       gap: 4rem;
-      margin: 4rem 0;
       flex-wrap: wrap;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 4rem auto;
       text-align: center;
     }
+
     .stat {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
-      color: #b98eff;
+      background: linear-gradient(135deg, #b98eff, #8a65cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: countUp 2s ease forwards;
     }
-    .stat-label {
-      font-size: 1rem;
+
+    .stat small {
+      font-size: 0.6rem;
+      vertical-align: super;
       color: #aaa;
     }
-    /* Back to top */
+
+    .stat-label {
+      font-size: 1.1rem;
+      color: #bbb;
+      margin-top: 0.25rem;
+    }
+
+    /* ========== FAQ ========== */
+    .faq {
+      max-width: 800px;
+      margin: 4rem auto;
+      color: #ccc;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #b98eff;
+    }
+
+    .faq h3 {
+      color: #b98eff;
+      margin-top: 1.5rem;
+    }
+
+    .faq p {
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    /* ========== Footer ========== */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #1f1f2a;
+      margin-top: 4rem;
+      border-radius: 20px;
+      margin: 2rem;
+      color: #aaa;
+    }
+
+    footer img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    /* ========== Back to Top ========== */
     #backToTop {
       position: fixed;
       bottom: 2rem;
@@ -115,14 +264,16 @@
       font-size: 1.5rem;
       cursor: pointer;
       box-shadow: 0 4px 12px rgba(185, 142, 255, 0.7);
-      display: none;
+      display: block;
       z-index: 1000;
-      transition: background 0.3s ease;
+      transition: 0.3s;
     }
+
     #backToTop:hover {
       background: #8a65cc;
     }
-    /* Dark Mode Toggle */
+
+    /* ========== Dark Mode Toggle ========== */
     #darkModeToggle {
       position: fixed;
       top: 1rem;
@@ -136,39 +287,56 @@
       color: #0b0f1a;
       box-shadow: 0 4px 12px rgba(185, 142, 255, 0.7);
       z-index: 1001;
-      transition: background 0.3s ease;
+      transition: background 0.3s, color 0.3s;
     }
+
     #darkModeToggle:hover {
       background: #8a65cc;
       color: white;
     }
 
-    /* Dark mode styles */
-    body.dark-mode {
-      background: #fafafa;
-      color: #222;
+    /* ========== Animations ========== */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    body.dark-mode header,
-    body.dark-mode footer,
-    body.dark-mode .card,
-    body.dark-mode .navbar {
-      background: rgba(40, 40, 50, 0.9);
-      color: #ddd;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      border-color: rgba(255, 255, 255, 0.12);
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
-    body.dark-mode .primary-button {
-      background: #5533cc;
-      color: white;
-      box-shadow: 0 4px 12px rgba(85, 51, 204, 0.7);
+
+    .stats-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      text-align: center;
+      color: #ccc;
     }
-    body.dark-mode .primary-button:hover {
-      background-color: #704ddb;
-      box-shadow: 0 0 20px rgba(112, 77, 219, 0.8);
+
+    .stats-footnotes {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      color: #999;
     }
   </style>
 </head>
-<body>
+
+<body class="dark-mode">
+  <!-- Navbar -->
   <header>
     <div class="navbar">
       <img src="Logo.svg" alt="Blacklink Logo" class="logo" />
@@ -178,202 +346,148 @@
         <a href="#"><button>About</button></a>
         <a href="help.html"><button>Help</button></a>
       </div>
-      <div class="nav-right">
-        <button class="icon-button" aria-label="Go Back">←</button>
-        <button class="icon-button" aria-label="Profile">👤</button>
-      </div>
     </div>
   </header>
 
+  <!-- Hero -->
   <main>
-    <div class="hero fade-in">
-      <div class="hero-content">
-        <img src="trust-logo.svg" alt="Trust Logo" class="hero-logo" />
-        <div class="hero-text">
-          <h1>
-            Introducing <span class="highlight"><b>Trust</b></span>
-          </h1>
-          <p>The source for finding sources.</p>
-          <small>Built for .ui3 | Web Application | .ui 1.6 | Trust 1.1 / 1.2 Alpha</small>
-          <br>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
-            <a href="trust.html">
-              <button class="primary-button">Launch Trust</button>
-            </a>
-            <a href="nova.html">
-              <button class="primary-button" style="background: #edddd1; color: #111;">
-                Launch 1.2 Alpha
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <section class="features fade-in">
-        <h2>Why use Trust?</h2>
-        <div class="feature-list">
-          <div class="feature">
-            <h3>🔍 Smart Search</h3>
-            <p>Find sources fast, filter by trust level, and get real-time results.</p>
-          </div>
-          <div class="feature">
-            <h3>🛡️ Verified Trust Scores</h3>
-            <p>Each source is reviewed, labeled, and scored for reliability — no guesswork.</p>
-          </div>
-          <div class="feature">
-            <h3>⚡ Lightning Fast</h3>
-            <p>Designed with performance in mind. Trust loads instantly, even on school Wi-Fi.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="container">
-      <section class="testimonial fade-in">
-        <div class="testimonial-block">
-          <blockquote>
-            “I literally found a better source in 10 seconds than my teacher gave me all year.”
-          </blockquote>
-          <cite> Harper Helbing, 7th grader</cite>
-        </div>
-      </section>
-    </div>
-
-    <div class="container">
-      <section class="cta fade-in">
-        <h2>Be the first to fact check better.</h2>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-          <a href="trust.html">
-            <button class="primary-button">Preview Trust</button>
-          </a>
-          <a href="trust-1.2.html">
-            <button class="primary-button" style="background: #edddd1; color: #111;">
-              Launch 1.2 Alpha
-            </button>
-          </a>
-        </div>
-      </section>
-    </div>
- 
-
-    <!-- New Team Section -->
-    <div class="team fade-in">
-      <h2>Meet the Team</h2>
-      <div class="team-members">
-        <div class="member">
-          <img src="team1.jpg" alt="Adrian" />
-          <h3>Aidan Walford</h3>
-          <p>Founder & Lead Developer</p>
-        </div>
-        <div class="member">
-          <img src="team2.jpg" alt="Drew" />
-          <h3>Jacob Gawedzinski</h3>
-          <p>Creative Director</p>
-        </div>
-        <div class="member">
-          <img src="team3.jpg" alt="Emily" />
-          <h3>Hunter Merganthal</h3>
-          <p>COO</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- New Stats Section -->
-    <div class="stats fade-in">
+    <div class="hero">
+      <img src="trust-logo.svg" alt="Trust Logo" class="hero-logo" />
       <div>
-        <div class="stat">1,200+</div>
-        <div class="stat-label">Trusted Sources</div>
-      </div>
-      <div>
-        <div class="stat">50,000+</div>
-        <div class="stat-label">Students Served</div>
-      </div>
-      <div>
-        <div class="stat">15+</div>
-        <div class="stat-label">Countries</div>
+        <h1>Introducing <span class="highlight"><b>Trust</b></span></h1>
+        <p>The source for finding sources.</p>
+        <small>Built for .ui3 | Web Application | .ui 1.6 | Trust 1.1 / 1.2 Alpha</small>
+        <div style="margin-top:1rem;">
+          <a href="trust.html"><button class="primary-button">Launch Trust</button></a>
+          <a href="standard.html"><button class="primary-button">View our new standards system</button></a>
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <section class="faq fade-in">
-        <h2>FAQ</h2>
-        <h3>Is Trust powered by AI?</h3>
-        <p>No. Trust is built by humans — students, educators, and researchers who care about source quality and clarity.</p>
+    <!-- Features -->
+    <section class="features">
+      <div class="feature">
+        <h3>🔍 Smart Search</h3>
+        <p>Find sources fast, filter by trust level, and get real-time results.</p>
+      </div>
+      <div class="feature">
+        <h3>🛡️ Verified Trust Scores</h3>
+        <p>Each source is reviewed, labeled, and scored for reliability — no guesswork.</p>
+      </div>
+      <div class="feature">
+        <h3>⚡ Lightning Fast</h3>
+        <p>Designed with performance in mind. Trust loads instantly, even on school Wi-Fi.</p>
+      </div>
+    </section>
 
-        <h3>How do you decide what's trustworthy?</h3>
-        <p>We look at source reliability, factual consistency, author background, and cross-checks with academic and journalistic standards.</p>
-
-        <h3>Can I submit a source for review?</h3>
-        <p>Yes! Just send it to <a href="mailto:contact@blacklink.net">contact@blacklink.net</a> and our team will review it manually.</p>
-      </section>
+    <!-- Stats -->
+    <div class="stats-section">
+      <div class="stats">
+        <div>
+          <div class="stat">
+            1,200+<small>†</small>
+          </div>
+          <div class="stat-label">Trusted Sources</div>
+        </div>
+        <div>
+          <div class="stat">
+            50,000+<small>†1</small>
+          </div>
+          <div class="stat-label">Students Served</div>
+        </div>
+        <div>
+          <div class="stat">15+</div>
+          <div class="stat-label">Countries</div>
+        </div>
+      </div>
+      <div class="stats-footnotes">
+        <small>† 1,200 sources after version 1.2.3 &nbsp; †1 50,000 counted by "Unique Visitors" via Cloudflare®</small>
+      </div>
     </div>
+    <style>
+      .trust-standard-badge {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 15px;
+        padding: 1.5rem;
+        max-width: 300px;
+        margin: 1rem auto;
+        text-align: left;
+        box-shadow: 0 8px 24px rgba(120, 80, 200, 0.2);
+        font-family: 'Inter', sans-serif;
+      }
 
-    <div class="container">
-      <section class="about-blacklink fade-in">
-        <h2>About Blacklink</h2>
-        <p>
-          Blacklink Education is an independent student-founded company on a mission to make digital learning better — not just flashier. We build tools students actually want to use (like <b>Trust</b>), and we believe education tech should be as intuitive as TikTok but as reliable as a textbook.
-        </p>
-        <p>
-          From school networks to AI-free source checks, we focus on real-world problems students face every day — and we build solutions from the inside out.
-        </p>
-        <p>
-          We're based in the U.S., but powered by students and educators across the world. Want to partner, suggest a feature, or just say hey? Email us at <a href="mailto:contact@blacklink.net">contact@blacklink.net</a>.
-        </p>
-      </section>
-    </div>
+      .badge-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
 
-    <div class="container">
-      <section class="movement fade-in">
-        <h2>Join the Movement</h2>
-        <p>We're more than a platform — we're a student-powered movement to take back learning. If you want to help change the way schools find information, you're in the right place.</p>
-        <a href="mailto:contact@blacklink.net">
-          <button>Get Involved</button>
-        </a>
-      </section>
-    </div>
+      .badge-logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        background: linear-gradient(135deg, #b98eff, #8a65cc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .trust-score.green {
+        color: #4CAF50;
+        font-weight: 700;
+      }
+
+      .trust-score.yellow {
+        color: #FFC107;
+        font-weight: 700;
+      }
+
+      .trust-score.red {
+        color: #F44336;
+        font-weight: 700;
+      }
+
+      .criteria li {
+        margin: 0.25rem 0;
+        color: #ccc;
+        font-size: 0.9rem;
+      }
+    </style>
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>FAQ</h2>
+      <h3>Is Trust powered by AI?</h3>
+      <p>No. Trust is built by humans — students, educators, and researchers who care about source quality and clarity.
+      </p>
+      <h3>How do you decide what's trustworthy?</h3>
+      <p>We look at source reliability, factual consistency, author background, and cross-checks with academic and
+        journalistic standards.</p>
+      <h3>Can I submit a source for review?</h3>
+      <p>Yes! Just send it to <a href="mailto:contact@blacklink.net">contact@blacklink.net</a> and our team will review
+        it manually.</p>
+    </section>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <img src="Logo.svg" alt="Blacklink Logo" class="footer-logo" />
-      <div>
-        <h3>Blacklink</h3>
-        <p>©2025 Blacklink Education, Inc.</p>
-      </div>
-      <div class="footer-buttons">
-        <a href="https://blacklink.net"><button>Main Site</button></a>
-        <a href="trust.html"><button>Trust</button></a>
-        <a href="#"><button>.edu</button></a>
-        <a href="#"><button>AeroAI</button></a>
-      </div>
-      <!-- Social Media Links -->
-      <div style="display:flex; gap:1rem; justify-content:center; width:100%; margin-top:1rem;">
-        <a href="https://twitter.com/blacklinkllc" target="_blank" aria-label="Twitter" style="color:#1da1f2; font-size:1.5rem;">🐦</a>
-        <a href="https://facebook.com/blacklinkllc" target="_blank" aria-label="Facebook" style="color:#1877f2; font-size:1.5rem;">📘</a>
-        <a href="https://instagram.com/blacklinkllc" target="_blank" aria-label="Instagram" style="color:#e4405f; font-size:1.5rem;">📸</a>
-        <a href="https://linkedin.com/company/blacklinkllc" target="_blank" aria-label="LinkedIn" style="color:#0077b5; font-size:1.5rem;">🔗</a>
-      </div>
-    </div>
+  <!-- Footer -->
+  <footer
+    style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2rem; background: #111; color: #eee; border-radius: 20px; margin: 2rem;">
+    <img src="Logo.svg" alt="Blacklink Logo" style="width:120px; margin-bottom: 1rem;">
+    <h1>Blacklink Education</h1>
+    <p>©2025 Blacklink Education</p>
   </footer>
 
-  <!-- Back to top button -->
+  <!-- Back to top -->
   <button id="backToTop" aria-label="Back to top">↑</button>
 
   <!-- Dark mode toggle -->
-  <button id="darkModeToggle" aria-label="Toggle dark mode">🌓</button>
+  <button id="darkModeToggle" aria-label="Toggle dark mode">☀️</button>
 
   <script>
     // Back to top button behavior
     const backToTopBtn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.style.display = 'block';
-      } else {
-        backToTopBtn.style.display = 'none';
-      }
+      if (window.scrollY > 300) backToTopBtn.style.display = 'block';
+      else backToTopBtn.style.display = 'none';
     });
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -383,12 +497,9 @@
     const darkModeToggle = document.getElementById('darkModeToggle');
     darkModeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-      if(document.body.classList.contains('dark-mode')) {
-        darkModeToggle.textContent = '☀️';
-      } else {
-        darkModeToggle.textContent = '🌓';
-      }
+      darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌓';
     });
   </script>
 </body>
+
 </html>

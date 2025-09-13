@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trust Standard™ | Blacklink</title>
+    <link rel="icon" href="favicon.ico" />
+    <style>
+        /* ====== Base & Reset ====== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background: #111;
+            color: #eee;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 700;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ====== Navbar ====== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            backdrop-filter: blur(12px);
+            background: rgba(30, 30, 40, 0.9);
+            border-radius: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar .logo {
+            width: 120px;
+        }
+
+        .nav-tagline {
+            font-weight: 600;
+            color: #ccc;
+            margin-left: 1rem;
+        }
+
+        .nav-buttons button {
+            background: #b98eff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-buttons button:hover {
+            background: #8a65cc;
+        }
+
+        /* ====== Hero ====== */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            margin: 2rem auto;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #b98eff, #8a65cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+
+        /* ====== Trust Standard Section ====== */
+        .trust-standard {
+            max-width: 1000px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+
+        .trust-standard h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #b98eff, #8a65cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .trust-standard p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+        }
+
+        .standards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .standard {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            padding: 1.5rem;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 32px rgba(120, 80, 200, 0.2);
+            transition: 0.3s;
+        }
+
+        .standard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 48px rgba(120, 80, 200, 0.35);
+        }
+
+        .standard h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .standard ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+
+        .standard p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .level-a {
+            border-left: 6px solid #4CAF50;
+        }
+
+        .level-b {
+            border-left: 6px solid #FFC107;
+        }
+
+        .level-c {
+            border-left: 6px solid #F44336;
+        }
+
+        .level-d {
+            border-left: 6px solid #999;
+        }
+
+        /* ====== Footer ====== */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(30, 30, 40, 0.9);
+            margin-top: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        footer img {
+            width: 120px;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* ====== Responsive ====== */
+        @media(min-width:800px) {
+            .standards {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <img src="trust-logo.svg" alt="Blacklink Logo" class="logo" />
+            <div class="nav-tagline"><b>Trust.</b> Standardized source evaluation.</div>
+            <div class="nav-buttons">
+                <a href="index.html"><button>Home</button></a>
+                <a href="trust.html"><button>Trust</button></a>
+                <a href="help.html"><button>Help</button></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Trust Standard™† Framework</h1>
+        <p>Learn how sources are ranked and evaluated using Trust Standard™ criteria.</p>
+        <p style="margin-top:1rem; font-size:0.85rem; color:#888;">
+            † Trust Standard is NOT currently a registered trademark of Blacklink Education.
+        </p>
+    </div>
+
+    <!-- Trust Standard -->
+    <section class="trust-standard">
+        <h2>Ranking Levels & Criteria</h2>
+        <p>The Trust Standard™ ensures every source is evaluated for reliability, credibility, and accuracy.</p>
+
+        <div class="standards">
+            <div class="standard level-a">
+                <h3>Level A (Trusted)</h3>
+                <ul>
+                    <li>Verified facts, cited, and cross-referenced.</li>
+                    <li>Author or organization has proven expertise.</li>
+                    <li>No known bias or misinformation history.</li>
+                </ul>
+                <p>Examples: Academic journals, government publications, verified news outlets.</p>
+            </div>
+
+            <div class="standard level-b">
+                <h3>Level B (Mostly Trusted)</h3>
+                <ul>
+                    <li>Generally accurate, minor errors possible.</li>
+                    <li>Author has credible credentials.</li>
+                    <li>Some cross-referencing exists.</li>
+                </ul>
+                <p>Examples: Industry publications, smaller news outlets, well-known blogs.</p>
+            </div>
+
+            <div class="standard level-c">
+                <h3>Level C (Caution)</h3>
+                <ul>
+                    <li>Accuracy is questionable.</li>
+                    <li>Author credentials unclear or unverified.</li>
+                    <li>Few or no cross-references.</li>
+                    <li>Potential bias or sensationalism detected.</li>
+                </ul>
+                <p>Examples: Personal blogs, opinion pieces, non-peer-reviewed websites.</p>
+            </div>
+
+            <div class="standard level-d">
+                <h3>Level D (Not Trusted)</h3>
+                <ul>
+                    <li>Unverified, misleading, or false information.</li>
+                    <li>Author anonymous or known for misinformation.</li>
+                    <li>No supporting evidence.</li>
+                    <li>Highly biased or clickbait content.</li>
+                </ul>
+                <p>Examples: Fake news sites, unverified social media posts, clickbait articles.</p>
+            </div>
+        </div>
+
+        <p style="margin-top:1.5rem; font-size:0.9rem; color:#888;">
+            ⚖️ Sources are assessed under Trust Standard™ v1.0 regulations. Evaluations are updated periodically.
+        </p>
+        <p style="margin-top:1.5rem; font-size:0.9rem; color:#888;">
+            Sources added to Blacklink Trust before version 1.2 use a different evaluation system.
+        </p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <img src="Logo.svg" alt="Blacklink Logo">
+        <h1>Blacklink Education</h1>
+        <p>©2025 Blacklink Education</p>
+    </footer>
+</body>
+
+</html>

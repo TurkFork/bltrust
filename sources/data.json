@@ -2,18 +2,23 @@
   {
     "name": "NASA",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/nasa.gov", "alt": "NASA logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/nasa.gov",
+        "alt": "NASA logo"
+      },
       "category": "Science",
       "visitUrl": "https://nasa.gov",
       "detailsPage": "sources/nasa.html",
-      "trust": "trusted",
-      "description": "test."
+      "trust": "trusted"
     }
   },
   {
     "name": "Wikipedia",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/wikipedia.org", "alt": "Wikipedia logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/wikipedia.org",
+        "alt": "Wikipedia logo"
+      },
       "category": "General",
       "visitUrl": "https://wikipedia.org",
       "detailsPage": "sources/wikipedia.html",
@@ -23,7 +28,10 @@
   {
     "name": "Blacklink News",
     "details": {
-      "logo": { "src": "Logo.png", "alt": "Blacklink News logo" },
+      "logo": {
+        "src": "Logo.png",
+        "alt": "Blacklink News logo"
+      },
       "category": "Education",
       "visitUrl": "https://blacklink.net/news",
       "detailsPage": "sources/news.html",
@@ -33,7 +41,10 @@
   {
     "name": "RealRawNews",
     "details": {
-      "logo": { "src": "https://www.svgrepo.com/show/379925/alert-error.svg", "alt": "RealRawNews icon" },
+      "logo": {
+        "src": "https://www.svgrepo.com/show/379925/alert-error.svg",
+        "alt": "RealRawNews icon"
+      },
       "category": "News",
       "visitUrl": "https://realrawnews.com",
       "detailsPage": "sources/realrawnews.html",
@@ -43,7 +54,10 @@
   {
     "name": "National Geographic",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/nationalgeographic.com", "alt": "National Geographic logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/nationalgeographic.com",
+        "alt": "National Geographic logo"
+      },
       "category": "Science",
       "visitUrl": "https://nationalgeographic.com",
       "detailsPage": "sources/natgeo.html",
@@ -53,7 +67,10 @@
   {
     "name": "The New York Times",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/nytimes.com", "alt": "NY Times logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/nytimes.com",
+        "alt": "NY Times logo"
+      },
       "category": "News",
       "visitUrl": "https://nytimes.com",
       "detailsPage": "sources/nytimes.html",
@@ -63,7 +80,10 @@
   {
     "name": "Snopes",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/snopes.com", "alt": "Snopes logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/snopes.com",
+        "alt": "Snopes logo"
+      },
       "category": "Fact-Checking",
       "visitUrl": "https://snopes.com",
       "detailsPage": "sources/snopes.html",
@@ -73,7 +93,10 @@
   {
     "name": "The Onion",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/theonion.com", "alt": "The Onion logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/theonion.com",
+        "alt": "The Onion logo"
+      },
       "category": "Satire",
       "visitUrl": "https://theonion.com",
       "detailsPage": "sources/theonion.html",
@@ -83,7 +106,10 @@
   {
     "name": "Scientific American",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/scientificamerican.com", "alt": "Scientific American logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/scientificamerican.com",
+        "alt": "Scientific American logo"
+      },
       "category": "Science",
       "visitUrl": "https://scientificamerican.com",
       "detailsPage": "sources/scientificamerican.html",
@@ -93,7 +119,10 @@
   {
     "name": "Reuters",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/reuters.com", "alt": "Reuters logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/reuters.com",
+        "alt": "Reuters logo"
+      },
       "category": "News",
       "visitUrl": "https://reuters.com",
       "detailsPage": "sources/reuters.html",
@@ -103,7 +132,10 @@
   {
     "name": "BuzzFeed News",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/buzzfeednews.com", "alt": "BuzzFeed News logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/buzzfeednews.com",
+        "alt": "BuzzFeed News logo"
+      },
       "category": "News",
       "visitUrl": "https://buzzfeednews.com",
       "detailsPage": "sources/buzzfeednews.html",
@@ -113,7 +145,10 @@
   {
     "name": "FactCheck.org",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/factcheck.org", "alt": "FactCheck.org logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/factcheck.org",
+        "alt": "FactCheck.org logo"
+      },
       "category": "Fact-Checking",
       "visitUrl": "https://factcheck.org",
       "detailsPage": "sources/factcheck.html",
@@ -123,7 +158,10 @@
   {
     "name": "Politifact",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/politifact.com", "alt": "Politifact logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/politifact.com",
+        "alt": "Politifact logo"
+      },
       "category": "Fact-Checking",
       "visitUrl": "https://politifact.com",
       "detailsPage": "sources/politifact.html",
@@ -133,7 +171,10 @@
   {
     "name": "Daily Mail",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/dailymail.co.uk", "alt": "Daily Mail logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/dailymail.co.uk",
+        "alt": "Daily Mail logo"
+      },
       "category": "News",
       "visitUrl": "https://dailymail.co.uk",
       "detailsPage": "sources/dailymail.html",
@@ -143,7 +184,10 @@
   {
     "name": "The Verge",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/theverge.com", "alt": "The Verge logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/theverge.com",
+        "alt": "The Verge logo"
+      },
       "category": "Tech",
       "visitUrl": "https://theverge.com",
       "detailsPage": "sources/theverge.html",
@@ -153,7 +197,10 @@
   {
     "name": "Wired",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/wired.com", "alt": "Wired logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/wired.com",
+        "alt": "Wired logo"
+      },
       "category": "Tech",
       "visitUrl": "https://wired.com",
       "detailsPage": "sources/wired.html",
@@ -163,7 +210,10 @@
   {
     "name": "The Guardian",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/theguardian.com", "alt": "The Guardian logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/theguardian.com",
+        "alt": "The Guardian logo"
+      },
       "category": "News",
       "visitUrl": "https://theguardian.com",
       "detailsPage": "sources/guardian.html",
@@ -173,7 +223,10 @@
   {
     "name": "CNN",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/cnn.com", "alt": "CNN logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/cnn.com",
+        "alt": "CNN logo"
+      },
       "category": "News",
       "visitUrl": "https://cnn.com",
       "detailsPage": "sources/cnn.html",
@@ -183,7 +236,10 @@
   {
     "name": "Fox News",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/foxnews.com", "alt": "Fox News logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/foxnews.com",
+        "alt": "Fox News logo"
+      },
       "category": "News",
       "visitUrl": "https://foxnews.com",
       "detailsPage": "sources/foxnews.html",
@@ -193,7 +249,10 @@
   {
     "name": "The Washington Post",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/washingtonpost.com", "alt": "Washington Post logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/washingtonpost.com",
+        "alt": "Washington Post logo"
+      },
       "category": "News",
       "visitUrl": "https://washingtonpost.com",
       "detailsPage": "sources/washingtonpost.html",
@@ -203,7 +262,10 @@
   {
     "name": "BBC News",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/bbc.com", "alt": "BBC News logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/bbc.com",
+        "alt": "BBC News logo"
+      },
       "category": "News",
       "visitUrl": "https://bbc.com/news",
       "detailsPage": "sources/bbcnews.html",
@@ -213,7 +275,10 @@
   {
     "name": "American Psychological Association",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/apa.org", "alt": "APA logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/apa.org",
+        "alt": "APA logo"
+      },
       "category": "Education",
       "visitUrl": "https://apa.org",
       "detailsPage": "sources/apa.html",
@@ -223,7 +288,10 @@
   {
     "name": "MIT Technology Review",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/technologyreview.com", "alt": "MIT Technology Review logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/technologyreview.com",
+        "alt": "MIT Technology Review logo"
+      },
       "category": "Technology",
       "visitUrl": "https://technologyreview.com",
       "detailsPage": "sources/mittechreview.html",
@@ -233,7 +301,10 @@
   {
     "name": "ProPublica",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/propublica.org", "alt": "ProPublica logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/propublica.org",
+        "alt": "ProPublica logo"
+      },
       "category": "News",
       "visitUrl": "https://propublica.org",
       "detailsPage": "sources/propublica.html",
@@ -243,7 +314,10 @@
   {
     "name": "Science Daily",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/sciencedaily.com", "alt": "Science Daily logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/sciencedaily.com",
+        "alt": "Science Daily logo"
+      },
       "category": "Science",
       "visitUrl": "https://sciencedaily.com",
       "detailsPage": "sources/sciencedaily.html",
@@ -253,7 +327,10 @@
   {
     "name": "Healthline",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/healthline.com", "alt": "Healthline logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/healthline.com",
+        "alt": "Healthline logo"
+      },
       "category": "Health",
       "visitUrl": "https://healthline.com",
       "detailsPage": "sources/healthline.html",
@@ -263,7 +340,10 @@
   {
     "name": "MIT OpenCourseWare",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/ocw.mit.edu", "alt": "MIT OpenCourseWare logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/ocw.mit.edu",
+        "alt": "MIT OpenCourseWare logo"
+      },
       "category": "Education",
       "visitUrl": "https://ocw.mit.edu",
       "detailsPage": "sources/mitocw.html",
@@ -273,7 +353,10 @@
   {
     "name": "The Economist",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/economist.com", "alt": "The Economist logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/economist.com",
+        "alt": "The Economist logo"
+      },
       "category": "News",
       "visitUrl": "https://economist.com",
       "detailsPage": "sources/economist.html",
@@ -283,7 +366,10 @@
   {
     "name": "PBS NewsHour",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/pbs.org", "alt": "PBS NewsHour logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/pbs.org",
+        "alt": "PBS NewsHour logo"
+      },
       "category": "News",
       "visitUrl": "https://pbs.org/newshour",
       "detailsPage": "sources/pbsnewshour.html",
@@ -293,62 +379,80 @@
   {
     "name": "Associated Press",
     "details": {
-      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Associated_Press_logo.svg", "alt": "Associated Press logo" },
+      "logo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Associated_Press_logo.svg",
+        "alt": "Associated Press logo"
+      },
       "category": "News",
       "visitUrl": "https://apnews.com",
       "detailsPage": "sources/associatedpress.html",
       "trust": "trusted",
-      "description": "Global independent news agency founded in 1846" 
+      "description": "Global independent news agency founded in 1846"
     }
   },
   {
     "name": "Live Science",
     "details": {
-      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Live_Science_logo.svg", "alt": "Live Science logo" },
+      "logo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Live_Science_logo.svg",
+        "alt": "Live Science logo"
+      },
       "category": "Science",
       "visitUrl": "https://livescience.com",
       "detailsPage": "sources/livescience.html",
       "trust": "trusted",
-      "description": "Popular science news with expert journalists reporting on space, health, archaeology, and more" 
+      "description": "Popular science news with expert journalists reporting on space, health, archaeology, and more"
     }
   },
   {
     "name": "ScienceDaily",
     "details": {
-      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/ScienceDaily_logo.png", "alt": "ScienceDaily logo" },
+      "logo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/ScienceDaily_logo.png",
+        "alt": "ScienceDaily logo"
+      },
       "category": "Science",
       "visitUrl": "https://sciencedaily.com",
       "detailsPage": "sources/sciencedaily.html",
       "trust": "trusted",
-      "description": "Aggregates lightly edited press releases on research across disciplines" 
+      "description": "Aggregates lightly edited press releases on research across disciplines"
     }
   },
   {
     "name": "Australian Associated Press",
     "details": {
-      "logo": { "src": "https://upload.wikimedia.org/wikipedia/commons/c/c7/AAP-logo.svg", "alt": "AAP logo" },
+      "logo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/c7/AAP-logo.svg",
+        "alt": "AAP logo"
+      },
       "category": "News",
       "visitUrl": "https://aap.com.au",
       "detailsPage": "sources/aap.html",
       "trust": "trusted",
-      "description": "Australia’s leading not‑for‑profit news wire agency" 
+      "description": "Australia's leading not‑for‑profit news wire agency"
     }
   },
   {
     "name": "Ask A Biologist",
     "details": {
-      "logo": { "src": "http://askabiologist.asu.edu/sites/default/files/logo_0.png", "alt": "Ask A Biologist logo" },
+      "logo": {
+        "src": "http://askabiologist.asu.edu/sites/default/files/logo_0.png",
+        "alt": "Ask A Biologist logo"
+      },
       "category": "Education",
       "visitUrl": "http://askabiologist.asu.edu",
       "detailsPage": "sources/askabiologist.html",
       "trust": "trusted",
-      "description": "Arizona State University life science outreach Q&A program" 
+      "description": "Arizona State University life science outreach Q&A program"
     }
   },
   {
     "name": "Nature",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/nature.com", "alt": "Nature logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/nature.com",
+        "alt": "Nature logo"
+      },
       "category": "Science",
       "visitUrl": "https://www.nature.com",
       "detailsPage": "sources/nature.html",
@@ -359,7 +463,10 @@
   {
     "name": "Harvard Gazette",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/news.harvard.edu", "alt": "Harvard Gazette logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/news.harvard.edu",
+        "alt": "Harvard Gazette logo"
+      },
       "category": "Education",
       "visitUrl": "https://news.harvard.edu/gazette",
       "detailsPage": "sources/harvardgazette.html",
@@ -370,7 +477,10 @@
   {
     "name": "Stanford News",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/news.stanford.edu", "alt": "Stanford News logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/news.stanford.edu",
+        "alt": "Stanford News logo"
+      },
       "category": "Education",
       "visitUrl": "https://news.stanford.edu",
       "detailsPage": "sources/stanfordnews.html",
@@ -381,7 +491,10 @@
   {
     "name": "Medical News Today",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/medicalnewstoday.com", "alt": "Medical News Today logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/medicalnewstoday.com",
+        "alt": "Medical News Today logo"
+      },
       "category": "Health",
       "visitUrl": "https://medicalnewstoday.com",
       "detailsPage": "sources/medicalnewstoday.html",
@@ -392,7 +505,10 @@
   {
     "name": "Verywell Health",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/verywellhealth.com", "alt": "Verywell Health logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/verywellhealth.com",
+        "alt": "Verywell Health logo"
+      },
       "category": "Health",
       "visitUrl": "https://verywellhealth.com",
       "detailsPage": "sources/verywellhealth.html",
@@ -403,7 +519,10 @@
   {
     "name": "Axios",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/axios.com", "alt": "Axios logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/axios.com",
+        "alt": "Axios logo"
+      },
       "category": "News",
       "visitUrl": "https://axios.com",
       "detailsPage": "sources/axios.html",
@@ -414,7 +533,10 @@
   {
     "name": "TechCrunch",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/techcrunch.com", "alt": "TechCrunch logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/techcrunch.com",
+        "alt": "TechCrunch logo"
+      },
       "category": "Tech",
       "visitUrl": "https://techcrunch.com",
       "detailsPage": "sources/techcrunch.html",
@@ -425,7 +547,10 @@
   {
     "name": "The Intercept",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/theintercept.com", "alt": "The Intercept logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/theintercept.com",
+        "alt": "The Intercept logo"
+      },
       "category": "News",
       "visitUrl": "https://theintercept.com",
       "detailsPage": "sources/theintercept.html",
@@ -436,7 +561,10 @@
   {
     "name": "New Scientist",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/newscientist.com", "alt": "New Scientist logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/newscientist.com",
+        "alt": "New Scientist logo"
+      },
       "category": "Science",
       "visitUrl": "https://newscientist.com",
       "detailsPage": "sources/newscientist.html",
@@ -447,7 +575,10 @@
   {
     "name": "CNET",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/cnet.com", "alt": "CNET logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/cnet.com",
+        "alt": "CNET logo"
+      },
       "category": "Tech",
       "visitUrl": "https://cnet.com",
       "detailsPage": "sources/cnet.html",
@@ -458,7 +589,10 @@
   {
     "name": "Space.com",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/space.com", "alt": "Space.com logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/space.com",
+        "alt": "Space.com logo"
+      },
       "category": "Science",
       "visitUrl": "https://space.com",
       "detailsPage": "sources/space.html",
@@ -469,7 +603,10 @@
   {
     "name": "NPR",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/npr.org", "alt": "NPR logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/npr.org",
+        "alt": "NPR logo"
+      },
       "category": "News",
       "visitUrl": "https://npr.org",
       "detailsPage": "sources/npr.html",
@@ -480,7 +617,10 @@
   {
     "name": "Vox",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/vox.com", "alt": "Vox logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/vox.com",
+        "alt": "Vox logo"
+      },
       "category": "News",
       "visitUrl": "https://vox.com",
       "detailsPage": "sources/vox.html",
@@ -491,7 +631,10 @@
   {
     "name": "The Atlantic",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/theatlantic.com", "alt": "The Atlantic logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/theatlantic.com",
+        "alt": "The Atlantic logo"
+      },
       "category": "News",
       "visitUrl": "https://theatlantic.com",
       "detailsPage": "sources/theatlantic.html",
@@ -502,7 +645,10 @@
   {
     "name": "The Conversation",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/theconversation.com", "alt": "The Conversation logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/theconversation.com",
+        "alt": "The Conversation logo"
+      },
       "category": "Education",
       "visitUrl": "https://theconversation.com",
       "detailsPage": "sources/theconversation.html",
@@ -513,7 +659,10 @@
   {
     "name": "History.com",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/history.com", "alt": "History.com logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/history.com",
+        "alt": "History.com logo"
+      },
       "category": "Education",
       "visitUrl": "https://history.com",
       "detailsPage": "sources/history.html",
@@ -524,7 +673,10 @@
   {
     "name": "Quartz",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/qz.com", "alt": "Quartz logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/qz.com",
+        "alt": "Quartz logo"
+      },
       "category": "News",
       "visitUrl": "https://qz.com",
       "detailsPage": "sources/quartz.html",
@@ -535,7 +687,10 @@
   {
     "name": "FiveThirtyEight",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/fivethirtyeight.com", "alt": "FiveThirtyEight logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/fivethirtyeight.com",
+        "alt": "FiveThirtyEight logo"
+      },
       "category": "News",
       "visitUrl": "https://fivethirtyeight.com",
       "detailsPage": "sources/fivethirtyeight.html",
@@ -546,7 +701,10 @@
   {
     "name": "Al Jazeera",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/aljazeera.com", "alt": "Al Jazeera logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/aljazeera.com",
+        "alt": "Al Jazeera logo"
+      },
       "category": "News",
       "visitUrl": "https://aljazeera.com",
       "detailsPage": "sources/aljazeera.html",
@@ -557,12 +715,4635 @@
   {
     "name": "Scientific Reports",
     "details": {
-      "logo": { "src": "https://logo.clearbit.com/nature.com", "alt": "Scientific Reports logo" },
+      "logo": {
+        "src": "https://logo.clearbit.com/nature.com",
+        "alt": "Scientific Reports logo"
+      },
       "category": "Science",
       "visitUrl": "https://www.nature.com/srep",
       "detailsPage": "sources/scientificreports.html",
       "trust": "trusted",
       "description": "Open access journal from Nature Portfolio"
+    }
+  },
+  {
+    "name": "The Wall Street Journal",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/wsj.com",
+        "alt": "WSJ logo"
+      },
+      "category": "News",
+      "visitUrl": "https://wsj.com",
+      "detailsPage": "sources/wsj.html",
+      "trust": "mostly-trusted",
+      "description": "Business and financial news publication"
+    }
+  },
+  {
+    "name": "Financial Times",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ft.com",
+        "alt": "Financial Times logo"
+      },
+      "category": "News",
+      "visitUrl": "https://ft.com",
+      "detailsPage": "sources/ft.html",
+      "trust": "trusted",
+      "description": "International business newspaper"
+    }
+  },
+  {
+    "name": "Bloomberg",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bloomberg.com",
+        "alt": "Bloomberg logo"
+      },
+      "category": "News",
+      "visitUrl": "https://bloomberg.com",
+      "detailsPage": "sources/bloomberg.html",
+      "trust": "trusted",
+      "description": "Financial and business news service"
+    }
+  },
+  {
+    "name": "TIME",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/time.com",
+        "alt": "TIME logo"
+      },
+      "category": "News",
+      "visitUrl": "https://time.com",
+      "detailsPage": "sources/time.html",
+      "trust": "mostly-trusted",
+      "description": "Weekly news magazine covering politics, world events, and culture"
+    }
+  },
+  {
+    "name": "Newsweek",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/newsweek.com",
+        "alt": "Newsweek logo"
+      },
+      "category": "News",
+      "visitUrl": "https://newsweek.com",
+      "detailsPage": "sources/newsweek.html",
+      "trust": "mostly-trusted",
+      "description": "Weekly news magazine"
+    }
+  },
+  {
+    "name": "USA Today",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/usatoday.com",
+        "alt": "USA Today logo"
+      },
+      "category": "News",
+      "visitUrl": "https://usatoday.com",
+      "detailsPage": "sources/usatoday.html",
+      "trust": "mostly-trusted",
+      "description": "National daily newspaper"
+    }
+  },
+  {
+    "name": "Los Angeles Times",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/latimes.com",
+        "alt": "LA Times logo"
+      },
+      "category": "News",
+      "visitUrl": "https://latimes.com",
+      "detailsPage": "sources/latimes.html",
+      "trust": "mostly-trusted",
+      "description": "West Coast daily newspaper"
+    }
+  },
+  {
+    "name": "Chicago Tribune",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/chicagotribune.com",
+        "alt": "Chicago Tribune logo"
+      },
+      "category": "News",
+      "visitUrl": "https://chicagotribune.com",
+      "detailsPage": "sources/chicagotribune.html",
+      "trust": "mostly-trusted",
+      "description": "Midwest daily newspaper"
+    }
+  },
+  {
+    "name": "The Boston Globe",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bostonglobe.com",
+        "alt": "Boston Globe logo"
+      },
+      "category": "News",
+      "visitUrl": "https://bostonglobe.com",
+      "detailsPage": "sources/bostonglobe.html",
+      "trust": "mostly-trusted",
+      "description": "New England daily newspaper"
+    }
+  },
+  {
+    "name": "The Times (UK)",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/thetimes.co.uk",
+        "alt": "The Times logo"
+      },
+      "category": "News",
+      "visitUrl": "https://thetimes.co.uk",
+      "detailsPage": "sources/timestimes.html",
+      "trust": "mostly-trusted",
+      "description": "British daily newspaper"
+    }
+  },
+  {
+    "name": "The Independent",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/independent.co.uk",
+        "alt": "The Independent logo"
+      },
+      "category": "News",
+      "visitUrl": "https://independent.co.uk",
+      "detailsPage": "sources/independent.html",
+      "trust": "mostly-trusted",
+      "description": "British online newspaper"
+    }
+  },
+  {
+    "name": "Le Monde",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/lemonde.fr",
+        "alt": "Le Monde logo"
+      },
+      "category": "News",
+      "visitUrl": "https://lemonde.fr",
+      "detailsPage": "sources/lemonde.html",
+      "trust": "trusted",
+      "description": "French daily newspaper"
+    }
+  },
+  {
+    "name": "Der Spiegel",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/spiegel.de",
+        "alt": "Der Spiegel logo"
+      },
+      "category": "News",
+      "visitUrl": "https://spiegel.de",
+      "detailsPage": "sources/spiegel.html",
+      "trust": "trusted",
+      "description": "German weekly news magazine"
+    }
+  },
+  {
+    "name": "The Japan Times",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/japantimes.co.jp",
+        "alt": "Japan Times logo"
+      },
+      "category": "News",
+      "visitUrl": "https://japantimes.co.jp",
+      "detailsPage": "sources/japantimes.html",
+      "trust": "trusted",
+      "description": "English-language Japanese daily newspaper"
+    }
+  },
+  {
+    "name": "South China Morning Post",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/scmp.com",
+        "alt": "SCMP logo"
+      },
+      "category": "News",
+      "visitUrl": "https://scmp.com",
+      "detailsPage": "sources/scmp.html",
+      "trust": "mostly-trusted",
+      "description": "Hong Kong English-language newspaper"
+    }
+  },
+  {
+    "name": "The Hindu",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/thehindu.com",
+        "alt": "The Hindu logo"
+      },
+      "category": "News",
+      "visitUrl": "https://thehindu.com",
+      "detailsPage": "sources/thehindu.html",
+      "trust": "mostly-trusted",
+      "description": "Indian English-language daily newspaper"
+    }
+  },
+  {
+    "name": "Times of India",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/timesofindia.com",
+        "alt": "Times of India logo"
+      },
+      "category": "News",
+      "visitUrl": "https://timesofindia.com",
+      "detailsPage": "sources/timesofindia.html",
+      "trust": "mostly-trusted",
+      "description": "Indian English-language daily newspaper"
+    }
+  },
+  {
+    "name": "CBC News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cbc.ca",
+        "alt": "CBC News logo"
+      },
+      "category": "News",
+      "visitUrl": "https://cbc.ca/news",
+      "detailsPage": "sources/cbc.html",
+      "trust": "trusted",
+      "description": "Canadian Broadcasting Corporation news division"
+    }
+  },
+  {
+    "name": "Globe and Mail",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/theglobeandmail.com",
+        "alt": "Globe and Mail logo"
+      },
+      "category": "News",
+      "visitUrl": "https://theglobeandmail.com",
+      "detailsPage": "sources/globeandmail.html",
+      "trust": "trusted",
+      "description": "Canadian national newspaper"
+    }
+  },
+  {
+    "name": "Sydney Morning Herald",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/smh.com.au",
+        "alt": "SMH logo"
+      },
+      "category": "News",
+      "visitUrl": "https://smh.com.au",
+      "detailsPage": "sources/smh.html",
+      "trust": "mostly-trusted",
+      "description": "Australian daily newspaper"
+    }
+  },
+  {
+    "name": "The Age",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/theage.com.au",
+        "alt": "The Age logo"
+      },
+      "category": "News",
+      "visitUrl": "https://theage.com.au",
+      "detailsPage": "sources/theage.html",
+      "trust": "mostly-trusted",
+      "description": "Melbourne daily newspaper"
+    }
+  },
+  {
+    "name": "New York Post",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nypost.com",
+        "alt": "NY Post logo"
+      },
+      "category": "News",
+      "visitUrl": "https://nypost.com",
+      "detailsPage": "sources/nypost.html",
+      "trust": "not-trusted",
+      "description": "New York tabloid newspaper"
+    }
+  },
+  {
+    "name": "New York Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nymag.com",
+        "alt": "NY Magazine logo"
+      },
+      "category": "News",
+      "visitUrl": "https://nymag.com",
+      "detailsPage": "sources/nymag.html",
+      "trust": "mostly-trusted",
+      "description": "Weekly magazine covering politics, culture, and lifestyle"
+    }
+  },
+  {
+    "name": "Vanity Fair",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/vanityfair.com",
+        "alt": "Vanity Fair logo"
+      },
+      "category": "News",
+      "visitUrl": "https://vanityfair.com",
+      "detailsPage": "sources/vanityfair.html",
+      "trust": "mostly-trusted",
+      "description": "Magazine covering culture, politics, and current affairs"
+    }
+  },
+  {
+    "name": "Harper's Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/harpers.org",
+        "alt": "Harper's logo"
+      },
+      "category": "News",
+      "visitUrl": "https://harpers.org",
+      "detailsPage": "sources/harpers.html",
+      "trust": "trusted",
+      "description": "Monthly magazine of literature, politics, culture, and the arts"
+    }
+  },
+  {
+    "name": "The New Yorker",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/newyorker.com",
+        "alt": "The New Yorker logo"
+      },
+      "category": "News",
+      "visitUrl": "https://newyorker.com",
+      "detailsPage": "sources/newyorker.html",
+      "trust": "trusted",
+      "description": "Weekly magazine featuring journalism, commentary, criticism, essays, fiction, and poetry"
+    }
+  },
+  {
+    "name": "Rolling Stone",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/rollingstone.com",
+        "alt": "Rolling Stone logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://rollingstone.com",
+      "detailsPage": "sources/rollingstone.html",
+      "trust": "mostly-trusted",
+      "description": "Music and popular culture magazine"
+    }
+  },
+  {
+    "name": "Entertainment Weekly",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ew.com",
+        "alt": "EW logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://ew.com",
+      "detailsPage": "sources/ew.html",
+      "trust": "mostly-trusted",
+      "description": "Entertainment news and reviews magazine"
+    }
+  },
+  {
+    "name": "Variety",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/variety.com",
+        "alt": "Variety logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://variety.com",
+      "detailsPage": "sources/variety.html",
+      "trust": "trusted",
+      "description": "Entertainment industry trade publication"
+    }
+  },
+  {
+    "name": "The Hollywood Reporter",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/hollywoodreporter.com",
+        "alt": "THR logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://hollywoodreporter.com",
+      "detailsPage": "sources/thr.html",
+      "trust": "trusted",
+      "description": "Entertainment industry trade publication"
+    }
+  },
+  {
+    "name": "Deadline",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/deadline.com",
+        "alt": "Deadline logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://deadline.com",
+      "detailsPage": "sources/deadline.html",
+      "trust": "trusted",
+      "description": "Entertainment industry news website"
+    }
+  },
+  {
+    "name": "ESPN",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/espn.com",
+        "alt": "ESPN logo"
+      },
+      "category": "Sports",
+      "visitUrl": "https://espn.com",
+      "detailsPage": "sources/espn.html",
+      "trust": "mostly-trusted",
+      "description": "Sports news and entertainment network"
+    }
+  },
+  {
+    "name": "Sports Illustrated",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/si.com",
+        "alt": "SI logo"
+      },
+      "category": "Sports",
+      "visitUrl": "https://si.com",
+      "detailsPage": "sources/si.html",
+      "trust": "mostly-trusted",
+      "description": "Sports magazine and website"
+    }
+  },
+  {
+    "name": "The Athletic",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/theathletic.com",
+        "alt": "The Athletic logo"
+      },
+      "category": "Sports",
+      "visitUrl": "https://theathletic.com",
+      "detailsPage": "sources/athletic.html",
+      "trust": "trusted",
+      "description": "Sports journalism subscription service"
+    }
+  },
+  {
+    "name": "Bleacher Report",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bleacherreport.com",
+        "alt": "BR logo"
+      },
+      "category": "Sports",
+      "visitUrl": "https://bleacherreport.com",
+      "detailsPage": "sources/br.html",
+      "trust": "mostly-trusted",
+      "description": "Sports news and commentary website"
+    }
+  },
+  {
+    "name": "Forbes",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/forbes.com",
+        "alt": "Forbes logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://forbes.com",
+      "detailsPage": "sources/forbes.html",
+      "trust": "mostly-trusted",
+      "description": "Business magazine and website"
+    }
+  },
+  {
+    "name": "Fortune",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/fortune.com",
+        "alt": "Fortune logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://fortune.com",
+      "detailsPage": "sources/fortune.html",
+      "trust": "trusted",
+      "description": "Business magazine focusing on Fortune 500 companies"
+    }
+  },
+  {
+    "name": "Harvard Business Review",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/hbr.org",
+        "alt": "HBR logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://hbr.org",
+      "detailsPage": "sources/hbr.html",
+      "trust": "trusted",
+      "description": "Business magazine and leadership resource"
+    }
+  },
+  {
+    "name": "Fast Company",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/fastcompany.com",
+        "alt": "Fast Company logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://fastcompany.com",
+      "detailsPage": "sources/fastcompany.html",
+      "trust": "mostly-trusted",
+      "description": "Business magazine focusing on innovation and design"
+    }
+  },
+  {
+    "name": "Inc.",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/inc.com",
+        "alt": "Inc. logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://inc.com",
+      "detailsPage": "sources/inc.html",
+      "trust": "mostly-trusted",
+      "description": "Magazine for entrepreneurs and business owners"
+    }
+  },
+  {
+    "name": "Entrepreneur",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/entrepreneur.com",
+        "alt": "Entrepreneur logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://entrepreneur.com",
+      "detailsPage": "sources/entrepreneur.html",
+      "trust": "mostly-trusted",
+      "description": "Magazine and website for entrepreneurs"
+    }
+  },
+  {
+    "name": "Business Insider",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/businessinsider.com",
+        "alt": "BI logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://businessinsider.com",
+      "detailsPage": "sources/bi.html",
+      "trust": "mostly-trusted",
+      "description": "Business news and analysis website"
+    }
+  },
+  {
+    "name": "MarketWatch",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/marketwatch.com",
+        "alt": "MarketWatch logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://marketwatch.com",
+      "detailsPage": "sources/marketwatch.html",
+      "trust": "trusted",
+      "description": "Financial news and market data website"
+    }
+  },
+  {
+    "name": "CNBC",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cnbc.com",
+        "alt": "CNBC logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://cnbc.com",
+      "detailsPage": "sources/cnbc.html",
+      "trust": "mostly-trusted",
+      "description": "Business news television channel and website"
+    }
+  },
+  {
+    "name": "Yahoo Finance",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/finance.yahoo.com",
+        "alt": "Yahoo Finance logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://finance.yahoo.com",
+      "detailsPage": "sources/yahoofinance.html",
+      "trust": "mostly-trusted",
+      "description": "Financial news and data service"
+    }
+  },
+  {
+    "name": "Seeking Alpha",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/seekingalpha.com",
+        "alt": "Seeking Alpha logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://seekingalpha.com",
+      "detailsPage": "sources/seekingalpha.html",
+      "trust": "mostly-trusted",
+      "description": "Investment research and analysis platform"
+    }
+  },
+  {
+    "name": "The Motley Fool",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/fool.com",
+        "alt": "Motley Fool logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://fool.com",
+      "detailsPage": "sources/fool.html",
+      "trust": "mostly-trusted",
+      "description": "Investment advice and financial services company"
+    }
+  },
+  {
+    "name": "Barron's",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/barrons.com",
+        "alt": "Barron's logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://barrons.com",
+      "detailsPage": "sources/barrons.html",
+      "trust": "trusted",
+      "description": "Weekly financial magazine"
+    }
+  },
+  {
+    "name": "Kiplinger",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/kiplinger.com",
+        "alt": "Kiplinger logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://kiplinger.com",
+      "detailsPage": "sources/kiplinger.html",
+      "trust": "trusted",
+      "description": "Personal finance magazine and website"
+    }
+  },
+  {
+    "name": "Money",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/money.com",
+        "alt": "Money logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://money.com",
+      "detailsPage": "sources/money.html",
+      "trust": "mostly-trusted",
+      "description": "Personal finance magazine and website"
+    }
+  },
+  {
+    "name": "NerdWallet",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nerdwallet.com",
+        "alt": "NerdWallet logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://nerdwallet.com",
+      "detailsPage": "sources/nerdwallet.html",
+      "trust": "mostly-trusted",
+      "description": "Personal finance advice and comparison platform"
+    }
+  },
+  {
+    "name": "Credit Karma",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/creditkarma.com",
+        "alt": "Credit Karma logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://creditkarma.com",
+      "detailsPage": "sources/creditkarma.html",
+      "trust": "mostly-trusted",
+      "description": "Personal finance and credit monitoring service"
+    }
+  },
+  {
+    "name": "Investopedia",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/investopedia.com",
+        "alt": "Investopedia logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://investopedia.com",
+      "detailsPage": "sources/investopedia.html",
+      "trust": "trusted",
+      "description": "Financial education and dictionary website"
+    }
+  },
+  {
+    "name": "Khan Academy",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/khanacademy.org",
+        "alt": "Khan Academy logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://khanacademy.org",
+      "detailsPage": "sources/khanacademy.html",
+      "trust": "trusted",
+      "description": "Free online education platform"
+    }
+  },
+  {
+    "name": "Coursera",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/coursera.org",
+        "alt": "Coursera logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://coursera.org",
+      "detailsPage": "sources/coursera.html",
+      "trust": "trusted",
+      "description": "Online learning platform with university courses"
+    }
+  },
+  {
+    "name": "edX",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/edx.org",
+        "alt": "edX logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://edx.org",
+      "detailsPage": "sources/edx.html",
+      "trust": "trusted",
+      "description": "Online learning platform founded by Harvard and MIT"
+    }
+  },
+  {
+    "name": "Udemy",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/udemy.com",
+        "alt": "Udemy logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://udemy.com",
+      "detailsPage": "sources/udemy.html",
+      "trust": "mostly-trusted",
+      "description": "Online learning marketplace"
+    }
+  },
+  {
+    "name": "Codecademy",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/codecademy.com",
+        "alt": "Codecademy logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://codecademy.com",
+      "detailsPage": "sources/codecademy.html",
+      "trust": "trusted",
+      "description": "Interactive coding education platform"
+    }
+  },
+  {
+    "name": "freeCodeCamp",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/freecodecamp.org",
+        "alt": "freeCodeCamp logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://freecodecamp.org",
+      "detailsPage": "sources/freecodecamp.html",
+      "trust": "trusted",
+      "description": "Free coding bootcamp and certification platform"
+    }
+  },
+  {
+    "name": "Stack Overflow",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/stackoverflow.com",
+        "alt": "Stack Overflow logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://stackoverflow.com",
+      "detailsPage": "sources/stackoverflow.html",
+      "trust": "trusted",
+      "description": "Programming Q&A community"
+    }
+  },
+  {
+    "name": "GitHub",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/github.com",
+        "alt": "GitHub logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://github.com",
+      "detailsPage": "sources/github.html",
+      "trust": "trusted",
+      "description": "Software development platform and version control"
+    }
+  },
+  {
+    "name": "GitLab",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gitlab.com",
+        "alt": "GitLab logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://gitlab.com",
+      "detailsPage": "sources/gitlab.html",
+      "trust": "trusted",
+      "description": "DevOps platform and version control"
+    }
+  },
+  {
+    "name": "Ars Technica",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/arstechnica.com",
+        "alt": "Ars Technica logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://arstechnica.com",
+      "detailsPage": "sources/arstechnica.html",
+      "trust": "trusted",
+      "description": "Technology news and analysis website"
+    }
+  },
+  {
+    "name": "AnandTech",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/anandtech.com",
+        "alt": "AnandTech logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://anandtech.com",
+      "detailsPage": "sources/anandtech.html",
+      "trust": "trusted",
+      "description": "Hardware reviews and technology analysis"
+    }
+  },
+  {
+    "name": "Tom's Hardware",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/tomshardware.com",
+        "alt": "Tom's Hardware logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://tomshardware.com",
+      "detailsPage": "sources/tomshardware.html",
+      "trust": "trusted",
+      "description": "Computer hardware reviews and guides"
+    }
+  },
+  {
+    "name": "PCMag",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pcmag.com",
+        "alt": "PCMag logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://pcmag.com",
+      "detailsPage": "sources/pcmag.html",
+      "trust": "trusted",
+      "description": "Technology product reviews and news"
+    }
+  },
+  {
+    "name": "PCWorld",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pcworld.com",
+        "alt": "PCWorld logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://pcworld.com",
+      "detailsPage": "sources/pcworld.html",
+      "trust": "trusted",
+      "description": "PC and technology news and reviews"
+    }
+  },
+  {
+    "name": "MacWorld",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/macworld.com",
+        "alt": "MacWorld logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://macworld.com",
+      "detailsPage": "sources/macworld.html",
+      "trust": "trusted",
+      "description": "Apple and Mac-focused technology publication"
+    }
+  },
+  {
+    "name": "9to5Mac",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/9to5mac.com",
+        "alt": "9to5Mac logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://9to5mac.com",
+      "detailsPage": "sources/9to5mac.html",
+      "trust": "trusted",
+      "description": "Apple news and rumors website"
+    }
+  },
+  {
+    "name": "MacRumors",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/macrumors.com",
+        "alt": "MacRumors logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://macrumors.com",
+      "detailsPage": "sources/macrumors.html",
+      "trust": "trusted",
+      "description": "Apple news and rumors community"
+    }
+  },
+  {
+    "name": "Android Authority",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/androidauthority.com",
+        "alt": "Android Authority logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://androidauthority.com",
+      "detailsPage": "sources/androidauthority.html",
+      "trust": "trusted",
+      "description": "Android news, reviews, and tutorials"
+    }
+  },
+  {
+    "name": "Android Central",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/androidcentral.com",
+        "alt": "Android Central logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://androidcentral.com",
+      "detailsPage": "sources/androidcentral.html",
+      "trust": "trusted",
+      "description": "Android news, reviews, and community"
+    }
+  },
+  {
+    "name": "XDA Developers",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/xda-developers.com",
+        "alt": "XDA logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://xda-developers.com",
+      "detailsPage": "sources/xda.html",
+      "trust": "trusted",
+      "description": "Mobile development and customization community"
+    }
+  },
+  {
+    "name": "GSMArena",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gsmarena.com",
+        "alt": "GSMArena logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://gsmarena.com",
+      "detailsPage": "sources/gsmarena.html",
+      "trust": "trusted",
+      "description": "Mobile phone specifications and reviews database"
+    }
+  },
+  {
+    "name": "Digital Trends",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/digitaltrends.com",
+        "alt": "Digital Trends logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://digitaltrends.com",
+      "detailsPage": "sources/digitaltrends.html",
+      "trust": "mostly-trusted",
+      "description": "Consumer technology news and reviews"
+    }
+  },
+  {
+    "name": "Engadget",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/engadget.com",
+        "alt": "Engadget logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://engadget.com",
+      "detailsPage": "sources/engadget.html",
+      "trust": "mostly-trusted",
+      "description": "Consumer electronics news and reviews"
+    }
+  },
+  {
+    "name": "Gizmodo",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gizmodo.com",
+        "alt": "Gizmodo logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://gizmodo.com",
+      "detailsPage": "sources/gizmodo.html",
+      "trust": "mostly-trusted",
+      "description": "Technology and science blog"
+    }
+  },
+  {
+    "name": "Lifehacker",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/lifehacker.com",
+        "alt": "Lifehacker logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://lifehacker.com",
+      "detailsPage": "sources/lifehacker.html",
+      "trust": "mostly-trusted",
+      "description": "Productivity tips and technology guides"
+    }
+  },
+  {
+    "name": "Mashable",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mashable.com",
+        "alt": "Mashable logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://mashable.com",
+      "detailsPage": "sources/mashable.html",
+      "trust": "mostly-trusted",
+      "description": "Technology, digital culture, and entertainment news"
+    }
+  },
+  {
+    "name": "ZDNet",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/zdnet.com",
+        "alt": "ZDNet logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://zdnet.com",
+      "detailsPage": "sources/zdnet.html",
+      "trust": "trusted",
+      "description": "Business technology news and analysis"
+    }
+  },
+  {
+    "name": "TechRepublic",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/techrepublic.com",
+        "alt": "TechRepublic logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://techrepublic.com",
+      "detailsPage": "sources/techrepublic.html",
+      "trust": "trusted",
+      "description": "IT professional news and advice"
+    }
+  },
+  {
+    "name": "ComputerWorld",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/computerworld.com",
+        "alt": "ComputerWorld logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://computerworld.com",
+      "detailsPage": "sources/computerworld.html",
+      "trust": "trusted",
+      "description": "IT and business technology news"
+    }
+  },
+  {
+    "name": "InfoWorld",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/infoworld.com",
+        "alt": "InfoWorld logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://infoworld.com",
+      "detailsPage": "sources/infoworld.html",
+      "trust": "trusted",
+      "description": "IT decision-makers news and analysis"
+    }
+  },
+  {
+    "name": "Network World",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/networkworld.com",
+        "alt": "Network World logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://networkworld.com",
+      "detailsPage": "sources/networkworld.html",
+      "trust": "trusted",
+      "description": "Network and IT infrastructure news"
+    }
+  },
+  {
+    "name": "SC Media",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/scmagazine.com",
+        "alt": "SC Media logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://scmagazine.com",
+      "detailsPage": "sources/scmedia.html",
+      "trust": "trusted",
+      "description": "Cybersecurity news and analysis"
+    }
+  },
+  {
+    "name": "Dark Reading",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/darkreading.com",
+        "alt": "Dark Reading logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://darkreading.com",
+      "detailsPage": "sources/darkreading.html",
+      "trust": "trusted",
+      "description": "Information security news and analysis"
+    }
+  },
+  {
+    "name": "Krebs on Security",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/krebsonsecurity.com",
+        "alt": "Krebs on Security logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://krebsonsecurity.com",
+      "detailsPage": "sources/krebs.html",
+      "trust": "trusted",
+      "description": "Independent cybersecurity journalism by Brian Krebs"
+    }
+  },
+  {
+    "name": "Schneier on Security",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/schneier.com",
+        "alt": "Schneier logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://schneier.com",
+      "detailsPage": "sources/schneier.html",
+      "trust": "trusted",
+      "description": "Security technologist Bruce Schneier's blog"
+    }
+  },
+  {
+    "name": "IEEE Spectrum",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/spectrum.ieee.org",
+        "alt": "IEEE Spectrum logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://spectrum.ieee.org",
+      "detailsPage": "sources/ieeespectrum.html",
+      "trust": "trusted",
+      "description": "Engineering and technology magazine"
+    }
+  },
+  {
+    "name": "ACM Communications",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cacm.acm.org",
+        "alt": "ACM logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://cacm.acm.org",
+      "detailsPage": "sources/acm.html",
+      "trust": "trusted",
+      "description": "Association for Computing Machinery flagship publication"
+    }
+  },
+  {
+    "name": "arXiv",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/arxiv.org",
+        "alt": "arXiv logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://arxiv.org",
+      "detailsPage": "sources/arxiv.html",
+      "trust": "trusted",
+      "description": "Preprint repository for scientific papers"
+    }
+  },
+  {
+    "name": "bioRxiv",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/biorxiv.org",
+        "alt": "bioRxiv logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://biorxiv.org",
+      "detailsPage": "sources/biorxiv.html",
+      "trust": "trusted",
+      "description": "Preprint server for biology research"
+    }
+  },
+  {
+    "name": "medRxiv",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/medrxiv.org",
+        "alt": "medRxiv logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://medrxiv.org",
+      "detailsPage": "sources/medrxiv.html",
+      "trust": "trusted",
+      "description": "Preprint server for health sciences"
+    }
+  },
+  {
+    "name": "Cell",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cell.com",
+        "alt": "Cell logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://cell.com",
+      "detailsPage": "sources/cell.html",
+      "trust": "trusted",
+      "description": "Leading life sciences research journal"
+    }
+  },
+  {
+    "name": "Science",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/science.org",
+        "alt": "Science logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://science.org",
+      "detailsPage": "sources/science.html",
+      "trust": "trusted",
+      "description": "Premier scientific journal published by AAAS"
+    }
+  },
+  {
+    "name": "PLOS ONE",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/plos.org",
+        "alt": "PLOS ONE logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://journals.plos.org/plosone",
+      "detailsPage": "sources/plosone.html",
+      "trust": "trusted",
+      "description": "Open access multidisciplinary scientific journal"
+    }
+  },
+  {
+    "name": "The Lancet",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/thelancet.com",
+        "alt": "The Lancet logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://thelancet.com",
+      "detailsPage": "sources/lancet.html",
+      "trust": "trusted",
+      "description": "Leading medical journal"
+    }
+  },
+  {
+    "name": "New England Journal of Medicine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nejm.org",
+        "alt": "NEJM logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://nejm.org",
+      "detailsPage": "sources/nejm.html",
+      "trust": "trusted",
+      "description": "Prestigious medical journal"
+    }
+  },
+  {
+    "name": "JAMA",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/jamanetwork.com",
+        "alt": "JAMA logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://jamanetwork.com",
+      "detailsPage": "sources/jama.html",
+      "trust": "trusted",
+      "description": "Journal of the American Medical Association"
+    }
+  },
+  {
+    "name": "BMJ",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bmj.com",
+        "alt": "BMJ logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://bmj.com",
+      "detailsPage": "sources/bmj.html",
+      "trust": "trusted",
+      "description": "British Medical Journal"
+    }
+  },
+  {
+    "name": "Mayo Clinic",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mayoclinic.org",
+        "alt": "Mayo Clinic logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://mayoclinic.org",
+      "detailsPage": "sources/mayoclinic.html",
+      "trust": "trusted",
+      "description": "Medical research institution and healthcare provider"
+    }
+  },
+  {
+    "name": "Cleveland Clinic",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/clevelandclinic.org",
+        "alt": "Cleveland Clinic logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://clevelandclinic.org",
+      "detailsPage": "sources/clevelandclinic.html",
+      "trust": "trusted",
+      "description": "Medical center and health information resource"
+    }
+  },
+  {
+    "name": "Johns Hopkins Medicine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/hopkinsmedicine.org",
+        "alt": "Johns Hopkins logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://hopkinsmedicine.org",
+      "detailsPage": "sources/johnshopkins.html",
+      "trust": "trusted",
+      "description": "Leading medical institution and research center"
+    }
+  },
+  {
+    "name": "WebMD",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/webmd.com",
+        "alt": "WebMD logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://webmd.com",
+      "detailsPage": "sources/webmd.html",
+      "trust": "mostly-trusted",
+      "description": "Consumer health information website"
+    }
+  },
+  {
+    "name": "MedlinePlus",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/medlineplus.gov",
+        "alt": "MedlinePlus logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://medlineplus.gov",
+      "detailsPage": "sources/medlineplus.html",
+      "trust": "trusted",
+      "description": "NIH health information resource"
+    }
+  },
+  {
+    "name": "PubMed",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pubmed.ncbi.nlm.nih.gov",
+        "alt": "PubMed logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://pubmed.ncbi.nlm.nih.gov",
+      "detailsPage": "sources/pubmed.html",
+      "trust": "trusted",
+      "description": "Biomedical literature database"
+    }
+  },
+  {
+    "name": "CDC",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cdc.gov",
+        "alt": "CDC logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://cdc.gov",
+      "detailsPage": "sources/cdc.html",
+      "trust": "trusted",
+      "description": "Centers for Disease Control and Prevention"
+    }
+  },
+  {
+    "name": "WHO",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/who.int",
+        "alt": "WHO logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://who.int",
+      "detailsPage": "sources/who.html",
+      "trust": "trusted",
+      "description": "World Health Organization"
+    }
+  },
+  {
+    "name": "NIH",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nih.gov",
+        "alt": "NIH logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://nih.gov",
+      "detailsPage": "sources/nih.html",
+      "trust": "trusted",
+      "description": "National Institutes of Health"
+    }
+  },
+  {
+    "name": "FDA",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/fda.gov",
+        "alt": "FDA logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://fda.gov",
+      "detailsPage": "sources/fda.html",
+      "trust": "trusted",
+      "description": "Food and Drug Administration"
+    }
+  },
+  {
+    "name": "EPA",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/epa.gov",
+        "alt": "EPA logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://epa.gov",
+      "detailsPage": "sources/epa.html",
+      "trust": "trusted",
+      "description": "Environmental Protection Agency"
+    }
+  },
+  {
+    "name": "NOAA",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/noaa.gov",
+        "alt": "NOAA logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://noaa.gov",
+      "detailsPage": "sources/noaa.html",
+      "trust": "trusted",
+      "description": "National Oceanic and Atmospheric Administration"
+    }
+  },
+  {
+    "name": "National Weather Service",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/weather.gov",
+        "alt": "NWS logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://weather.gov",
+      "detailsPage": "sources/nws.html",
+      "trust": "trusted",
+      "description": "Official weather forecasting service"
+    }
+  },
+  {
+    "name": "Climate.gov",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/climate.gov",
+        "alt": "Climate.gov logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://climate.gov",
+      "detailsPage": "sources/climate.html",
+      "trust": "trusted",
+      "description": "NOAA climate science and services portal"
+    }
+  },
+  {
+    "name": "IPCC",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ipcc.ch",
+        "alt": "IPCC logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://ipcc.ch",
+      "detailsPage": "sources/ipcc.html",
+      "trust": "trusted",
+      "description": "Intergovernmental Panel on Climate Change"
+    }
+  },
+  {
+    "name": "Carbon Brief",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/carbonbrief.org",
+        "alt": "Carbon Brief logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://carbonbrief.org",
+      "detailsPage": "sources/carbonbrief.html",
+      "trust": "trusted",
+      "description": "Climate science and policy analysis"
+    }
+  },
+  {
+    "name": "RealClimate",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/realclimate.org",
+        "alt": "RealClimate logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://realclimate.org",
+      "detailsPage": "sources/realclimate.html",
+      "trust": "trusted",
+      "description": "Climate science blog by climate scientists"
+    }
+  },
+  {
+    "name": "Yale Climate Connections",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/yaleclimateconnections.org",
+        "alt": "Yale Climate logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://yaleclimateconnections.org",
+      "detailsPage": "sources/yaleclimate.html",
+      "trust": "trusted",
+      "description": "Climate science communication from Yale"
+    }
+  },
+  {
+    "name": "Inside Climate News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/insideclimatenews.org",
+        "alt": "ICN logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://insideclimatenews.org",
+      "detailsPage": "sources/icn.html",
+      "trust": "trusted",
+      "description": "Pulitzer Prize-winning climate journalism"
+    }
+  },
+  {
+    "name": "Grist",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/grist.org",
+        "alt": "Grist logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://grist.org",
+      "detailsPage": "sources/grist.html",
+      "trust": "mostly-trusted",
+      "description": "Environmental news and commentary"
+    }
+  },
+  {
+    "name": "Greentech Media",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/greentechmedia.com",
+        "alt": "GTM logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://greentechmedia.com",
+      "detailsPage": "sources/gtm.html",
+      "trust": "trusted",
+      "description": "Clean energy industry news and analysis"
+    }
+  },
+  {
+    "name": "CleanTechnica",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cleantechnica.com",
+        "alt": "CleanTechnica logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://cleantechnica.com",
+      "detailsPage": "sources/cleantechnica.html",
+      "trust": "mostly-trusted",
+      "description": "Clean technology news and analysis"
+    }
+  },
+  {
+    "name": "Energy Storage News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/energy-storage.news",
+        "alt": "ESN logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://energy-storage.news",
+      "detailsPage": "sources/esn.html",
+      "trust": "trusted",
+      "description": "Battery and energy storage industry news"
+    }
+  },
+  {
+    "name": "PV Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pv-magazine.com",
+        "alt": "PV Magazine logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://pv-magazine.com",
+      "detailsPage": "sources/pvmagazine.html",
+      "trust": "trusted",
+      "description": "Solar photovoltaic industry publication"
+    }
+  },
+  {
+    "name": "Wind Power Engineering",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/windpowerengineering.com",
+        "alt": "WPE logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://windpowerengineering.com",
+      "detailsPage": "sources/wpe.html",
+      "trust": "trusted",
+      "description": "Wind energy industry publication"
+    }
+  },
+  {
+    "name": "Renewable Energy World",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/renewableenergyworld.com",
+        "alt": "REW logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://renewableenergyworld.com",
+      "detailsPage": "sources/rew.html",
+      "trust": "trusted",
+      "description": "Renewable energy industry news and analysis"
+    }
+  },
+  {
+    "name": "Oil & Gas Journal",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ogj.com",
+        "alt": "OGJ logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://ogj.com",
+      "detailsPage": "sources/ogj.html",
+      "trust": "trusted",
+      "description": "Petroleum industry trade publication"
+    }
+  },
+  {
+    "name": "World Nuclear News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/world-nuclear-news.org",
+        "alt": "WNN logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://world-nuclear-news.org",
+      "detailsPage": "sources/wnn.html",
+      "trust": "trusted",
+      "description": "Nuclear industry news and information"
+    }
+  },
+  {
+    "name": "Nuclear Engineering International",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/neimagazine.com",
+        "alt": "NEI logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://neimagazine.com",
+      "detailsPage": "sources/nei.html",
+      "trust": "trusted",
+      "description": "Nuclear engineering and technology magazine"
+    }
+  },
+  {
+    "name": "Electric Power Research Institute",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/epri.com",
+        "alt": "EPRI logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://epri.com",
+      "detailsPage": "sources/epri.html",
+      "trust": "trusted",
+      "description": "Independent energy research and development"
+    }
+  },
+  {
+    "name": "Department of Energy",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/energy.gov",
+        "alt": "DOE logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://energy.gov",
+      "detailsPage": "sources/doe.html",
+      "trust": "trusted",
+      "description": "U.S. Department of Energy"
+    }
+  },
+  {
+    "name": "International Energy Agency",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/iea.org",
+        "alt": "IEA logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://iea.org",
+      "detailsPage": "sources/iea.html",
+      "trust": "trusted",
+      "description": "Global energy policy advisor"
+    }
+  },
+  {
+    "name": "IRENA",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/irena.org",
+        "alt": "IRENA logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://irena.org",
+      "detailsPage": "sources/irena.html",
+      "trust": "trusted",
+      "description": "International Renewable Energy Agency"
+    }
+  },
+  {
+    "name": "Energy Information Administration",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/eia.gov",
+        "alt": "EIA logo"
+      },
+      "category": "Energy",
+      "visitUrl": "https://eia.gov",
+      "detailsPage": "sources/eia.html",
+      "trust": "trusted",
+      "description": "U.S. energy statistics and analysis"
+    }
+  },
+  {
+    "name": "USGS",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/usgs.gov",
+        "alt": "USGS logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://usgs.gov",
+      "detailsPage": "sources/usgs.html",
+      "trust": "trusted",
+      "description": "United States Geological Survey"
+    }
+  },
+  {
+    "name": "National Park Service",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nps.gov",
+        "alt": "NPS logo"
+      },
+      "category": "Environment",
+      "visitUrl": "https://nps.gov",
+      "detailsPage": "sources/nps.html",
+      "trust": "trusted",
+      "description": "U.S. National Park Service"
+    }
+  },
+  {
+    "name": "Mouser Electronics",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mouser.com",
+        "alt": "Mouser logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://mouser.com",
+      "detailsPage": "sources/mouser.html",
+      "trust": "trusted",
+      "description": "Electronic components and design resources"
+    }
+  },
+  {
+    "name": "Texas Instruments",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ti.com",
+        "alt": "TI logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://ti.com",
+      "detailsPage": "sources/ti.html",
+      "trust": "trusted",
+      "description": "Semiconductor manufacturer and design resources"
+    }
+  },
+  {
+    "name": "Analog Devices",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/analog.com",
+        "alt": "ADI logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://analog.com",
+      "detailsPage": "sources/adi.html",
+      "trust": "trusted",
+      "description": "Analog semiconductor solutions and education"
+    }
+  },
+  {
+    "name": "Intel",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/intel.com",
+        "alt": "Intel logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://intel.com",
+      "detailsPage": "sources/intel.html",
+      "trust": "trusted",
+      "description": "Processor manufacturer and technology news"
+    }
+  },
+  {
+    "name": "AMD",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/amd.com",
+        "alt": "AMD logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://amd.com",
+      "detailsPage": "sources/amd.html",
+      "trust": "trusted",
+      "description": "Processor and graphics technology news"
+    }
+  },
+  {
+    "name": "NVIDIA",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nvidia.com",
+        "alt": "NVIDIA logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://nvidia.com",
+      "detailsPage": "sources/nvidia.html",
+      "trust": "trusted",
+      "description": "GPU and AI technology company news"
+    }
+  },
+  {
+    "name": "Qualcomm",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/qualcomm.com",
+        "alt": "Qualcomm logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://qualcomm.com",
+      "detailsPage": "sources/qualcomm.html",
+      "trust": "trusted",
+      "description": "Mobile processor and wireless technology"
+    }
+  },
+  {
+    "name": "ARM",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/arm.com",
+        "alt": "ARM logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://arm.com",
+      "detailsPage": "sources/arm.html",
+      "trust": "trusted",
+      "description": "Processor architecture and design company"
+    }
+  },
+  {
+    "name": "Microsoft",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/microsoft.com",
+        "alt": "Microsoft logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://microsoft.com",
+      "detailsPage": "sources/microsoft.html",
+      "trust": "mostly-trusted",
+      "description": "Software and cloud technology company"
+    }
+  },
+  {
+    "name": "Apple",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/apple.com",
+        "alt": "Apple logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://apple.com",
+      "detailsPage": "sources/apple.html",
+      "trust": "mostly-trusted",
+      "description": "Consumer electronics and software company"
+    }
+  },
+  {
+    "name": "Google",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/google.com",
+        "alt": "Google logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://google.com",
+      "detailsPage": "sources/google.html",
+      "trust": "mostly-trusted",
+      "description": "Search engine and technology company"
+    }
+  },
+  {
+    "name": "Amazon",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/amazon.com",
+        "alt": "Amazon logo"
+      },
+      "category": "Business",
+      "visitUrl": "https://amazon.com",
+      "detailsPage": "sources/amazon.html",
+      "trust": "mostly-trusted",
+      "description": "E-commerce and cloud computing company"
+    }
+  },
+  {
+    "name": "Meta",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/meta.com",
+        "alt": "Meta logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://meta.com",
+      "detailsPage": "sources/meta.html",
+      "trust": "mostly-trusted",
+      "description": "Social media and virtual reality technology"
+    }
+  },
+  {
+    "name": "Tesla",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/tesla.com",
+        "alt": "Tesla logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://tesla.com",
+      "detailsPage": "sources/tesla.html",
+      "trust": "mostly-trusted",
+      "description": "Electric vehicle and energy company"
+    }
+  },
+  {
+    "name": "Netflix",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/netflix.com",
+        "alt": "Netflix logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://netflix.com",
+      "detailsPage": "sources/netflix.html",
+      "trust": "mostly-trusted",
+      "description": "Streaming entertainment service"
+    }
+  },
+  {
+    "name": "Disney",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/disney.com",
+        "alt": "Disney logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://disney.com",
+      "detailsPage": "sources/disney.html",
+      "trust": "mostly-trusted",
+      "description": "Entertainment and media company"
+    }
+  },
+  {
+    "name": "Warner Bros",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/warnerbros.com",
+        "alt": "Warner Bros logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://warnerbros.com",
+      "detailsPage": "sources/warnerbros.html",
+      "trust": "mostly-trusted",
+      "description": "Film and television production company"
+    }
+  },
+  {
+    "name": "Universal Pictures",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/universalpictures.com",
+        "alt": "Universal logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://universalpictures.com",
+      "detailsPage": "sources/universal.html",
+      "trust": "mostly-trusted",
+      "description": "Film production and distribution company"
+    }
+  },
+  {
+    "name": "Paramount Pictures",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/paramount.com",
+        "alt": "Paramount logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://paramount.com",
+      "detailsPage": "sources/paramount.html",
+      "trust": "mostly-trusted",
+      "description": "Film and television production company"
+    }
+  },
+  {
+    "name": "Sony Pictures",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/sonypictures.com",
+        "alt": "Sony Pictures logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://sonypictures.com",
+      "detailsPage": "sources/sonypictures.html",
+      "trust": "mostly-trusted",
+      "description": "Film and television production company"
+    }
+  },
+  {
+    "name": "HBO",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/hbo.com",
+        "alt": "HBO logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://hbo.com",
+      "detailsPage": "sources/hbo.html",
+      "trust": "mostly-trusted",
+      "description": "Premium television network and streaming"
+    }
+  },
+  {
+    "name": "Hulu",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/hulu.com",
+        "alt": "Hulu logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://hulu.com",
+      "detailsPage": "sources/hulu.html",
+      "trust": "mostly-trusted",
+      "description": "Streaming television service"
+    }
+  },
+  {
+    "name": "Amazon Prime Video",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/primevideo.com",
+        "alt": "Prime Video logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://primevideo.com",
+      "detailsPage": "sources/primevideo.html",
+      "trust": "mostly-trusted",
+      "description": "Streaming video service from Amazon"
+    }
+  },
+  {
+    "name": "Apple TV+",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/tv.apple.com",
+        "alt": "Apple TV+ logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://tv.apple.com",
+      "detailsPage": "sources/appletv.html",
+      "trust": "mostly-trusted",
+      "description": "Apple's streaming television service"
+    }
+  },
+  {
+    "name": "Spotify",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/spotify.com",
+        "alt": "Spotify logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://spotify.com",
+      "detailsPage": "sources/spotify.html",
+      "trust": "mostly-trusted",
+      "description": "Music streaming and podcast platform"
+    }
+  },
+  {
+    "name": "Apple Music",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/music.apple.com",
+        "alt": "Apple Music logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://music.apple.com",
+      "detailsPage": "sources/applemusic.html",
+      "trust": "mostly-trusted",
+      "description": "Apple's music streaming service"
+    }
+  },
+  {
+    "name": "YouTube Music",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/music.youtube.com",
+        "alt": "YouTube Music logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://music.youtube.com",
+      "detailsPage": "sources/youtubemusic.html",
+      "trust": "mostly-trusted",
+      "description": "Google's music streaming service"
+    }
+  },
+  {
+    "name": "Pandora",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pandora.com",
+        "alt": "Pandora logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://pandora.com",
+      "detailsPage": "sources/pandora.html",
+      "trust": "mostly-trusted",
+      "description": "Internet radio and music streaming"
+    }
+  },
+  {
+    "name": "SiriusXM",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/siriusxm.com",
+        "alt": "SiriusXM logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://siriusxm.com",
+      "detailsPage": "sources/siriusxm.html",
+      "trust": "mostly-trusted",
+      "description": "Satellite radio and audio entertainment"
+    }
+  },
+  {
+    "name": "Pitchfork",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pitchfork.com",
+        "alt": "Pitchfork logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://pitchfork.com",
+      "detailsPage": "sources/pitchfork.html",
+      "trust": "mostly-trusted",
+      "description": "Independent music journalism and reviews"
+    }
+  },
+  {
+    "name": "Billboard",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/billboard.com",
+        "alt": "Billboard logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://billboard.com",
+      "detailsPage": "sources/billboard.html",
+      "trust": "mostly-trusted",
+      "description": "Music industry news and charts"
+    }
+  },
+  {
+    "name": "MTV",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mtv.com",
+        "alt": "MTV logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://mtv.com",
+      "detailsPage": "sources/mtv.html",
+      "trust": "mostly-trusted",
+      "description": "Music television and youth culture"
+    }
+  },
+  {
+    "name": "VH1",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/vh1.com",
+        "alt": "VH1 logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://vh1.com",
+      "detailsPage": "sources/vh1.html",
+      "trust": "mostly-trusted",
+      "description": "Music and pop culture television"
+    }
+  },
+  {
+    "name": "E! News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/eonline.com",
+        "alt": "E! logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://eonline.com",
+      "detailsPage": "sources/enews.html",
+      "trust": "mostly-trusted",
+      "description": "Celebrity and entertainment news"
+    }
+  },
+  {
+    "name": "Access Hollywood",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/accesshollywood.com",
+        "alt": "Access Hollywood logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://accesshollywood.com",
+      "detailsPage": "sources/accesshollywood.html",
+      "trust": "mostly-trusted",
+      "description": "Entertainment news television show"
+    }
+  },
+  {
+    "name": "Extra TV",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/extratv.com",
+        "alt": "Extra logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://extratv.com",
+      "detailsPage": "sources/extratv.html",
+      "trust": "mostly-trusted",
+      "description": "Entertainment news and celebrity interviews"
+    }
+  },
+  {
+    "name": "TMZ",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/tmz.com",
+        "alt": "TMZ logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://tmz.com",
+      "detailsPage": "sources/tmz.html",
+      "trust": "not-trusted",
+      "description": "Celebrity gossip and entertainment news"
+    }
+  },
+  {
+    "name": "Page Six",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pagesix.com",
+        "alt": "Page Six logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://pagesix.com",
+      "detailsPage": "sources/pagesix.html",
+      "trust": "not-trusted",
+      "description": "Celebrity gossip and entertainment news"
+    }
+  },
+  {
+    "name": "Perez Hilton",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/perezhilton.com",
+        "alt": "Perez Hilton logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://perezhilton.com",
+      "detailsPage": "sources/perezhilton.html",
+      "trust": "not-trusted",
+      "description": "Celebrity gossip blog"
+    }
+  },
+  {
+    "name": "Rotten Tomatoes",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/rottentomatoes.com",
+        "alt": "Rotten Tomatoes logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://rottentomatoes.com",
+      "detailsPage": "sources/rottentomatoes.html",
+      "trust": "mostly-trusted",
+      "description": "Movie and TV review aggregator"
+    }
+  },
+  {
+    "name": "IMDb",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/imdb.com",
+        "alt": "IMDb logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://imdb.com",
+      "detailsPage": "sources/imdb.html",
+      "trust": "trusted",
+      "description": "Internet Movie Database"
+    }
+  },
+  {
+    "name": "Metacritic",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/metacritic.com",
+        "alt": "Metacritic logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://metacritic.com",
+      "detailsPage": "sources/metacritic.html",
+      "trust": "mostly-trusted",
+      "description": "Review aggregator for films, TV, music, and games"
+    }
+  },
+  {
+    "name": "The A.V. Club",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/avclub.com",
+        "alt": "AV Club logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://avclub.com",
+      "detailsPage": "sources/avclub.html",
+      "trust": "mostly-trusted",
+      "description": "Pop culture news and reviews"
+    }
+  },
+  {
+    "name": "IndieWire",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/indiewire.com",
+        "alt": "IndieWire logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://indiewire.com",
+      "detailsPage": "sources/indiewire.html",
+      "trust": "trusted",
+      "description": "Independent film and television news"
+    }
+  },
+  {
+    "name": "Screen Rant",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/screenrant.com",
+        "alt": "Screen Rant logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://screenrant.com",
+      "detailsPage": "sources/screenrant.html",
+      "trust": "mostly-trusted",
+      "description": "Movie and TV news and theories"
+    }
+  },
+  {
+    "name": "Collider",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/collider.com",
+        "alt": "Collider logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://collider.com",
+      "detailsPage": "sources/collider.html",
+      "trust": "mostly-trusted",
+      "description": "Movie and entertainment news and reviews"
+    }
+  },
+  {
+    "name": "ComicBook.com",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/comicbook.com",
+        "alt": "ComicBook.com logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://comicbook.com",
+      "detailsPage": "sources/comicbook.html",
+      "trust": "mostly-trusted",
+      "description": "Comic book and superhero entertainment news"
+    }
+  },
+  {
+    "name": "The Mary Sue",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/themarysue.com",
+        "alt": "The Mary Sue logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://themarysue.com",
+      "detailsPage": "sources/marysue.html",
+      "trust": "mostly-trusted",
+      "description": "Geek culture and feminist entertainment news"
+    }
+  },
+  {
+    "name": "io9",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/io9.com",
+        "alt": "io9 logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://io9.com",
+      "detailsPage": "sources/io9.html",
+      "trust": "mostly-trusted",
+      "description": "Science fiction and fantasy entertainment"
+    }
+  },
+  {
+    "name": "Den of Geek",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/denofgeek.com",
+        "alt": "Den of Geek logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://denofgeek.com",
+      "detailsPage": "sources/denofgeek.html",
+      "trust": "mostly-trusted",
+      "description": "Pop culture and entertainment analysis"
+    }
+  },
+  {
+    "name": "Nerdist",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nerdist.com",
+        "alt": "Nerdist logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://nerdist.com",
+      "detailsPage": "sources/nerdist.html",
+      "trust": "mostly-trusted",
+      "description": "Geek culture and entertainment news"
+    }
+  },
+  {
+    "name": "Comic-Con International",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/comic-con.org",
+        "alt": "Comic-Con logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://comic-con.org",
+      "detailsPage": "sources/comiccon.html",
+      "trust": "trusted",
+      "description": "Pop culture convention news and updates"
+    }
+  },
+  {
+    "name": "DC Comics",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/dccomics.com",
+        "alt": "DC logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://dccomics.com",
+      "detailsPage": "sources/dc.html",
+      "trust": "mostly-trusted",
+      "description": "DC Comics official news and releases"
+    }
+  },
+  {
+    "name": "Marvel",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/marvel.com",
+        "alt": "Marvel logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://marvel.com",
+      "detailsPage": "sources/marvel.html",
+      "trust": "mostly-trusted",
+      "description": "Marvel Comics and entertainment news"
+    }
+  },
+  {
+    "name": "Dark Horse Comics",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/darkhorse.com",
+        "alt": "Dark Horse logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://darkhorse.com",
+      "detailsPage": "sources/darkhorse.html",
+      "trust": "mostly-trusted",
+      "description": "Independent comic book publisher"
+    }
+  },
+  {
+    "name": "Image Comics",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/imagecomics.com",
+        "alt": "Image logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://imagecomics.com",
+      "detailsPage": "sources/image.html",
+      "trust": "mostly-trusted",
+      "description": "Independent comic book publisher"
+    }
+  },
+  {
+    "name": "IDW Publishing",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/idwpublishing.com",
+        "alt": "IDW logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://idwpublishing.com",
+      "detailsPage": "sources/idw.html",
+      "trust": "mostly-trusted",
+      "description": "Comic book and graphic novel publisher"
+    }
+  },
+  {
+    "name": "Valve",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/valvesoftware.com",
+        "alt": "Valve logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://valvesoftware.com",
+      "detailsPage": "sources/valve.html",
+      "trust": "mostly-trusted",
+      "description": "Video game developer and Steam platform"
+    }
+  },
+  {
+    "name": "Epic Games",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/epicgames.com",
+        "alt": "Epic Games logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://epicgames.com",
+      "detailsPage": "sources/epic.html",
+      "trust": "mostly-trusted",
+      "description": "Video game developer and Epic Games Store"
+    }
+  },
+  {
+    "name": "Riot Games",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/riotgames.com",
+        "alt": "Riot logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://riotgames.com",
+      "detailsPage": "sources/riot.html",
+      "trust": "mostly-trusted",
+      "description": "Video game developer of League of Legends"
+    }
+  },
+  {
+    "name": "Blizzard Entertainment",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/blizzard.com",
+        "alt": "Blizzard logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://blizzard.com",
+      "detailsPage": "sources/blizzard.html",
+      "trust": "mostly-trusted",
+      "description": "Video game developer of Warcraft and Overwatch"
+    }
+  },
+  {
+    "name": "Activision",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/activision.com",
+        "alt": "Activision logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://activision.com",
+      "detailsPage": "sources/activision.html",
+      "trust": "mostly-trusted",
+      "description": "Video game publisher of Call of Duty"
+    }
+  },
+  {
+    "name": "Electronic Arts",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ea.com",
+        "alt": "EA logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://ea.com",
+      "detailsPage": "sources/ea.html",
+      "trust": "mostly-trusted",
+      "description": "Video game publisher and developer"
+    }
+  },
+  {
+    "name": "Ubisoft",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ubisoft.com",
+        "alt": "Ubisoft logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://ubisoft.com",
+      "detailsPage": "sources/ubisoft.html",
+      "trust": "mostly-trusted",
+      "description": "Video game developer and publisher"
+    }
+  },
+  {
+    "name": "Lonely Planet",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/lonelyplanet.com",
+        "alt": "Lonely Planet logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://lonelyplanet.com",
+      "detailsPage": "sources/lonelyplanet.html",
+      "trust": "trusted",
+      "description": "Travel guidebooks and destination information"
+    }
+  },
+  {
+    "name": "Fodor's Travel",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/fodors.com",
+        "alt": "Fodor's logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://fodors.com",
+      "detailsPage": "sources/fodors.html",
+      "trust": "trusted",
+      "description": "Travel guides and destination planning"
+    }
+  },
+  {
+    "name": "Frommer's",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/frommers.com",
+        "alt": "Frommer's logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://frommers.com",
+      "detailsPage": "sources/frommers.html",
+      "trust": "trusted",
+      "description": "Budget travel guides and tips"
+    }
+  },
+  {
+    "name": "Rick Steves",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ricksteves.com",
+        "alt": "Rick Steves logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://ricksteves.com",
+      "detailsPage": "sources/ricksteves.html",
+      "trust": "trusted",
+      "description": "European travel guides and cultural insights"
+    }
+  },
+  {
+    "name": "Outside Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/outsideonline.com",
+        "alt": "Outside logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://outsideonline.com",
+      "detailsPage": "sources/outside.html",
+      "trust": "mostly-trusted",
+      "description": "Outdoor adventure and fitness magazine"
+    }
+  },
+  {
+    "name": "Adventure Journal",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/adventure-journal.com",
+        "alt": "Adventure Journal logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://adventure-journal.com",
+      "detailsPage": "sources/adventurejournal.html",
+      "trust": "trusted",
+      "description": "Outdoor adventure and exploration stories"
+    }
+  },
+  {
+    "name": "Backpacker Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/backpacker.com",
+        "alt": "Backpacker logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://backpacker.com",
+      "detailsPage": "sources/backpacker.html",
+      "trust": "trusted",
+      "description": "Hiking and wilderness adventure magazine"
+    }
+  },
+  {
+    "name": "Climbing Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/climbing.com",
+        "alt": "Climbing logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://climbing.com",
+      "detailsPage": "sources/climbing.html",
+      "trust": "trusted",
+      "description": "Rock climbing and mountaineering magazine"
+    }
+  },
+  {
+    "name": "Ski Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/skimag.com",
+        "alt": "Ski Magazine logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://skimag.com",
+      "detailsPage": "sources/skimag.html",
+      "trust": "trusted",
+      "description": "Skiing and winter sports magazine"
+    }
+  },
+  {
+    "name": "Powder Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/powdermag.com",
+        "alt": "Powder logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://powdermag.com",
+      "detailsPage": "sources/powder.html",
+      "trust": "trusted",
+      "description": "Skiing culture and mountain lifestyle"
+    }
+  },
+  {
+    "name": "Runner's World",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/runnersworld.com",
+        "alt": "Runner's World logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://runnersworld.com",
+      "detailsPage": "sources/runnersworld.html",
+      "trust": "trusted",
+      "description": "Running training and fitness magazine"
+    }
+  },
+  {
+    "name": "Bicycling Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bicycling.com",
+        "alt": "Bicycling logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://bicycling.com",
+      "detailsPage": "sources/bicycling.html",
+      "trust": "trusted",
+      "description": "Cycling training and equipment magazine"
+    }
+  },
+  {
+    "name": "Cycling Weekly",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cyclingweekly.com",
+        "alt": "Cycling Weekly logo"
+      },
+      "category": "Sports",
+      "visitUrl": "https://cyclingweekly.com",
+      "detailsPage": "sources/cyclingweekly.html",
+      "trust": "trusted",
+      "description": "Professional cycling news and racing"
+    }
+  },
+  {
+    "name": "Men's Health",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/menshealth.com",
+        "alt": "Men's Health logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://menshealth.com",
+      "detailsPage": "sources/menshealth.html",
+      "trust": "mostly-trusted",
+      "description": "Men's fitness and lifestyle magazine"
+    }
+  },
+  {
+    "name": "Women's Health",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/womenshealthmag.com",
+        "alt": "Women's Health logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://womenshealthmag.com",
+      "detailsPage": "sources/womenshealth.html",
+      "trust": "mostly-trusted",
+      "description": "Women's fitness and lifestyle magazine"
+    }
+  },
+  {
+    "name": "Prevention",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/prevention.com",
+        "alt": "Prevention logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://prevention.com",
+      "detailsPage": "sources/prevention.html",
+      "trust": "mostly-trusted",
+      "description": "Health and wellness prevention magazine"
+    }
+  },
+  {
+    "name": "Shape Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/shape.com",
+        "alt": "Shape logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://shape.com",
+      "detailsPage": "sources/shape.html",
+      "trust": "mostly-trusted",
+      "description": "Women's fitness and health magazine"
+    }
+  },
+  {
+    "name": "Self Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/self.com",
+        "alt": "Self logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://self.com",
+      "detailsPage": "sources/self.html",
+      "trust": "mostly-trusted",
+      "description": "Women's wellness and lifestyle magazine"
+    }
+  },
+  {
+    "name": "Fitness Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/fitnessmagazine.com",
+        "alt": "Fitness logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://fitnessmagazine.com",
+      "detailsPage": "sources/fitness.html",
+      "trust": "mostly-trusted",
+      "description": "Fitness and exercise magazine"
+    }
+  },
+  {
+    "name": "Muscle & Fitness",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/muscleandfitness.com",
+        "alt": "M&F logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://muscleandfitness.com",
+      "detailsPage": "sources/musclefitness.html",
+      "trust": "mostly-trusted",
+      "description": "Bodybuilding and strength training magazine"
+    }
+  },
+  {
+    "name": "Bodybuilding.com",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bodybuilding.com",
+        "alt": "Bodybuilding.com logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://bodybuilding.com",
+      "detailsPage": "sources/bodybuilding.html",
+      "trust": "mostly-trusted",
+      "description": "Fitness training and supplement information"
+    }
+  },
+  {
+    "name": "Yoga Journal",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/yogajournal.com",
+        "alt": "Yoga Journal logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://yogajournal.com",
+      "detailsPage": "sources/yogajournal.html",
+      "trust": "trusted",
+      "description": "Yoga practice and wellness magazine"
+    }
+  },
+  {
+    "name": "Well+Good",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/wellandgood.com",
+        "alt": "Well+Good logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://wellandgood.com",
+      "detailsPage": "sources/wellgood.html",
+      "trust": "mostly-trusted",
+      "description": "Wellness and healthy living lifestyle"
+    }
+  },
+  {
+    "name": "mindbodygreen",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mindbodygreen.com",
+        "alt": "mindbodygreen logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://mindbodygreen.com",
+      "detailsPage": "sources/mindbodygreen.html",
+      "trust": "mostly-trusted",
+      "description": "Holistic wellness and lifestyle content"
+    }
+  },
+  {
+    "name": "Mindful",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mindful.org",
+        "alt": "Mindful logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://mindful.org",
+      "detailsPage": "sources/mindful.html",
+      "trust": "trusted",
+      "description": "Mindfulness and meditation magazine"
+    }
+  },
+  {
+    "name": "Psychology Today",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/psychologytoday.com",
+        "alt": "Psychology Today logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://psychologytoday.com",
+      "detailsPage": "sources/psychologytoday.html",
+      "trust": "mostly-trusted",
+      "description": "Psychology and mental health magazine"
+    }
+  },
+  {
+    "name": "Scientific American Mind",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/scientificamerican.com",
+        "alt": "SA Mind logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://scientificamerican.com/mind",
+      "detailsPage": "sources/samind.html",
+      "trust": "trusted",
+      "description": "Neuroscience and psychology research"
+    }
+  },
+  {
+    "name": "Psychiatric News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/psychnews.org",
+        "alt": "Psychiatric News logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://psychnews.org",
+      "detailsPage": "sources/psychnews.html",
+      "trust": "trusted",
+      "description": "American Psychiatric Association news"
+    }
+  },
+  {
+    "name": "The Lancet Psychiatry",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/thelancet.com",
+        "alt": "Lancet Psychiatry logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://thelancet.com/journals/lanpsy",
+      "detailsPage": "sources/lancetpsych.html",
+      "trust": "trusted",
+      "description": "Psychiatric research and clinical practice"
+    }
+  },
+  {
+    "name": "Nature Neuroscience",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nature.com",
+        "alt": "Nature Neuroscience logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://nature.com/neuro",
+      "detailsPage": "sources/natureneuro.html",
+      "trust": "trusted",
+      "description": "Neuroscience research journal"
+    }
+  },
+  {
+    "name": "Neuron",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cell.com",
+        "alt": "Neuron logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://cell.com/neuron",
+      "detailsPage": "sources/neuron.html",
+      "trust": "trusted",
+      "description": "Premier neuroscience research journal"
+    }
+  },
+  {
+    "name": "Current Biology",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cell.com",
+        "alt": "Current Biology logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://cell.com/current-biology",
+      "detailsPage": "sources/currentbio.html",
+      "trust": "trusted",
+      "description": "Life sciences research journal"
+    }
+  },
+  {
+    "name": "Trends in Cognitive Sciences",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cell.com",
+        "alt": "TICS logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://cell.com/trends/cognitive-sciences",
+      "detailsPage": "sources/tics.html",
+      "trust": "trusted",
+      "description": "Cognitive science review journal"
+    }
+  },
+  {
+    "name": "Proceedings of the National Academy of Sciences",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pnas.org",
+        "alt": "PNAS logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://pnas.org",
+      "detailsPage": "sources/pnas.html",
+      "trust": "trusted",
+      "description": "Multidisciplinary scientific journal"
+    }
+  },
+  {
+    "name": "Journal of the American Medical Association",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/jamanetwork.com",
+        "alt": "JAMA logo"
+      },
+      "category": "Health",
+      "visitUrl": "https://jamanetwork.com/journals/jama",
+      "detailsPage": "sources/jamajournal.html",
+      "trust": "trusted",
+      "description": "Leading medical research journal"
+    }
+  },
+  {
+    "name": "Vogue",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/vogue.com",
+        "alt": "Vogue logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://vogue.com",
+      "detailsPage": "sources/vogue.html",
+      "trust": "mostly-trusted",
+      "description": "Fashion and lifestyle magazine"
+    }
+  },
+  {
+    "name": "Harper's Bazaar",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/harpersbazaar.com",
+        "alt": "Harper's Bazaar logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://harpersbazaar.com",
+      "detailsPage": "sources/harpersbazaar.html",
+      "trust": "mostly-trusted",
+      "description": "Fashion and beauty magazine"
+    }
+  },
+  {
+    "name": "Elle",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/elle.com",
+        "alt": "Elle logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://elle.com",
+      "detailsPage": "sources/elle.html",
+      "trust": "mostly-trusted",
+      "description": "Fashion and women's lifestyle magazine"
+    }
+  },
+  {
+    "name": "Marie Claire",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/marieclaire.com",
+        "alt": "Marie Claire logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://marieclaire.com",
+      "detailsPage": "sources/marieclaire.html",
+      "trust": "mostly-trusted",
+      "description": "Women's fashion and lifestyle magazine"
+    }
+  },
+  {
+    "name": "Glamour",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/glamour.com",
+        "alt": "Glamour logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://glamour.com",
+      "detailsPage": "sources/glamour.html",
+      "trust": "mostly-trusted",
+      "description": "Women's fashion and lifestyle magazine"
+    }
+  },
+  {
+    "name": "Cosmopolitan",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cosmopolitan.com",
+        "alt": "Cosmopolitan logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://cosmopolitan.com",
+      "detailsPage": "sources/cosmopolitan.html",
+      "trust": "mostly-trusted",
+      "description": "Women's lifestyle and entertainment magazine"
+    }
+  },
+  {
+    "name": "Allure",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/allure.com",
+        "alt": "Allure logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://allure.com",
+      "detailsPage": "sources/allure.html",
+      "trust": "mostly-trusted",
+      "description": "Beauty and skincare magazine"
+    }
+  },
+  {
+    "name": "InStyle",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/instyle.com",
+        "alt": "InStyle logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://instyle.com",
+      "detailsPage": "sources/instyle.html",
+      "trust": "mostly-trusted",
+      "description": "Fashion and beauty lifestyle magazine"
+    }
+  },
+  {
+    "name": "People Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/people.com",
+        "alt": "People logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://people.com",
+      "detailsPage": "sources/people.html",
+      "trust": "mostly-trusted",
+      "description": "Celebrity and human interest magazine"
+    }
+  },
+  {
+    "name": "Us Weekly",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/usmagazine.com",
+        "alt": "Us Weekly logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://usmagazine.com",
+      "detailsPage": "sources/usweekly.html",
+      "trust": "not-trusted",
+      "description": "Celebrity gossip and entertainment news"
+    }
+  },
+  {
+    "name": "OK! Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/okmagazine.com",
+        "alt": "OK! logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://okmagazine.com",
+      "detailsPage": "sources/okmagazine.html",
+      "trust": "not-trusted",
+      "description": "Celebrity news and gossip magazine"
+    }
+  },
+  {
+    "name": "Good Housekeeping",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/goodhousekeeping.com",
+        "alt": "Good Housekeeping logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://goodhousekeeping.com",
+      "detailsPage": "sources/goodhousekeeping.html",
+      "trust": "mostly-trusted",
+      "description": "Home and lifestyle magazine"
+    }
+  },
+  {
+    "name": "Better Homes & Gardens",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bhg.com",
+        "alt": "BH&G logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://bhg.com",
+      "detailsPage": "sources/bhg.html",
+      "trust": "mostly-trusted",
+      "description": "Home improvement and lifestyle magazine"
+    }
+  },
+  {
+    "name": "House Beautiful",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/housebeautiful.com",
+        "alt": "House Beautiful logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://housebeautiful.com",
+      "detailsPage": "sources/housebeautiful.html",
+      "trust": "mostly-trusted",
+      "description": "Interior design and home decor magazine"
+    }
+  },
+  {
+    "name": "Architectural Digest",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/architecturaldigest.com",
+        "alt": "AD logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://architecturaldigest.com",
+      "detailsPage": "sources/ad.html",
+      "trust": "mostly-trusted",
+      "description": "Architecture and interior design magazine"
+    }
+  },
+  {
+    "name": "Dwell",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/dwell.com",
+        "alt": "Dwell logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://dwell.com",
+      "detailsPage": "sources/dwell.html",
+      "trust": "mostly-trusted",
+      "description": "Modern architecture and design magazine"
+    }
+  },
+  {
+    "name": "This Old House",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/thisoldhouse.com",
+        "alt": "This Old House logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://thisoldhouse.com",
+      "detailsPage": "sources/thisoldhouse.html",
+      "trust": "trusted",
+      "description": "Home improvement and renovation magazine"
+    }
+  },
+  {
+    "name": "Fine Homebuilding",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/finehomebuilding.com",
+        "alt": "Fine Homebuilding logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://finehomebuilding.com",
+      "detailsPage": "sources/finehomebuilding.html",
+      "trust": "trusted",
+      "description": "Professional home construction magazine"
+    }
+  },
+  {
+    "name": "Family Handyman",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/familyhandyman.com",
+        "alt": "Family Handyman logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://familyhandyman.com",
+      "detailsPage": "sources/familyhandyman.html",
+      "trust": "trusted",
+      "description": "DIY home improvement and repair magazine"
+    }
+  },
+  {
+    "name": "Popular Woodworking",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/popularwoodworking.com",
+        "alt": "Popular Woodworking logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://popularwoodworking.com",
+      "detailsPage": "sources/popwood.html",
+      "trust": "trusted",
+      "description": "Woodworking techniques and projects"
+    }
+  },
+  {
+    "name": "Fine Woodworking",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/finewoodworking.com",
+        "alt": "Fine Woodworking logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://finewoodworking.com",
+      "detailsPage": "sources/finewood.html",
+      "trust": "trusted",
+      "description": "Professional woodworking magazine"
+    }
+  },
+  {
+    "name": "Make Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/makezine.com",
+        "alt": "Make logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://makezine.com",
+      "detailsPage": "sources/make.html",
+      "trust": "trusted",
+      "description": "DIY technology and maker culture magazine"
+    }
+  },
+  {
+    "name": "Hackaday",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/hackaday.com",
+        "alt": "Hackaday logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://hackaday.com",
+      "detailsPage": "sources/hackaday.html",
+      "trust": "trusted",
+      "description": "Hardware hacking and maker projects"
+    }
+  },
+  {
+    "name": "Instructables",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/instructables.com",
+        "alt": "Instructables logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://instructables.com",
+      "detailsPage": "sources/instructables.html",
+      "trust": "mostly-trusted",
+      "description": "DIY project tutorials and guides"
+    }
+  },
+  {
+    "name": "Arduino Blog",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/arduino.cc",
+        "alt": "Arduino logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://blog.arduino.cc",
+      "detailsPage": "sources/arduino.html",
+      "trust": "trusted",
+      "description": "Official Arduino project news and tutorials"
+    }
+  },
+  {
+    "name": "Raspberry Pi Foundation",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/raspberrypi.org",
+        "alt": "Raspberry Pi logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://raspberrypi.org",
+      "detailsPage": "sources/raspberrypi.html",
+      "trust": "trusted",
+      "description": "Official Raspberry Pi news and projects"
+    }
+  },
+  {
+    "name": "Circuit Cellar",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/circuitcellar.com",
+        "alt": "Circuit Cellar logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://circuitcellar.com",
+      "detailsPage": "sources/circuitcellar.html",
+      "trust": "trusted",
+      "description": "Electronic design and embedded systems"
+    }
+  },
+  {
+    "name": "Electronics Weekly",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/electronicsweekly.com",
+        "alt": "Electronics Weekly logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://electronicsweekly.com",
+      "detailsPage": "sources/electronicsweekly.html",
+      "trust": "trusted",
+      "description": "Electronics industry news and design"
+    }
+  },
+  {
+    "name": "EE Times",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/eetimes.com",
+        "alt": "EE Times logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://eetimes.com",
+      "detailsPage": "sources/eetimes.html",
+      "trust": "trusted",
+      "description": "Electrical engineering industry publication"
+    }
+  },
+  {
+    "name": "Electronic Design",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/electronicdesign.com",
+        "alt": "Electronic Design logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://electronicdesign.com",
+      "detailsPage": "sources/electronicdesign.html",
+      "trust": "trusted",
+      "description": "Electronic design engineering magazine"
+    }
+  },
+  {
+    "name": "EDN Network",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/edn.com",
+        "alt": "EDN logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://edn.com",
+      "detailsPage": "sources/edn.html",
+      "trust": "trusted",
+      "description": "Electronics design engineering community"
+    }
+  },
+  {
+    "name": "Electronic Products",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/electronicproducts.com",
+        "alt": "Electronic Products logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://electronicproducts.com",
+      "detailsPage": "sources/electronicproducts.html",
+      "trust": "trusted",
+      "description": "Electronic component and product news"
+    }
+  },
+  {
+    "name": "All About Circuits",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/allaboutcircuits.com",
+        "alt": "AAC logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://allaboutcircuits.com",
+      "detailsPage": "sources/aac.html",
+      "trust": "trusted",
+      "description": "Electronics education and tutorials"
+    }
+  },
+  {
+    "name": "SparkFun Electronics",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/sparkfun.com",
+        "alt": "SparkFun logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://sparkfun.com",
+      "detailsPage": "sources/sparkfun.html",
+      "trust": "trusted",
+      "description": "Electronics components and education"
+    }
+  },
+  {
+    "name": "Adafruit",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/adafruit.com",
+        "alt": "Adafruit logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://adafruit.com",
+      "detailsPage": "sources/adafruit.html",
+      "trust": "trusted",
+      "description": "DIY electronics and maker education"
+    }
+  },
+  {
+    "name": "Popular Science",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/popsci.com",
+        "alt": "PopSci logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://popsci.com",
+      "detailsPage": "sources/popsci.html",
+      "trust": "trusted",
+      "description": "Consumer science and technology magazine"
+    }
+  },
+  {
+    "name": "Popular Mechanics",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/popularmechanics.com",
+        "alt": "PopMech logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://popularmechanics.com",
+      "detailsPage": "sources/popmech.html",
+      "trust": "trusted",
+      "description": "Technology, automotive, and engineering content"
+    }
+  },
+  {
+    "name": "Mental Floss",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mentalfloss.com",
+        "alt": "Mental Floss logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://mentalfloss.com",
+      "detailsPage": "sources/mentalfloss.html",
+      "trust": "mostly-trusted",
+      "description": "Trivia, facts, and educational content"
+    }
+  },
+  {
+    "name": "TED",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ted.com",
+        "alt": "TED logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://ted.com",
+      "detailsPage": "sources/ted.html",
+      "trust": "trusted",
+      "description": "Ideas worth spreading through talks and content"
+    }
+  },
+  {
+    "name": "American Scientist",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/americanscientist.org",
+        "alt": "American Scientist logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://americanscientist.org",
+      "detailsPage": "sources/americanscientist.html",
+      "trust": "trusted",
+      "description": "Science magazine published by Sigma Xi"
+    }
+  },
+  {
+    "name": "Discover Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/discovermagazine.com",
+        "alt": "Discover logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://discovermagazine.com",
+      "detailsPage": "sources/discover.html",
+      "trust": "trusted",
+      "description": "Popular science magazine covering latest discoveries"
+    }
+  },
+  {
+    "name": "Science News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/sciencenews.org",
+        "alt": "Science News logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://sciencenews.org",
+      "detailsPage": "sources/sciencenews.html",
+      "trust": "trusted",
+      "description": "Independent science journalism since 1921"
+    }
+  },
+  {
+    "name": "Astronomy Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/astronomy.com",
+        "alt": "Astronomy logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://astronomy.com",
+      "detailsPage": "sources/astronomy.html",
+      "trust": "trusted",
+      "description": "Space and astronomy enthusiast magazine"
+    }
+  },
+  {
+    "name": "Sky & Telescope",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/skyandtelescope.org",
+        "alt": "Sky & Telescope logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://skyandtelescope.org",
+      "detailsPage": "sources/skytelescope.html",
+      "trust": "trusted",
+      "description": "Astronomy magazine and observing guides"
+    }
+  },
+  {
+    "name": "Physics Today",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/physicstoday.org",
+        "alt": "Physics Today logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://physicstoday.org",
+      "detailsPage": "sources/physicstoday.html",
+      "trust": "trusted",
+      "description": "American Institute of Physics magazine"
+    }
+  },
+  {
+    "name": "Chemistry World",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/chemistryworld.com",
+        "alt": "Chemistry World logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://chemistryworld.com",
+      "detailsPage": "sources/chemworld.html",
+      "trust": "trusted",
+      "description": "Royal Society of Chemistry magazine"
+    }
+  },
+  {
+    "name": "Wired UK",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/wired.co.uk",
+        "alt": "Wired UK logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://wired.co.uk",
+      "detailsPage": "sources/wireduk.html",
+      "trust": "trusted",
+      "description": "UK edition of technology and culture magazine"
+    }
+  },
+  {
+    "name": "New Atlas",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/newatlas.com",
+        "alt": "New Atlas logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://newatlas.com",
+      "detailsPage": "sources/newatlas.html",
+      "trust": "trusted",
+      "description": "Emerging technology and science news"
+    }
+  },
+  {
+    "name": "Next Big Future",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nextbigfuture.com",
+        "alt": "NBF logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://nextbigfuture.com",
+      "detailsPage": "sources/nbf.html",
+      "trust": "mostly-trusted",
+      "description": "Future technology and breakthrough science"
+    }
+  },
+  {
+    "name": "Kurzweil AI",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/kurzweilai.net",
+        "alt": "KurzweilAI logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://kurzweilai.net",
+      "detailsPage": "sources/kurzweilai.html",
+      "trust": "mostly-trusted",
+      "description": "Artificial intelligence and accelerating intelligence"
+    }
+  },
+  {
+    "name": "AI News",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/artificialintelligence-news.com",
+        "alt": "AI News logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://artificialintelligence-news.com",
+      "detailsPage": "sources/ainews.html",
+      "trust": "mostly-trusted",
+      "description": "Latest developments in artificial intelligence"
+    }
+  },
+  {
+    "name": "VentureBeat",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/venturebeat.com",
+        "alt": "VentureBeat logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://venturebeat.com",
+      "detailsPage": "sources/venturebeat.html",
+      "trust": "mostly-trusted",
+      "description": "Technology industry news and analysis"
+    }
+  },
+  {
+    "name": "ReadWrite",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/readwrite.com",
+        "alt": "ReadWrite logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://readwrite.com",
+      "detailsPage": "sources/readwrite.html",
+      "trust": "mostly-trusted",
+      "description": "Technology news and startup coverage"
+    }
+  },
+  {
+    "name": "SlashGear",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/slashgear.com",
+        "alt": "SlashGear logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://slashgear.com",
+      "detailsPage": "sources/slashgear.html",
+      "trust": "mostly-trusted",
+      "description": "Technology, cars, and science news"
+    }
+  },
+  {
+    "name": "ExtremeTech",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/extremetech.com",
+        "alt": "ExtremeTech logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://extremetech.com",
+      "detailsPage": "sources/extremetech.html",
+      "trust": "trusted",
+      "description": "Cutting-edge technology analysis"
+    }
+  },
+  {
+    "name": "HotHardware",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/hothardware.com",
+        "alt": "HotHardware logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://hothardware.com",
+      "detailsPage": "sources/hothardware.html",
+      "trust": "trusted",
+      "description": "PC hardware reviews and technology news"
+    }
+  },
+  {
+    "name": "TechSpot",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/techspot.com",
+        "alt": "TechSpot logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://techspot.com",
+      "detailsPage": "sources/techspot.html",
+      "trust": "trusted",
+      "description": "Hardware reviews, tech news, and buying guides"
+    }
+  },
+  {
+    "name": "Tom's Guide",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/tomsguide.com",
+        "alt": "Tom's Guide logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://tomsguide.com",
+      "detailsPage": "sources/tomsguide.html",
+      "trust": "trusted",
+      "description": "Consumer technology buying guides and reviews"
+    }
+  },
+  {
+    "name": "PC Gamer",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pcgamer.com",
+        "alt": "PC Gamer logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://pcgamer.com",
+      "detailsPage": "sources/pcgamer.html",
+      "trust": "trusted",
+      "description": "PC gaming news, reviews, and hardware"
+    }
+  },
+  {
+    "name": "IGN",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/ign.com",
+        "alt": "IGN logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://ign.com",
+      "detailsPage": "sources/ign.html",
+      "trust": "mostly-trusted",
+      "description": "Video game and entertainment reviews"
+    }
+  },
+  {
+    "name": "GameSpot",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gamespot.com",
+        "alt": "GameSpot logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://gamespot.com",
+      "detailsPage": "sources/gamespot.html",
+      "trust": "mostly-trusted",
+      "description": "Video game news, reviews, and guides"
+    }
+  },
+  {
+    "name": "Polygon",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/polygon.com",
+        "alt": "Polygon logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://polygon.com",
+      "detailsPage": "sources/polygon.html",
+      "trust": "mostly-trusted",
+      "description": "Gaming culture and entertainment news"
+    }
+  },
+  {
+    "name": "Kotaku",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/kotaku.com",
+        "alt": "Kotaku logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://kotaku.com",
+      "detailsPage": "sources/kotaku.html",
+      "trust": "mostly-trusted",
+      "description": "Video game news and culture blog"
+    }
+  },
+  {
+    "name": "Rock Paper Shotgun",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/rockpapershotgun.com",
+        "alt": "RPS logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://rockpapershotgun.com",
+      "detailsPage": "sources/rps.html",
+      "trust": "trusted",
+      "description": "PC gaming news and reviews"
+    }
+  },
+  {
+    "name": "GamesRadar",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gamesradar.com",
+        "alt": "GamesRadar logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://gamesradar.com",
+      "detailsPage": "sources/gamesradar.html",
+      "trust": "mostly-trusted",
+      "description": "Video game news, reviews, and features"
+    }
+  },
+  {
+    "name": "Eurogamer",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/eurogamer.net",
+        "alt": "Eurogamer logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://eurogamer.net",
+      "detailsPage": "sources/eurogamer.html",
+      "trust": "trusted",
+      "description": "European gaming news and reviews"
+    }
+  },
+  {
+    "name": "Giant Bomb",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/giantbomb.com",
+        "alt": "Giant Bomb logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://giantbomb.com",
+      "detailsPage": "sources/giantbomb.html",
+      "trust": "trusted",
+      "description": "Video game wiki and entertainment site"
+    }
+  },
+  {
+    "name": "GameInformer",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gameinformer.com",
+        "alt": "GameInformer logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://gameinformer.com",
+      "detailsPage": "sources/gameinformer.html",
+      "trust": "mostly-trusted",
+      "description": "Video game magazine and reviews"
+    }
+  },
+  {
+    "name": "Destructoid",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/destructoid.com",
+        "alt": "Destructoid logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://destructoid.com",
+      "detailsPage": "sources/destructoid.html",
+      "trust": "mostly-trusted",
+      "description": "Gaming community and news site"
+    }
+  },
+  {
+    "name": "GamingBolt",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gamingbolt.com",
+        "alt": "GamingBolt logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://gamingbolt.com",
+      "detailsPage": "sources/gamingbolt.html",
+      "trust": "mostly-trusted",
+      "description": "Gaming news, reviews, and industry analysis"
+    }
+  },
+  {
+    "name": "Nintendo Life",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nintendolife.com",
+        "alt": "Nintendo Life logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://nintendolife.com",
+      "detailsPage": "sources/nintendolife.html",
+      "trust": "trusted",
+      "description": "Nintendo gaming news and reviews"
+    }
+  },
+  {
+    "name": "PlayStation Blog",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/blog.playstation.com",
+        "alt": "PS Blog logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://blog.playstation.com",
+      "detailsPage": "sources/psblog.html",
+      "trust": "trusted",
+      "description": "Official PlayStation news and updates"
+    }
+  },
+  {
+    "name": "Xbox Wire",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/news.xbox.com",
+        "alt": "Xbox Wire logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://news.xbox.com",
+      "detailsPage": "sources/xboxwire.html",
+      "trust": "trusted",
+      "description": "Official Xbox news and features"
+    }
+  },
+  {
+    "name": "Steam Community",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/steamcommunity.com",
+        "alt": "Steam logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://steamcommunity.com",
+      "detailsPage": "sources/steam.html",
+      "trust": "mostly-trusted",
+      "description": "PC gaming platform community and news"
+    }
+  },
+  {
+    "name": "TouchArcade",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/toucharcade.com",
+        "alt": "TouchArcade logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://toucharcade.com",
+      "detailsPage": "sources/toucharcade.html",
+      "trust": "trusted",
+      "description": "Mobile gaming news and reviews"
+    }
+  },
+  {
+    "name": "Pocket Gamer",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/pocketgamer.com",
+        "alt": "Pocket Gamer logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://pocketgamer.com",
+      "detailsPage": "sources/pocketgamer.html",
+      "trust": "trusted",
+      "description": "Mobile and handheld gaming coverage"
+    }
+  },
+  {
+    "name": "AppSpy",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/appspy.com",
+        "alt": "AppSpy logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://appspy.com",
+      "detailsPage": "sources/appspy.html",
+      "trust": "trusted",
+      "description": "Mobile app and game reviews"
+    }
+  },
+  {
+    "name": "Gamasutra",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/gamedeveloper.com",
+        "alt": "Game Developer logo"
+      },
+      "category": "Gaming",
+      "visitUrl": "https://gamedeveloper.com",
+      "detailsPage": "sources/gamedeveloper.html",
+      "trust": "trusted",
+      "description": "Game development industry news and resources"
+    }
+  },
+  {
+    "name": "MobileSyrup",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/mobilesyrup.com",
+        "alt": "MobileSyrup logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://mobilesyrup.com",
+      "detailsPage": "sources/mobilesyrup.html",
+      "trust": "trusted",
+      "description": "Canadian mobile technology news"
+    }
+  },
+  {
+    "name": "PhoneArena",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/phonearena.com",
+        "alt": "PhoneArena logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://phonearena.com",
+      "detailsPage": "sources/phonearena.html",
+      "trust": "mostly-trusted",
+      "description": "Mobile phone news, reviews, and comparisons"
+    }
+  },
+  {
+    "name": "Android Police",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/androidpolice.com",
+        "alt": "Android Police logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://androidpolice.com",
+      "detailsPage": "sources/androidpolice.html",
+      "trust": "trusted",
+      "description": "Android news, reviews, and how-tos"
+    }
+  },
+  {
+    "name": "iMore",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/imore.com",
+        "alt": "iMore logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://imore.com",
+      "detailsPage": "sources/imore.html",
+      "trust": "trusted",
+      "description": "iPhone, iPad, and Apple news and reviews"
+    }
+  },
+  {
+    "name": "AppleInsider",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/appleinsider.com",
+        "alt": "AppleInsider logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://appleinsider.com",
+      "detailsPage": "sources/appleinsider.html",
+      "trust": "trusted",
+      "description": "Apple news, rumors, and analysis"
+    }
+  },
+  {
+    "name": "Cult of Mac",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cultofmac.com",
+        "alt": "Cult of Mac logo"
+      },
+      "category": "Tech",
+      "visitUrl": "https://cultofmac.com",
+      "detailsPage": "sources/cultofmac.html",
+      "trust": "mostly-trusted",
+      "description": "Apple news, reviews, and how-tos"
+    }
+  },
+  {
+    "name": "The Verge Science",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/theverge.com",
+        "alt": "Verge Science logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://theverge.com/science",
+      "detailsPage": "sources/vergescience.html",
+      "trust": "mostly-trusted",
+      "description": "Science coverage from The Verge"
+    }
+  },
+  {
+    "name": "Inverse",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/inverse.com",
+        "alt": "Inverse logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://inverse.com",
+      "detailsPage": "sources/inverse.html",
+      "trust": "mostly-trusted",
+      "description": "Science, technology, and pop culture"
+    }
+  },
+  {
+    "name": "Futurism",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/futurism.com",
+        "alt": "Futurism logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://futurism.com",
+      "detailsPage": "sources/futurism.html",
+      "trust": "mostly-trusted",
+      "description": "Future technology and scientific breakthroughs"
+    }
+  },
+  {
+    "name": "Singularity Hub",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/singularityhub.com",
+        "alt": "SingularityHub logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://singularityhub.com",
+      "detailsPage": "sources/singularityhub.html",
+      "trust": "mostly-trusted",
+      "description": "Emerging technology and science news"
+    }
+  },
+  {
+    "name": "Big Think",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/bigthink.com",
+        "alt": "Big Think logo"
+      },
+      "category": "Education",
+      "visitUrl": "https://bigthink.com",
+      "detailsPage": "sources/bigthink.html",
+      "trust": "mostly-trusted",
+      "description": "Ideas and insights from leading thinkers"
+    }
+  },
+  {
+    "name": "Aeon",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/aeon.co",
+        "alt": "Aeon logo"
+      },
+      "category": "Culture",
+      "visitUrl": "https://aeon.co",
+      "detailsPage": "sources/aeon.html",
+      "trust": "trusted",
+      "description": "Essays on philosophy, science, and culture"
+    }
+  },
+  {
+    "name": "Nautilus",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/nautil.us",
+        "alt": "Nautilus logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://nautil.us",
+      "detailsPage": "sources/nautilus.html",
+      "trust": "trusted",
+      "description": "Science connected magazine"
+    }
+  },
+  {
+    "name": "Quanta Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/quantamagazine.org",
+        "alt": "Quanta logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://quantamagazine.org",
+      "detailsPage": "sources/quanta.html",
+      "trust": "trusted",
+      "description": "Mathematics and science journalism"
+    }
+  },
+  {
+    "name": "Undark",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/undark.org",
+        "alt": "Undark logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://undark.org",
+      "detailsPage": "sources/undark.html",
+      "trust": "trusted",
+      "description": "Truth, beauty, science magazine"
+    }
+  },
+  {
+    "name": "Knowable Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/knowablemagazine.org",
+        "alt": "Knowable logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://knowablemagazine.org",
+      "detailsPage": "sources/knowable.html",
+      "trust": "trusted",
+      "description": "Science journalism from Annual Reviews"
+    }
+  },
+  {
+    "name": "Cosmos Magazine",
+    "details": {
+      "logo": {
+        "src": "https://logo.clearbit.com/cosmosmagazine.com",
+        "alt": "Cosmos logo"
+      },
+      "category": "Science",
+      "visitUrl": "https://cosmosmagazine.com",
+      "detailsPage": "sources/cosmos.html",
+      "trust": "trusted",
+      "description": "Australian science magazine"
     }
   }
 ]

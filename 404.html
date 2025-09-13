@@ -1,3 +1,117 @@
-<h1>ERROR 404 </h1>
-<p>the page you were looking for could not be found</p>
-<p>&copy; Blacklink Education, Inc.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Blacklink Education</title>
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #162447);
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 8rem;
+            background: linear-gradient(90deg, #b98eff, #8a65cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            margin-top: 1rem;
+            background: linear-gradient(135deg, #b98eff, #8a65cc);
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(185, 142, 255, 0.4);
+            transition: 0.3s;
+        }
+
+        a.button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(185, 142, 255, 0.6);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Optional floating shapes for fun */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(185, 142, 255, 0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 15%;
+        }
+
+        .circle2 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            right: 10%;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <h1>404</h1>
+    <h2>Oops! Page Not Found</h2>
+    <p>The page you were looking for could not be found.</p>
+    <a href="index.html" class="button">Go Home</a>
+
+    <footer>&copy; 2025 Blacklink Education, Inc.</footer>
+</body>
+
+</html>

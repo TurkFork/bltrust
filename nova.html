@@ -4,206 +4,996 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blacklink Trust 1.2</title>
-  <link rel="stylesheet" href="trust+nova.css" />
-  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+  <meta name="description"
+    content="Blacklink Trust - The source for finding sources. Discover and evaluate trusted information sources." />
+  <title>Blacklink Trust 1.2</title>
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js" defer></script>
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <div class="logo" style="display:flex;align-items:center;gap:10px;">
       <img src="trust-logo.svg" alt="Blacklink Trust logo" width="40" height="40" />
-      <h3>Blacklink Trust</h3>
+      <h1 style="font-size: 1.5rem; margin: 0;">Blacklink Trust</h1>
     </div>
     <div class="nav-right">
-      <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark or light theme">🌙</button>
-      <button id="account-btn" disabled>Loading...</button>
+      <button id="theme-toggle" aria-pressed="true" aria-label="Toggle dark or light theme"
+        title="Switch between light and dark themes">
+        ☀️
+      </button>
+      <button id="account-btn" class="account-button" disabled aria-describedby="account-status">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        Loading...
+      </button>
     </div>
   </header>
 
-  <main class="container trust-extension" style="position:relative;">
-    <h2>Sources</h2>
-    <p>The source for finding sources.</p>
+  <main class="container trust-extension" role="main">
+    <section class="hero-section">
+      <h2>Trust</h2>
+      <p class="subtitle">The source for finding sources.</p>
+      <small>Version 1.2 | NOVA 1.0 | Updated September 13th, 2025.
+      </small>
+    </section>
 
-    <div class="toolbar" style="position:relative;">
-      <input type="search" id="search-input" placeholder="Search sources…" disabled autocomplete="off"
-        aria-autocomplete="list" aria-controls="autocomplete-list" aria-expanded="false" />
-      <div id="autocomplete-list" role="listbox" style="display:none;"></div>
-
-      <div class="filter-sort-row" style="align-items:center;">
-        <div class="filter-container" role="group" aria-label="Filter sources">
-          <button data-filter="all" class="active" disabled title="Show all sources">All</button>
-          <button data-filter="trusted" disabled title="Show only trusted sources">Trusted</button>
-          <button data-filter="mostly-trusted" disabled title="Show mostly trusted sources">Mostly Trusted</button>
-          <button data-filter="not-trusted" disabled title="Show not trusted sources">Not Trusted</button>
+    <section class="controls-section" aria-label="Search and filter controls">
+      <div class="search-container" style="position:relative;">
+        <label for="search-input" class="visually-hidden">Search sources</label>
+        <input type="search" id="search-input" placeholder="Search sources…" disabled autocomplete="off"
+          aria-autocomplete="list" aria-controls="autocomplete-list" aria-expanded="false"
+          aria-describedby="search-help" />
+        <div id="search-help" class="visually-hidden">
+          Type to search through source names, categories, and descriptions
         </div>
-        <select id="sort-select" disabled aria-label="Sort sources">
-          <option value="default">Sort By</option>
-          <option value="name-asc">Name ↑</option>
-          <option value="name-desc">Name ↓</option>
-          <option value="category-asc">Category ↑</option>
-          <option value="category-desc">Category ↓</option>
-        </select>
-        <select id="category-filter" disabled aria-label="Filter by category" style="margin-left:10px;">
-          <option value="all">All Categories</option>
-        </select>
-        <button id="clear-filters" title="Clear all filters and search" disabled>Clear Filters</button>
+        <div id="autocomplete-list" role="listbox" style="display:none;" aria-label="Search suggestions"></div>
       </div>
 
-      <div id="source-count" aria-live="polite" aria-atomic="true">Showing 0 sources</div>
-    </div>
+      <div class="filter-sort-container">
+        <div class="filter-container" role="group" aria-label="Trust level filters">
+          <span class="filter-label">Trust Level:</span>
+          <button data-filter="all" class="filter-btn active" disabled title="Show all sources">
+            All <span class="count" aria-hidden="true"></span>
+          </button>
+          <button data-filter="trusted" class="filter-btn" disabled title="Show only trusted sources">
+            Trusted <span class="count" aria-hidden="true"></span>
+          </button>
+          <button data-filter="mostly-trusted" class="filter-btn" disabled title="Show mostly trusted sources">
+            Mostly Trusted <span class="count" aria-hidden="true"></span>
+          </button>
+          <button data-filter="not-trusted" class="filter-btn" disabled title="Show not trusted sources">
+            Not Trusted <span class="count" aria-hidden="true"></span>
+          </button>
+        </div>
 
-    <div id="resource-list" style="min-height:150px; display:flex; flex-direction:column; gap:15px;">
-      <p id="loading-msg">Please log in to view sources.</p>
-    </div>
+        <div class="sort-container">
+          <label for="sort-select" class="sort-label">Sort:</label>
+          <select id="sort-select" disabled aria-label="Sort sources">
+            <option value="default">Default Order</option>
+            <option value="name-asc">Name (A-Z)</option>
+            <option value="name-desc">Name (Z-A)</option>
+            <option value="category-asc">Category (A-Z)</option>
+            <option value="category-desc">Category (Z-A)</option>
+            <option value="trust-desc">Trust Level (High-Low)</option>
+            <option value="trust-asc">Trust Level (Low-High)</option>
+          </select>
+        </div>
 
-    <div id="error-msg" style="color:red; margin-top:1rem;"></div>
+        <div class="category-container">
+          <label for="category-filter" class="category-label">Category:</label>
+          <select id="category-filter" disabled aria-label="Filter by category">
+            <option value="all">All Categories</option>
+          </select>
+        </div>
+
+        <button id="clear-filters" class="clear-btn" title="Clear all filters and search" disabled
+          aria-describedby="clear-help">
+          <span aria-hidden="true">✕</span> Clear Filters
+        </button>
+        <div id="clear-help" class="visually-hidden">
+          Reset all filters and clear search to show all sources
+        </div>
+      </div>
+
+      <div class="results-info">
+        <div id="source-count" aria-live="polite" aria-atomic="true">
+          Showing 0 sources
+        </div>
+        <div id="filter-summary" aria-live="polite" class="filter-summary"></div>
+      </div>
+    </section>
+
+    <section class="sources-section" aria-label="Source results">
+      <div id="resource-list" role="region" aria-label="Sources list"
+        style="min-height:150px; display:flex; flex-direction:column; gap:15px;">
+        <div class="welcome-message" id="loading-msg">
+          <div class="message-icon">🔐</div>
+          <h3>Welcome to Blacklink Trust</h3>
+          <p>Please log in to view and search our curated database of information sources.</p>
+          <button class="login-cta" onclick="window.location.href='https://accounts.blacklink.net/public/login'">
+            Sign In to Continue
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div id="error-msg" role="alert" aria-live="assertive" style="color:red; margin-top:1rem; display:none;"></div>
   </main>
 
-  <footer style="text-align:center; padding:2rem; color:#666; user-select:none;">
-    © 2025 Blacklink Education, Inc. · Licensed under CC BY‑NC‑SA 4.0
+  <footer role="contentinfo" style="text-align:center; padding:2rem; color:#666; user-select:none;">
+    <p>© 2025 Blacklink Education, Inc. · Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer"
+        aria-label="Creative Commons BY-NC-SA 4.0 License (opens in new tab)">
+        CC BY‑NC‑SA 4.0
+      </a>
+
+    </p>
+    <p> Trust Version 1.2 | NOVA 1.0A
+    </p>
   </footer>
 
+  <style>
+    /* ==============================
+   Blacklink Trust 1.2 - Full CSS
+   Updated: Resource Cards & Light Mode
+   ============================== */
+
+    /* Reset & base */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(160deg, #0d0d0d, #1a1a1a);
+      color: #f5f5f5;
+      line-height: 1.6;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    /* Light theme */
+    body.light {
+      background: linear-gradient(160deg, #f0f2f5, #ffffff);
+      color: #212529;
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #4CAF50;
+      border-radius: 8px;
+      border: 3px solid transparent;
+      background-clip: content-box;
+    }
+
+    /* Scrollbar light mode */
+    body.light ::-webkit-scrollbar-thumb {
+      background-color: #F067EB;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      backdrop-filter: blur(12px) saturate(180%);
+      background-color: rgba(10, 10, 10, 0.75);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #F067EB, #679EFE);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* Theme Toggle */
+    #theme-toggle {
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      padding: 0.6rem;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.1);
+    }
+
+    /* Account Button */
+    .account-button {
+      background: #F067EB;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.6rem 1.4rem;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .account-button:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(240, 103, 235, 0.3);
+    }
+
+    /* Main container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 3rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero-section h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(120deg, #F067EB, #679EFE);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      color: #ccc;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Controls Section */
+    .controls-section {
+      background: rgba(25, 25, 25, 0.75);
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Search Input */
+    #search-input {
+      width: 100%;
+      padding: 1rem 1.4rem;
+      border-radius: 24px;
+      border: none;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    #search-input:focus {
+      outline: none;
+      background: rgba(240, 103, 235, 0.15);
+      box-shadow: 0 0 12px rgba(240, 103, 235, 0.5);
+    }
+
+    /* Filter & Sort Buttons */
+    .filter-sort-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      font-weight: 600;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn.active {
+      background: #F067EB;
+      border-color: #F067EB;
+      color: #fff;
+    }
+
+    .filter-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(240, 103, 235, 0.25);
+    }
+
+    /* Sort & Category */
+    #sort-select,
+    #category-filter {
+      border-radius: 20px;
+      border: none;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    #sort-select:hover,
+    #category-filter:hover {
+      background: rgba(240, 103, 235, 0.15);
+    }
+
+    /* Multiple Select Fix for Safari */
+    select[multiple] {
+      height: auto;
+      min-height: 2.5rem;
+      overflow-y: auto;
+    }
+
+    select[multiple] option {
+      padding: 0.5rem 1rem;
+    }
+
+    /* Clear Filters */
+    .clear-btn {
+      background: #679EFE;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .clear-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(103, 158, 254, 0.3);
+    }
+
+    /* Results Info */
+    .results-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* ==============================
+   Resource Card Redesign
+   ============================== */
+    .source-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      backdrop-filter: blur(30px);
+      background: rgba(30, 30, 30, 0.6);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1.8rem 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .source-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #F067EB, #679EFE);
+      transition: all 0.5s ease;
+    }
+
+    .source-card:hover::before {
+      left: 0;
+    }
+
+    .source-card:hover {
+      transform: translateY(-5px) rotateX(2deg);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Card Top */
+    .source-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .source-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-fallback {
+      font-size: 1.5rem;
+      color: #F067EB;
+    }
+
+    .source-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      flex: 1;
+    }
+
+    /* Trust Badge */
+    .trust-badge {
+      font-weight: 700;
+      padding: 0.4rem 0.8rem;
+      border-radius: 16px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    .trust-trusted {
+      background: rgba(240, 103, 235, 0.15);
+      color: #F067EB;
+    }
+
+    .trust-mostly-trusted {
+      background: rgba(103, 158, 254, 0.15);
+      color: #679EFE;
+    }
+
+    .trust-not-trusted {
+      background: rgba(255, 103, 158, 0.15);
+      color: #F067EB;
+    }
+
+    /* Card Meta */
+    .source-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .category-badge {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.4rem 0.8rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .source-link {
+      color: #F067EB;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .source-link:hover {
+      text-decoration: underline;
+      color: #679EFE;
+    }
+
+    /* Empty & Loading States */
+    .welcome-message,
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      background: rgba(25, 25, 25, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .message-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #F067EB;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .controls-section {
+        padding: 1.5rem;
+      }
+
+      header {
+        padding: 1rem 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .filter-sort-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+
   <script>
-    // Firebase initialization
-    firebase.initializeApp({
+    // =========================
+    // Firebase configuration
+    // =========================
+    const firebaseConfig = {
       apiKey: "AIzaSyDh1cCQXw1TGVJdVVgLEGdOgZlTPzGORLw",
       authDomain: "blacklink-auth.firebaseapp.com",
       projectId: "blacklink-auth",
-      storageBucket: "blacklink-auth.appspot.com",
+      storageBucket: "blacklink-auth.appStorage.com",
       messagingSenderId: "457832218084",
       appId: "1:457832218084:web:your-app-id-here"
-    });
-
-    const auth = firebase.auth();
-    const accountBtn = document.getElementById("account-btn");
-    const searchInput = document.getElementById("search-input");
-    const filterButtons = document.querySelectorAll(".filter-container button");
-    const sortSelect = document.getElementById("sort-select");
-    const categoryFilter = document.getElementById("category-filter");
-    const clearFiltersBtn = document.getElementById("clear-filters");
-    const resourceList = document.getElementById("resource-list");
-    const errorMsg = document.getElementById("error-msg");
-    const sourceCount = document.getElementById("source-count");
-    let allSources = [], expandedData = {}, filteredSources = [];
-
-    // Utility: Show Firebase error nicely
-    function displayFirebaseError(err) {
-      if (["auth/invalid-email", "auth/wrong-password"].includes(err.code)) {
-        errorMsg.textContent = "Invalid email or password.";
-      } else if (err.code === "auth/user-not-found") {
-        errorMsg.textContent = "User not found.";
-      } else {
-        errorMsg.textContent = err.message;
-      }
-    }
-
-    // Disable or enable UI elements based on login
-    function updateAccountUI(user) {
-      errorMsg.textContent = "";
-      const disabled = !user;
-      accountBtn.textContent = user ? `Logout (${user.email})` : "Login";
-      accountBtn.disabled = false;
-
-      accountBtn.onclick = user
-        ? logout
-        : () => { window.location.href = "https://accounts.blacklink.net/public/login"; };
-
-      [searchInput, ...filterButtons, sortSelect, categoryFilter, clearFiltersBtn]
-        .forEach(el => el.disabled = disabled);
-
-      resourceList.innerHTML = user
-        ? ""
-        : '<p id="loading-msg">Please log in to view sources.</p>';
-      sourceCount.textContent = user ? `Showing 0 sources` : `Showing 0 sources`;
-    }
-
-    // Copy-paste your existing createSourceElement, applyFiltersAndSort, populateCategories, etc here
-    // For brevity, I'll omit repeating those functions. (Use your existing code for those)
-
-    // But include a minimal example for loadSources and loadExpandedData:
-    async function loadExpandedData() {
-      try {
-        const res = await fetch("/sources/expanded.json");
-        if (!res.ok) throw new Error(`Error ${res.status}`);
-        const data = await res.json();
-        expandedData = data.reduce((acc, item) => {
-          if (item.name) acc[item.name] = item;
-          return acc;
-        }, {});
-      } catch (err) {
-        console.warn("Failed to load expanded data:", err);
-        expandedData = {};
-      }
-    }
-
-    async function loadSources() {
-      try {
-        const res = await fetch("/sources/data.json");
-        if (!res.ok) throw new Error(`Error ${res.status}`);
-        allSources = await res.json();
-        await loadExpandedData();
-        populateCategories();
-        applyFiltersAndSort();
-      } catch (err) {
-        errorMsg.textContent = "Error loading sources.";
-      }
-    }
-
-    function logout() {
-      auth.signOut();
-    }
-
-    // On page load: check for JWT token (in URL param or localStorage)
-    async function initAuth() {
-      let token = null;
-
-      // Check URL param "token" (example: https://site.com?token=XYZ)
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has("token")) {
-        token = urlParams.get("token");
-        // Optionally save to localStorage for persistence
-        localStorage.setItem("blacklinkJwtToken", token);
-        // Remove token from URL to clean it up (optional)
-        window.history.replaceState({}, document.title, window.location.pathname);
-      } else {
-        // Else check localStorage
-        token = localStorage.getItem("blacklinkJwtToken");
-      }
-
-      if (token) {
-        try {
-          await auth.signInWithCustomToken(token);
-          // Signed in successfully, UI will update in onAuthStateChanged
-        } catch (err) {
-          console.error("Invalid token or sign-in failed:", err);
-          localStorage.removeItem("blacklinkJwtToken");
-          updateAccountUI(null);
-        }
-      } else {
-        updateAccountUI(null);
-      }
-    }
-
-    // Theme toggle
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      document.getElementById("theme-toggle").textContent =
-        document.documentElement.classList.contains("dark") ? "☀️" : "🌙";
-    });
-
-    // Firebase auth state listener
-    auth.onAuthStateChanged(user => {
-      updateAccountUI(user);
-      if (user) loadSources();
-    });
-
-    window.onload = () => {
-      initAuth();
     };
+    let authManager = {
+      async login() {
+        // Example: redirect-based login
+        const provider = new firebase.auth.GoogleAuthProvider();
+        try {
+          const result = await firebase.auth().signInWithPopup(provider);
+          const user = result.user;
+          const token = await user.getIdToken(); // This is your JWT
+          console.log('JWT Token:', token);
 
+          appState.currentUser = user;
+          UIManager.updateAccountButton(user);
+          applyFilters(); // Now filters can work with auth if needed
+        } catch (err) {
+          Utils.showError('Login failed: ' + err.message, true);
+        }
+      },
+
+      async logout() {
+        try {
+          await firebase.auth().signOut();
+          appState.currentUser = null;
+          UIManager.updateAccountButton(null);
+        } catch (err) {
+          Utils.showError('Logout failed: ' + err.message, true);
+        }
+      }
+    };
+    // =========================
+    // Application State
+    // =========================
+    class AppState {
+      constructor() {
+        this.allSources = [];
+        this.expandedData = {};
+        this.filteredSources = [];
+        this.currentUser = null;
+        this.isLoading = false;
+        this.isOnline = navigator.onLine;
+        this.retryCount = 0;
+        this.maxRetries = 3;
+      }
+
+      reset() {
+        this.allSources = [];
+        this.expandedData = {};
+        this.filteredSources = [];
+        this.isLoading = false;
+        this.retryCount = 0;
+      }
+    }
+
+    // =========================
+    // DOM Manager
+    // =========================
+    class DOMManager {
+      constructor() {
+        this.elements = {
+          auth: null,
+          accountBtn: document.getElementById("account-btn"),
+          searchInput: document.getElementById("search-input"),
+          filterButtons: document.querySelectorAll(".filter-container button"),
+          sortSelect: document.getElementById("sort-select"),
+          categoryFilter: document.getElementById("category-filter"),
+          clearFiltersBtn: document.getElementById("clear-filters"),
+          resourceList: document.getElementById("resource-list"),
+          errorMsg: document.getElementById("error-msg"),
+          sourceCount: document.getElementById("source-count"),
+          filterSummary: document.getElementById("filter-summary"),
+          themeToggle: document.getElementById("theme-toggle")
+        };
+      }
+
+      setAuth(auth) {
+        this.elements.auth = auth;
+      }
+    }
+
+    // =========================
+    // Utility Functions
+    // =========================
+    class Utils {
+      static showError(message, isTemporary = false) {
+        const errorMsg = dom.elements.errorMsg;
+        errorMsg.textContent = message;
+        errorMsg.style.display = 'block';
+        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        if (isTemporary) {
+          setTimeout(() => this.hideError(), 5000);
+        }
+      }
+
+      static hideError() {
+        dom.elements.errorMsg.style.display = 'none';
+      }
+
+      static debounce(func, delay) {
+        let timeoutId;
+        return (...args) => {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => func.apply(null, args), delay);
+        };
+      }
+
+      static formatNumber(num) {
+        return new Intl.NumberFormat().format(num);
+      }
+
+      static async retryOperation(operation, maxRetries = 3, delay = 1000) {
+        for (let i = 0; i < maxRetries; i++) {
+          try {
+            return await operation();
+          } catch (error) {
+            console.warn(`Operation failed (attempt ${i + 1}/${maxRetries}):`, error);
+            if (i === maxRetries - 1) throw error;
+            await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, i)));
+          }
+        }
+      }
+    }
+
+    // =========================
+    // UI Manager
+    // =========================
+    class UIManager {
+      static updateAccountButton(user) {
+        const btn = dom.elements.accountBtn;
+        if (user) {
+          const email = user.email;
+          const displayEmail = email.length > 20 ? email.substring(0, 17) + '...' : email;
+          btn.innerHTML = `Logout (${displayEmail})`;
+          btn.onclick = () => authManager.logout();
+          btn.disabled = false;
+          btn.setAttribute('aria-label', `Logout ${email}`);
+          btn.title = `Logged in as ${email}. Click to logout.`;
+        } else {
+          btn.innerHTML = 'Sign In';
+          btn.onclick = () => window.location.href = 'https://accounts.blacklink.net/public/login';
+          btn.disabled = false;
+          btn.setAttribute('aria-label', 'Sign in to access sources');
+          btn.title = 'Sign in to access the source database';
+        }
+      }
+
+      static updateControlsState(enabled) {
+        const controls = [
+          dom.elements.searchInput,
+          ...dom.elements.filterButtons,
+          dom.elements.sortSelect,
+          dom.elements.categoryFilter,
+          dom.elements.clearFiltersBtn
+        ];
+
+        controls.forEach(control => {
+          if (control instanceof NodeList || Array.isArray(control)) {
+            control.forEach(c => c.disabled = !enabled);
+          } else {
+            control.disabled = !enabled;
+          }
+        });
+      }
+
+      static showLoading(message = 'Loading...') {
+        dom.elements.resourceList.innerHTML = `
+          <div class="welcome-message">
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <h3>${message}</h3>
+          </div>
+        `;
+      }
+
+      static showEmptyState(message = 'No sources found.') {
+        dom.elements.resourceList.innerHTML = `
+          <div class="empty-state">
+            <div class="message-icon">📭</div>
+            <h3>${message}</h3>
+          </div>
+        `;
+      }
+
+      static renderSources(sources) {
+        if (!sources || sources.length === 0) {
+          this.showEmptyState();
+          dom.elements.sourceCount.textContent = 'Showing 0 sources';
+          return;
+        }
+
+        const html = sources.map(source => `
+    <div class="source-card">
+      <div class="source-header">
+        <div class="logo-container">
+          <img src="${source.logo}" alt="${source.logoAlt}" class="source-logo"
+               onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('beforeend', '<div class=\\'logo-fallback\\'>⚠️</div>');" />
+        </div>
+        <div class="source-title-section">
+          <div class="title-row">
+            <h4 class="source-name">${source.name}</h4>
+            <div class="trust-circle ${source.trustClass}" title="Trust level: ${source.trust}"></div>
+          </div>
+          <div class="source-meta">
+            <span class="category-badge">${source.category}</span>
+            <a href="${source.visitUrl}" target="_blank" rel="noopener noreferrer" class="source-link">Visit</a>
+          </div>
+        </div>
+        <div class="trust-badge-container">
+          <span class="trust-badge ${source.trustClass}">${source.trust}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+        dom.elements.resourceList.innerHTML = html;
+        dom.elements.sourceCount.textContent = `Showing ${Utils.formatNumber(sources.length)} sources`;
+      }
+    }
+
+    // =========================
+    // Theme Management
+    // =========================
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+      const isLight = document.body.classList.contains('light');
+      dom.elements.themeToggle.textContent = isLight ? '🌙' : '☀️';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    }
+
+    // =========================
+    // Load Sources from JSON
+    // =========================
+    async function loadSources() {
+      UIManager.showLoading('Fetching sources...');
+      try {
+        const response = await fetch('sources/data.json');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+
+        // Map JSON to flat structure used in UI
+        appState.allSources = data.map(item => ({
+          name: item.name,
+          logo: item.details.logo.src || 'placeholder-logo.png',
+          logoAlt: item.details.logo.alt || `${item.name} logo`,
+          category: item.details.category || 'Uncategorized',
+          visitUrl: item.details.visitUrl || '#',
+          detailsPage: item.details.detailsPage || '#',
+          trust: item.details.trust || 'Unknown',
+          trustClass: `trust-${item.details.trust.toLowerCase().replace(/\s/g, '-')}`
+        }));
+
+        UIManager.renderSources(appState.allSources);
+        UIManager.updateControlsState(true);
+      } catch (error) {
+        console.error('Failed to load sources:', error);
+        Utils.showError('Failed to load sources. Please try again later.', true);
+        UIManager.showEmptyState();
+      }
+    }
+
+    // =========================
+    // Initialize App
+    // =========================
+    const appState = new AppState();
+    const dom = new DOMManager();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Apply saved theme
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      if (savedTheme === 'light') document.body.classList.add('light');
+
+      dom.elements.themeToggle.addEventListener('click', toggleTheme);
+
+      // Initialize Firebase
+      try {
+        firebase.initializeApp(firebaseConfig);
+      } catch (err) {
+        Utils.showError('Failed to initialize Firebase: ' + err.message, true);
+      }
+
+      // Load sources from JSON
+      loadSources();
+    });
+
+    // -------------------
+    // Filter & Search Logic
+    // -------------------
+    function applyFilters() {
+      let filtered = [...appState.allSources];
+
+      // Search filter
+      const query = dom.elements.searchInput.value.toLowerCase().trim();
+      if (query) {
+        filtered = filtered.filter(src =>
+          src.name.toLowerCase().includes(query) ||
+          src.category.toLowerCase().includes(query)
+        );
+      }
+
+      // Trust filter
+      const activeTrustBtn = document.querySelector('.filter-btn.active');
+      if (activeTrustBtn && activeTrustBtn.dataset.filter !== 'all') {
+        filtered = filtered.filter(src => src.trustClass === `trust-${activeTrustBtn.dataset.filter}`);
+      }
+
+      // Category filter
+      const catVal = dom.elements.categoryFilter.value;
+      if (catVal !== 'all') {
+        filtered = filtered.filter(src => src.category === catVal);
+      }
+
+      // Sort
+      const sortVal = dom.elements.sortSelect.value;
+      if (sortVal === 'name-asc') filtered.sort((a, b) => a.name.localeCompare(b.name));
+      else if (sortVal === 'name-desc') filtered.sort((a, b) => b.name.localeCompare(a.name));
+      else if (sortVal === 'category-asc') filtered.sort((a, b) => a.category.localeCompare(b.category));
+      else if (sortVal === 'category-desc') filtered.sort((a, b) => b.category.localeCompare(a.category));
+      else if (sortVal === 'trust-asc') filtered.sort((a, b) => a.trust.localeCompare(b.trust));
+      else if (sortVal === 'trust-desc') filtered.sort((a, b) => b.trust.localeCompare(a.trust));
+
+      appState.filteredSources = filtered;
+      UIManager.renderSources(filtered);
+
+      // Update filter summary
+      dom.elements.filterSummary.textContent = `Filters applied: ${query || 'none'}, Trust: ${activeTrustBtn?.dataset.filter || 'all'}, Category: ${catVal}`;
+    }
+
+    // -------------------
+    // Event Listeners
+    // -------------------
+    dom.elements.searchInput.addEventListener('input', Utils.debounce(applyFilters, 300));
+
+    dom.elements.filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        dom.elements.filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+
+    dom.elements.categoryFilter.addEventListener('change', applyFilters);
+    dom.elements.sortSelect.addEventListener('change', applyFilters);
+
+    dom.elements.clearFiltersBtn.addEventListener('click', () => {
+      dom.elements.searchInput.value = '';
+      dom.elements.categoryFilter.value = 'all';
+      dom.elements.sortSelect.value = 'default';
+      dom.elements.filterButtons.forEach(b => b.classList.remove('active'));
+      document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+      applyFilters();
+    });
+
+    // -------------------
+    // Populate category options dynamically
+    // -------------------
+    function populateCategories() {
+      const categories = [...new Set(appState.allSources.map(src => src.category))];
+      categories.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat;
+        option.textContent = cat;
+        dom.elements.categoryFilter.appendChild(option);
+      });
+    }
+
+    // Call this after loading sources
+    loadSources().then(() => {
+      populateCategories();
+    });
   </script>
 </body>
 

@@ -1,3 +1,9 @@
+/*Trust+Nova.css
+Nova ©2025 Blacklink Education.
+Trust 1.2 */
+
+
+
 /* Reset and Base */
 body {
   margin: 0;
@@ -15,6 +21,7 @@ h1 {
   margin-bottom: 1rem;
   color: #fafafa;
 }
+
 h2 {
   font-size: 2.2rem;
   color: #e3dee9;
@@ -34,10 +41,12 @@ h2 {
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 .section p {
   color: #bbb;
   font-size: 1.1rem;
@@ -55,7 +64,7 @@ h2 {
   color: white;
   font-weight: 600;
   transition: all 0.25s ease-in-out;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transform: scale(1);
 }
@@ -82,21 +91,32 @@ h2 {
   transition: transform 0.15s ease;
   will-change: transform;
 }
+
 .cta.magnetic:hover {
   animation: magneticPulse 0.25s ease-in-out forwards;
 }
 
 @keyframes magneticPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.07); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
 /* Tooltip */
 .tooltip {
   position: relative;
   cursor: help;
   border-bottom: 1px dotted #ccc;
 }
+
 .tooltip-text {
   visibility: hidden;
   opacity: 0;
@@ -112,6 +132,7 @@ h2 {
   white-space: nowrap;
   z-index: 10;
 }
+
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
@@ -127,9 +148,19 @@ h2 {
   max-width: 600px;
   color: #fff;
 }
-.alert-error { background: #e74c3c; }
-.alert-success { background: #4caf50; }
-.alert-info { background: #3178c6; }
+
+.alert-error {
+  background: #e74c3c;
+}
+
+.alert-success {
+  background: #4caf50;
+}
+
+.alert-info {
+  background: #3178c6;
+}
+
 .alert-warning {
   background: #f39c12;
   color: #222;
@@ -140,22 +171,25 @@ h2 {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 9999;
   justify-content: center;
   align-items: center;
 }
+
 .modal.show {
   display: flex;
 }
+
 .modal-content {
   background: #222;
   color: #fff;
   padding: 35px;
   border-radius: 14px;
   max-width: 500px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
+
 .modal-content button {
   background: #edddd1;
   color: #0a0a0a;
@@ -176,8 +210,11 @@ h2 {
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Footer */
@@ -188,11 +225,13 @@ h2 {
   font-size: 0.9rem;
   border-top: 1px solid #222;
 }
+
 .footer a {
   color: #edddd1;
   margin: 0 10px;
   text-decoration: none;
 }
+
 .footer a:hover {
   text-decoration: underline;
 }
@@ -204,19 +243,23 @@ table {
   margin: 40px auto;
   border-collapse: collapse;
   background: #181818;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   overflow: hidden;
 }
-th, td {
+
+th,
+td {
   padding: 16px;
   text-align: left;
   border-bottom: 1px solid #2a2a2a;
 }
+
 th {
   background: #1f1f1f;
   font-weight: 700;
 }
+
 tr:hover {
   background: #2e2e2e;
 }
@@ -228,7 +271,7 @@ form {
   padding: 25px 30px;
   margin: 0 auto 50px;
   max-width: 700px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   color: #ddd;
 }
 
@@ -308,7 +351,7 @@ input[type="submit"] {
   background: #121212;
   padding: 12px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .tab {
@@ -341,7 +384,7 @@ input[type="submit"] {
   padding: 24px;
   max-width: 700px;
   color: #ccc;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s ease;
 }
 
@@ -350,6 +393,7 @@ input[type="submit"] {
   outline: 2px solid #edddd1;
   outline-offset: 4px;
 }
+
 .cta.magnetic {
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -363,6 +407,7 @@ input[type="submit"] {
 .cta.magnetic:active {
   transform: scale(0.98);
 }
+
 /* HTML: <div class="loader"></div> */
 .main-spinner {
   width: 50px;
@@ -372,7 +417,12 @@ input[type="submit"] {
   border-color: #edddd1 #0000;
   animation: l1 1s infinite;
 }
-@keyframes l1 {to{transform: rotate(.5turn)}}
+
+@keyframes l1 {
+  to {
+    transform: rotate(.5turn)
+  }
+}
 
 /* TRUST 1.2+ COMPATIBILITY CSS. */
 
@@ -401,11 +451,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem; /* reduce padding to 1rem from 2rem */
+  padding: 0 1rem;
+  /* reduce padding to 1rem from 2rem */
   border-bottom: 1px solid #333;
   z-index: 1000;
-  box-sizing: border-box; /* ensure padding is included in width */
-  overflow-x: hidden; /* prevent horizontal scroll if any */
+  box-sizing: border-box;
+  /* ensure padding is included in width */
+  overflow-x: hidden;
+  /* prevent horizontal scroll if any */
 }
 
 body.light header {
@@ -419,6 +472,7 @@ body.light header {
   color: #edddd1;
   margin: 0;
 }
+
 body.light .logo h3 {
   color: #222;
 }
@@ -451,11 +505,13 @@ button,
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
+
 button:hover,
 #sort-select:hover {
   background: #e4cdbc;
   transform: scale(1.02);
 }
+
 body.light button,
 body.light #sort-select {
   background: #222;
@@ -473,14 +529,17 @@ body.light #sort-select {
   font-size: 1rem;
   transition: all 0.3s ease;
 }
+
 #search-input::placeholder {
   color: #888;
 }
+
 #search-input:focus {
   border-color: #edddd1;
   background: #2a2a2a;
   outline: none;
 }
+
 body.light #search-input {
   background: #eee;
   color: #222;
@@ -493,11 +552,13 @@ body.light #search-input {
   font-weight: 600;
   border-radius: 10px;
 }
+
 .filter-container button.active {
   background: #edddd1;
   color: #0a0a0a;
   box-shadow: 0 2px 10px rgba(237, 221, 209, 0.4);
 }
+
 body.light .filter-container button.active {
   background: #222;
   color: #f1f1f1;
@@ -509,12 +570,14 @@ body.light .filter-container button.active {
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 0 24px rgba(0,0,0,0.4);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
   transition: background 0.3s ease;
 }
+
 .resource-item:hover {
   background: #1a1a1a;
 }
+
 body.light .resource-item {
   background: #fff;
   color: #222;
@@ -526,14 +589,17 @@ body.light .resource-item {
   height: 16px;
   border-radius: 50%;
   margin-left: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
+
 [data-trust="trusted"] .trust-circle {
   background: #4caf50;
 }
+
 [data-trust="mostly-trusted"] .trust-circle {
   background: #f39c12;
 }
+
 [data-trust="not-trusted"] .trust-circle {
   background: #e74c3c;
 }
@@ -546,8 +612,9 @@ body.light .resource-item {
   margin-top: 15px;
   color: #ccc;
   font-size: 0.95rem;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 body.light .details {
   background: #f5f5f5;
   color: #222;
@@ -563,28 +630,39 @@ body.light .details {
   border: none;
   cursor: pointer;
 }
+
 .copy-link-btn:hover {
   background: #666;
 }
+
 body.light .copy-link-btn {
   background: #ccc;
   color: #000;
 }
+
 .source-logo {
-  width: 40px;        /* Set a consistent width */
-  height: 40px;       /* Set a consistent height */
-  object-fit: contain; /* Keep aspect ratio, no cropping */
-  border-radius: 8px; /* Rounded corners to match NOVA’s style */
-  box-shadow: 0 0 6px rgba(0,0,0,0.6);
-  flex-shrink: 0;      /* Prevent shrinking in flex layouts */
-  background: #222;    /* Optional: subtle background for transparent logos */
+  width: 40px;
+  /* Set a consistent width */
+  height: 40px;
+  /* Set a consistent height */
+  object-fit: contain;
+  /* Keep aspect ratio, no cropping */
+  border-radius: 8px;
+  /* Rounded corners to match NOVA’s style */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
+  /* Prevent shrinking in flex layouts */
+  background: #222;
+  /* Optional: subtle background for transparent logos */
   transition: filter 0.3s ease;
 }
 
 body.light .source-logo {
-  background: #eee;    /* Light bg in light mode */
+  background: #eee;
+  /* Light bg in light mode */
   filter: none;
 }
+
 .details {
   overflow: hidden;
   max-height: 0;
@@ -599,17 +677,21 @@ body.light .source-logo {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  pointer-events: none; /* disables interaction when hidden */
-  user-select: none; /* optional, prevent accidental selection */
+  pointer-events: none;
+  /* disables interaction when hidden */
+  user-select: none;
+  /* optional, prevent accidental selection */
 }
 
 .resource-item.expanded .details {
-  max-height: 500px; /* or a big enough value to show content */
+  max-height: 500px;
+  /* or a big enough value to show content */
   opacity: 1;
   padding-top: 0.75rem;
   padding-bottom: 0.5rem;
   margin-top: 0.5rem;
-  pointer-events: auto; /* enable interaction */
+  pointer-events: auto;
+  /* enable interaction */
   user-select: auto;
 }
 
@@ -620,12 +702,13 @@ body.light .source-logo {
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(237, 221, 209, 0.15),
-              0 0 40px rgba(237, 221, 209, 0.1) inset;
+    0 0 40px rgba(237, 221, 209, 0.1) inset;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
+
 .card-glow:hover {
   box-shadow: 0 0 25px rgba(237, 221, 209, 0.4),
-              0 0 60px rgba(237, 221, 209, 0.3) inset;
+    0 0 60px rgba(237, 221, 209, 0.3) inset;
   transform: translateY(-4px);
 }
 
@@ -636,6 +719,7 @@ body.light .source-logo {
   color: #edddd1;
   cursor: pointer;
 }
+
 .rainbow-underline::after {
   content: '';
   position: absolute;
@@ -648,9 +732,15 @@ body.light .source-logo {
   animation: rainbowSlide 3s linear infinite;
   border-radius: 2px;
 }
+
 @keyframes rainbowSlide {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 200% 0%; }
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 200% 0%;
+  }
 }
 
 /* 🌟 Glow Pulse Button */
@@ -658,21 +748,32 @@ body.light .source-logo {
   position: relative;
   z-index: 1;
 }
+
 .button-glow::before {
   content: '';
   position: absolute;
   z-index: -1;
-  top: -5px; left: -5px;
-  right: -5px; bottom: -5px;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
   background: linear-gradient(45deg, #edddd1, #e4cdbc);
   border-radius: inherit;
   filter: blur(12px);
   opacity: 0.4;
   animation: pulseGlow 3s infinite ease-in-out;
 }
+
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
 }
 
 /* 🌀 Tilt-on-Hover for Images */
@@ -680,6 +781,7 @@ body.light .source-logo {
   transition: transform 0.3s ease;
   will-change: transform;
 }
+
 .tilt-img:hover {
   transform: rotate3d(1, 1, 0, 8deg) scale(1.03);
 }
@@ -688,15 +790,18 @@ body.light .source-logo {
 .bounce-in {
   animation: bounceIn 0.8s ease forwards;
 }
+
 @keyframes bounceIn {
   0% {
     transform: scale(0.5);
     opacity: 0;
   }
+
   60% {
     transform: scale(1.1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
   }
@@ -711,11 +816,25 @@ html {
 .flicker {
   animation: flickerAnim 2s infinite;
 }
+
 @keyframes flickerAnim {
-  0%, 100% { opacity: 1; }
-  45% { opacity: 0.4; }
-  50% { opacity: 1; }
-  55% { opacity: 0.3; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0.3;
+  }
 }
 
 /* 🌌 Starry Background Option */
@@ -731,72 +850,92 @@ body.starry {
   white-space: nowrap;
   animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
 }
+
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
+
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
-    /* Additional styles for new features */
-    #source-count {
-      margin: 1rem 0;
-      color: #ccc;
-      font-weight: 600;
-    }
-    #clear-filters {
-      background: #edddd1;
-      border: none;
-      border-radius: 10px;
-      padding: 8px 16px;
-      font-weight: 700;
-      cursor: pointer;
-      margin-left: 10px;
-      transition: background 0.3s ease;
-    }
-    #clear-filters:hover {
-      background: #e4cdbc;
-    }
-    #retry-btn {
-      background: #e74c3c;
-      border: none;
-      border-radius: 10px;
-      padding: 10px 20px;
-      color: white;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    #retry-btn:hover {
-      background: #c0392b;
-    }
-    /* Autocomplete dropdown */
-    #autocomplete-list {
-      position: absolute;
-      background: #222;
-      border: 1px solid #444;
-      max-height: 200px;
-      overflow-y: auto;
-      width: 100%;
-      z-index: 10000;
-      border-radius: 10px;
-      color: #eee;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
-    }
-    #autocomplete-list div {
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-    #autocomplete-list div:hover, #autocomplete-list .autocomplete-active {
-      background-color: #edddd1;
-      color: #0a0a0a;
-    }
-    /* Tooltip */
-    .tooltip-text {
-      font-size: 0.8rem;
-      padding: 4px 8px;
-    }
-    /* Container for the expanded details inside each source */
+
+/* Additional styles for new features */
+#source-count {
+  margin: 1rem 0;
+  color: #ccc;
+  font-weight: 600;
+}
+
+#clear-filters {
+  background: #edddd1;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+#clear-filters:hover {
+  background: #e4cdbc;
+}
+
+#retry-btn {
+  background: #e74c3c;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#retry-btn:hover {
+  background: #c0392b;
+}
+
+/* Autocomplete dropdown */
+#autocomplete-list {
+  position: absolute;
+  background: #222;
+  border: 1px solid #444;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 10000;
+  border-radius: 10px;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+#autocomplete-list div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#autocomplete-list div:hover,
+#autocomplete-list .autocomplete-active {
+  background-color: #edddd1;
+  color: #0a0a0a;
+}
+
+/* Tooltip */
+.tooltip-text {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+}
+
+/* Container for the expanded details inside each source */
 .resource-expanded-details {
   margin-top: 0.8rem;
   padding-top: 0.8rem;
@@ -829,36 +968,42 @@ body.starry {
   background: var(--progress-bg, #eee);
   border-radius: 7px;
   overflow: hidden;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Progress bar fill */
 .progress-bar-fill {
   height: 100%;
-  background: var(--progress-fill, #3b82f6); /* default to blue */
+  background: var(--progress-fill, #3b82f6);
+  /* default to blue */
   border-radius: 7px 0 0 7px;
   transition: width 0.5s ease;
 }
 
 /* Different colors for progress bars by metric */
 .progress-bar-fill.trust-amount {
-  background: #16a34a; /* green */
+  background: #16a34a;
+  /* green */
 }
 
 .progress-bar-fill.bias-amount {
-  background: #dc2626; /* red */
+  background: #dc2626;
+  /* red */
 }
 
 .progress-bar-fill.data-accuracy {
-  background: #2563eb; /* blue */
+  background: #2563eb;
+  /* blue */
 }
 
 .progress-bar-fill.transparency {
-  background: #f59e0b; /* amber */
+  background: #f59e0b;
+  /* amber */
 }
 
 .progress-bar-fill.update-frequency {
-  background: #6366f1; /* indigo */
+  background: #6366f1;
+  /* indigo */
 }
 
 /* Expanded description text */
