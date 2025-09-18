@@ -8,12 +8,13 @@
   <meta name="description"
     content="Blacklink Trust helps students find reliable sources with verified trust scores. Built by students, for students." />
   <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ========== Reset & Base Styles ========== */
+    /* ========== Reset & Base ========== */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -43,6 +44,10 @@
       display: block;
     }
 
+    button {
+      font-family: 'Inter', sans-serif;
+    }
+
     /* ========== Navbar ========== */
     .navbar {
       display: flex;
@@ -56,7 +61,6 @@
       position: sticky;
       top: 0;
       z-index: 999;
-      transition: background 0.5s;
     }
 
     .navbar .logo {
@@ -69,6 +73,11 @@
       margin-left: 1rem;
     }
 
+    .nav-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
     .nav-buttons button {
       background: linear-gradient(135deg, #5533cc, #704ddb);
       color: white;
@@ -76,15 +85,79 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s;
       font-weight: 600;
+      transition: 0.3s;
     }
 
     .nav-buttons button:hover {
       background: linear-gradient(135deg, #704ddb, #8658ff);
     }
 
-    /* ========== Hero Section ========== */
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(40, 40, 50, 0.9);
+      min-width: 160px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+    }
+
+    .dropdown-content a {
+      color: #eee;
+      padding: 0.5rem 1rem;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background: #5533cc;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ========== Banner ========== */
+    .update-banner {
+      max-width: 1200px;
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #ff7b72, #ffb347);
+      color: #111;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      animation: pulse 1.5s ease-in-out infinite;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .update-banner:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    /* ========== Hero ========== */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -97,7 +170,6 @@
       margin: 2rem auto;
       max-width: 1200px;
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-      animation: fadeInUp 1s ease forwards;
     }
 
     .hero-logo {
@@ -181,6 +253,13 @@
     }
 
     /* ========== Stats ========== */
+    .stats-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      text-align: center;
+      color: #ccc;
+    }
+
     .stats {
       display: flex;
       justify-content: center;
@@ -211,6 +290,12 @@
       margin-top: 0.25rem;
     }
 
+    .stats-footnotes {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      color: #999;
+    }
+
     /* ========== FAQ ========== */
     .faq {
       max-width: 800px;
@@ -227,15 +312,37 @@
     .faq h3 {
       color: #b98eff;
       margin-top: 1.5rem;
+      cursor: pointer;
+      position: relative;
+      padding-right: 20px;
+    }
+
+    .faq h3::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      font-weight: 700;
     }
 
     .faq p {
+      display: none;
       color: #ccc;
       margin-bottom: 1rem;
     }
 
+    .faq.active p {
+      display: block;
+    }
+
+    .faq.active h3::after {
+      content: '-';
+    }
+
     /* ========== Footer ========== */
     footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       padding: 3rem 2rem;
       background: #1f1f2a;
@@ -248,6 +355,22 @@
     footer img {
       width: 120px;
       margin-bottom: 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: #b98eff;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
     }
 
     /* ========== Back to Top ========== */
@@ -296,18 +419,6 @@
     }
 
     /* ========== Animations ========== */
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @keyframes float {
 
       0%,
@@ -320,22 +431,22 @@
       }
     }
 
-    .stats-section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      text-align: center;
-      color: #ccc;
-    }
+    @keyframes countUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-    .stats-footnotes {
-      margin-top: 0.5rem;
-      font-size: 0.7rem;
-      color: #999;
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 
 <body class="dark-mode">
+
   <!-- Navbar -->
   <header>
     <div class="navbar">
@@ -343,11 +454,23 @@
       <div class="nav-tagline"><b>Trust.</b> The source for finding sources.</div>
       <div class="nav-buttons">
         <a href="#"><button>Home</button></a>
-        <a href="#"><button>About</button></a>
+        <div class="dropdown">
+          <button>About</button>
+          <div class="dropdown-content">
+            <a href="#">Our Team</a>
+            <a href="#">Mission</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
         <a href="help.html"><button>Help</button></a>
       </div>
     </div>
   </header>
+
+  <!-- Banner -->
+  <div class="update-banner" onclick="document.getElementById('whats-new').scrollIntoView({behavior:'smooth'});">
+    🚀 <strong>NEW UPDATE RELEASED TODAY!</strong> Trust 1.2 is outttt! Click to see what's new.
+  </div>
 
   <!-- Hero -->
   <main>
@@ -356,9 +479,9 @@
       <div>
         <h1>Introducing <span class="highlight"><b>Trust</b></span></h1>
         <p>The source for finding sources.</p>
-        <small>Built for .ui3 | Web Application | .ui 1.6 | Trust 1.1 / 1.2 Alpha</small>
+        <small>Built for .ui3 | Web Application | .ui 1.6 | Trust 1.2</small>
         <div style="margin-top:1rem;">
-          <a href="trust.html"><button class="primary-button">Launch Trust</button></a>
+          <a href="nova.html"><button class="primary-button">Launch Trust</button></a>
           <a href="standard.html"><button class="primary-button">View our new standards system</button></a>
         </div>
       </div>
@@ -378,21 +501,25 @@
         <h3>⚡ Lightning Fast</h3>
         <p>Designed with performance in mind. Trust loads instantly, even on school Wi-Fi.</p>
       </div>
+      <div class="feature">
+        <h3>📊 Analytics</h3>
+        <p>Track source usage and trends in your classes and research projects.</p>
+      </div>
+      <div class="feature">
+        <h3>💬 Community Feedback</h3>
+        <p>Submit sources, review them, and join a student-powered verification network.</p>
+      </div>
     </section>
 
     <!-- Stats -->
     <div class="stats-section">
       <div class="stats">
         <div>
-          <div class="stat">
-            1,200+<small>†</small>
-          </div>
+          <div class="stat">1,200+<small>†</small></div>
           <div class="stat-label">Trusted Sources</div>
         </div>
         <div>
-          <div class="stat">
-            50,000+<small>†1</small>
-          </div>
+          <div class="stat">50,000+<small>†1</small></div>
           <div class="stat-label">Students Served</div>
         </div>
         <div>
@@ -401,58 +528,27 @@
         </div>
       </div>
       <div class="stats-footnotes">
-        <small>† 1,200 sources after version 1.2.3 &nbsp; †1 50,000 counted by "Unique Visitors" via Cloudflare®</small>
+        <small>† 1,200 sources after version 1.3 (Unreleased currently.) &nbsp; †1 50,000 counted by "Unique Visitors"
+          via Cloudflare®</small>
       </div>
     </div>
-    <style>
-      .trust-standard-badge {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(12px);
-        border-radius: 15px;
-        padding: 1.5rem;
-        max-width: 300px;
-        margin: 1rem auto;
-        text-align: left;
-        box-shadow: 0 8px 24px rgba(120, 80, 200, 0.2);
-        font-family: 'Inter', sans-serif;
-      }
 
-      .badge-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
-      }
+    <!-- What's New Section -->
+    <section id="whats-new" class="features">
+      <div class="feature">
+        <h3>✨ New Dashboard</h3>
+        <p>Redesigned dashboard with faster access to source scores and analytics.</p>
+      </div>
+      <div class="feature">
+        <h3>🟢 Trust Circles</h3>
+        <p>See at a glance which sources are highly trusted, medium, or low trust.</p>
+      </div>
+      <div class="feature">
+        <h3>⚡ Performance Boost</h3>
+        <p>Load times cut in half, optimized for school networks.</p>
+      </div>
+    </section>
 
-      .badge-logo {
-        font-weight: 700;
-        font-size: 1.5rem;
-        background: linear-gradient(135deg, #b98eff, #8a65cc);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .trust-score.green {
-        color: #4CAF50;
-        font-weight: 700;
-      }
-
-      .trust-score.yellow {
-        color: #FFC107;
-        font-weight: 700;
-      }
-
-      .trust-score.red {
-        color: #F44336;
-        font-weight: 700;
-      }
-
-      .criteria li {
-        margin: 0.25rem 0;
-        color: #ccc;
-        font-size: 0.9rem;
-      }
-    </style>
     <!-- FAQ -->
     <section class="faq">
       <h2>FAQ</h2>
@@ -469,11 +565,21 @@
   </main>
 
   <!-- Footer -->
-  <footer
-    style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2rem; background: #111; color: #eee; border-radius: 20px; margin: 2rem;">
-    <img src="Logo.svg" alt="Blacklink Logo" style="width:120px; margin-bottom: 1rem;">
+  <footer>
+    <img src="Logo.svg" alt="Blacklink Logo">
     <h1>Blacklink Education</h1>
     <p>©2025 Blacklink Education</p>
+    <div class="social-links">
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+    </div>
+    <form style="margin-top:1rem;">
+      <input type="email" placeholder="Subscribe for updates"
+        style="padding:0.5rem 1rem; border-radius:12px; border:none; margin-right:0.5rem;">
+      <button type="submit"
+        style="padding:0.5rem 1rem; border-radius:12px; border:none; background:#b98eff; color:white; cursor:pointer;">Subscribe</button>
+    </form>
   </footer>
 
   <!-- Back to top -->
@@ -483,21 +589,21 @@
   <button id="darkModeToggle" aria-label="Toggle dark mode">☀️</button>
 
   <script>
-    // Back to top button behavior
+    // Back to top
     const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) backToTopBtn.style.display = 'block';
-      else backToTopBtn.style.display = 'none';
-    });
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    window.addEventListener('scroll', () => { backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none'; });
+    backToTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-    // Dark mode toggle behavior
+    // Dark mode
     const darkModeToggle = document.getElementById('darkModeToggle');
     darkModeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌓';
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq h3').forEach(q => {
+      q.addEventListener('click', () => { q.parentElement.classList.toggle('active'); });
     });
   </script>
 </body>
