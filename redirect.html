@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getFirestore, doc, setDoc, getDoc, increment, serverTimestamp, updateDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+
+        // Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyDh1cCQXw1TGVJdVVgLEGdOgZlTPzGORLw",
+            authDomain: "blacklink-auth.firebaseapp.com",
+            databaseURL: "https://blacklink-auth-default-rtdb.firebaseio.com",
+            projectId: "blacklink-auth",
+            storageBucket: "blacklink-auth.firebasestorage.app",
+            messagingSenderId: "457832218084",
+            appId: "1:457832218084:web:97ed6014a2ba6a6d789bf1",
+            measurementId: "G-YXBK4L3VPL"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        // Get URL parameter
+        const params = new URLSearchParams(window.location.search);
+        const targetURL = params.get('url');
+        if (!targetURL) {
+            alert("No URL specified!");
+            throw new Error("No URL specified");
+        }
+
+        // Optional: whitelist domains
+        const allowedDomains = ["example.com", "another.com"];
+        function isAllowed(url) {
+            try {
+                const u = new URL(url);
+                return allowedDomains.includes(u.hostname);
+            } catch {
+                return false;
+            }
+        }
+
+        if (!isAllowed(targetURL)) {
+            alert("Redirect not allowed");
+            throw new Error("Redirect not allowed");
+        }
+
+        // Get visitor IP
+        async function getIP() {
+            try {
+                const res = await fetch("https://api.ipify.org?format=json");
+                const data = await res.json();
+                return data.ip;
+            } catch {
+                return "unknown";
+            }
+        }
+
+        // Log visit
+        async function logVisit(userId, ip) {
+            const docId = targetURL.replace(/[^a-zA-Z0-9]/g, "_"); // safe doc ID
+            const docRef = doc(db, "trust-redirect_logs", docId);
+            const docSnap = await getDoc(docRef);
+
+            if (!docSnap.exists()) {
+                await setDoc(docRef, {
+                    lastVisited: serverTimestamp(),
+                    visits: 1,
+                    byIP: { [ip]: 1 },
+                    byUser: userId ? { [userId]: 1 } : {}
+                });
+            } else {
+                const data = docSnap.data();
+
+                // Update visits
+                await updateDoc(docRef, {
+                    lastVisited: serverTimestamp(),
+                    visits: increment(1),
+                    [`byIP.${ip}`]: (data.byIP?.[ip] || 0) + 1,
+                    ...(userId ? { [`byUser.${userId}`]: (data.byUser?.[userId] || 0) + 1 } : {})
+                });
+            }
+        }
+
+        // Handle redirect
+        async function handleRedirect(user) {
+            const ip = await getIP();
+            await logVisit(user ? user.uid : null, ip);
+            window.location.href = targetURL;
+        }
+
+        // Wait for Firebase Auth state
+        onAuthStateChanged(auth, handleRedirect);
+
+        // If not signed in immediately
+        if (!auth.currentUser) {
+            handleRedirect(null);
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting... Please wait.</p>
+</body>
+
+</html>

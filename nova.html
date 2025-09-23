@@ -24,9 +24,9 @@
         title="Switch between light and dark themes">
         ☀️
       </button>
-      <button id="account-btn" class="account-button" disabled aria-describedby="account-status">
+      <button id="account-btn" class="account-button">
         <span class="loading-spinner" aria-hidden="true"></span>
-        Loading...
+        Log In to load accesibility settings.
       </button>
     </div>
   </header>
@@ -162,9 +162,92 @@
     }
 
     /* Light theme */
+    /* ==============================
+   Light Mode (True Bright Theme)
+   ============================== */
     body.light {
-      background: linear-gradient(160deg, #f0f2f5, #ffffff);
-      color: #212529;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    /* Header */
+    body.light header {
+      background: #ffffff !important;
+      border-bottom: 1px solid #ddd !important;
+      color: #000 !important;
+    }
+
+    /* Controls, Cards, Panels */
+    body.light .controls-section,
+    body.light .source-card,
+    body.light .welcome-message,
+    body.light .empty-state {
+      background: #fdfdfd !important;
+      border: 1px solid #e0e0e0 !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06) !important;
+      color: #000 !important;
+    }
+
+    body.light .filter-btn {
+      background: #f2f2f7 !important;
+      border: 1px solid #e0e0e0 !important;
+      color: #000 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    body.light .filter-btn:hover {
+      background: #e5e5ea !important;
+      border-color: #d1d1d6 !important;
+    }
+
+    body.light .filter-btn.active {
+      background: linear-gradient(135deg, #F067EB, #679EFE) !important;
+      border: none !important;
+      color: #fff !important;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Buttons */
+    body.light button {
+      background: linear-gradient(135deg, #007AFF, #5856D6) !important;
+      color: #fff !important;
+      border: none !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    body.light button:hover {
+      background: linear-gradient(135deg, #5AC8FA, #007AFF) !important;
+    }
+
+    /* Links */
+    body.light a,
+    body.light .source-link,
+    body.light footer a {
+      color: #007AFF !important;
+      text-decoration: none;
+    }
+
+    body.light a:hover,
+    body.light .source-link:hover,
+    body.light footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Trust Badges */
+    body.light .trust-trusted {
+      background: rgba(0, 122, 255, 0.12) !important;
+      color: #007AFF !important;
+    }
+
+    body.light .trust-mostly-trusted {
+      background: rgba(255, 149, 0, 0.12) !important;
+      color: #FF9500 !important;
+    }
+
+    body.light .trust-not-trusted {
+      background: rgba(255, 59, 48, 0.12) !important;
+      color: #FF3B30 !important;
     }
 
     /* Scrollbar Styling */
@@ -613,9 +696,187 @@
         align-items: stretch;
       }
     }
+
+    /* ==============================
+   Accessibility Modes
+   ============================== */
+
+    /* High Contrast */
+    body.high-contrast {
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    body.high-contrast header {
+      background: #000 !important;
+      border-bottom: 2px solid #fff !important;
+    }
+
+    body.high-contrast .controls-section,
+    body.high-contrast .source-card,
+    body.high-contrast .welcome-message,
+    body.high-contrast .empty-state {
+      background: #000 !important;
+      border: 2px solid #fff !important;
+      box-shadow: none !important;
+    }
+
+    body.high-contrast .source-link,
+    body.high-contrast footer a {
+      color: #0ff !important;
+      text-decoration: underline !important;
+    }
+
+    /* Colorblind-Safe Palette (Deuteranopia/Protanopia safe) */
+    body.colorblind .trust-trusted {
+      background: rgba(0, 122, 255, 0.15);
+      color: #007AFF;
+      /* Blue */
+    }
+
+    body.colorblind .trust-mostly-trusted {
+      background: rgba(255, 149, 0, 0.15);
+      color: #FF9500;
+      /* Orange */
+    }
+
+    body.colorblind .trust-not-trusted {
+      background: rgba(255, 59, 48, 0.15);
+      color: #FF3B30;
+      /* Red */
+    }
   </style>
 
   <script>
+
+    // =========================
+    // Cookie Management
+    // =========================
+    // Blacklink Cookie Management
+    const BLACKLINK_COOKIES = {
+      AUTH_TOKEN: 'bl_auth_token',
+      SESSION_ID: 'bl_session_id',
+      CSRF_TOKEN: 'bl_csrf_token',
+      SECURE_FLAG: 'bl_secure_flag'
+    };
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    function getBlacklinkCookies() {
+      return {
+        authToken: getCookie(BLACKLINK_COOKIES.AUTH_TOKEN),
+        sessionId: getCookie(BLACKLINK_COOKIES.SESSION_ID),
+        csrfToken: getCookie(BLACKLINK_COOKIES.CSRF_TOKEN),
+        secureFlag: getCookie(BLACKLINK_COOKIES.SECURE_FLAG)
+      };
+    }
+    // =========================
+    // Settings/ACCESSPOLICY
+    // =========================
+    function loadBlacklinkSettings() {
+      try {
+        const settingsData = localStorage.getItem('blacklink_user_settings');
+        if (settingsData) {
+          const { settings, user, timestamp, cookies } = JSON.parse(settingsData);
+
+          // Check if data is recent (within 24 hours)
+          if (Date.now() - timestamp < 86400000) {
+            return { settings, user, cookies };
+          }
+        }
+      } catch (error) {
+        console.error('Failed to load Blacklink settings:', error);
+      }
+
+      // Return defaults
+      return {
+        settings: {
+          accessibility: {
+            darkMode: false,
+            highContrast: false,
+            reducedMotion: false,
+            dyslexiaFont: false,
+            fontSize: 'normal',
+            colorBlindSupport: 'none'
+          }
+        },
+        user: null,
+        cookies: getBlacklinkCookies()
+      };
+    }
+    function applyBlacklinkSettings(settings) {
+      const { accessibility } = settings;
+
+      // Apply theme (override your existing theme toggle)
+      if (accessibility.darkMode) {
+        document.body.classList.remove('light');
+      } else {
+        document.body.classList.add('light');
+      }
+
+      // Apply font size
+      document.body.style.fontSize = accessibility.fontSize === 'large' ? '18px' :
+        accessibility.fontSize === 'xlarge' ? '20px' : '16px';
+
+      // Apply high contrast
+      if (accessibility.highContrast) {
+        document.body.style.filter = 'contrast(150%)';
+      }
+
+      // Apply reduced motion
+      if (accessibility.reducedMotion) {
+        document.body.style.setProperty('--transition-duration', '0s');
+      }
+
+      // Apply dyslexia font
+      if (accessibility.dyslexiaFont) {
+        loadDyslexiaFont();
+      }
+    }
+
+    function loadDyslexiaFont() {
+      if (!document.getElementById('dyslexia-font')) {
+        const link = document.createElement('link');
+        link.id = 'dyslexia-font';
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/open-dyslexic/1.0.0/open-dyslexic-regular.css';
+        document.head.appendChild(link);
+
+        link.onload = () => {
+          document.body.style.fontFamily = 'OpenDyslexic, Inter, sans-serif';
+        };
+      }
+    }
+    // Listen for settings updates from dashboard
+    window.addEventListener('message', function (event) {
+      if (event.data.type === 'BLACKLINK_SETTINGS_UPDATE' && event.data.app !== 'trust') {
+        console.log('Trust: Received settings update from', event.data.app);
+        applyBlacklinkSettings(event.data.settings);
+      }
+    });
+
+    // Watch localStorage for changes
+    window.addEventListener('storage', function (event) {
+      if (event.key === 'blacklink_user_settings') {
+        try {
+          const newData = JSON.parse(event.newValue);
+          if (newData && newData.settings) {
+            applyBlacklinkSettings(newData.settings);
+          }
+        } catch (error) {
+          console.error('Failed to parse updated settings:', error);
+        }
+      }
+    });
     // =========================
     // Firebase configuration
     // =========================
@@ -629,17 +890,19 @@
     };
     let authManager = {
       async login() {
-        // Example: redirect-based login
         const provider = new firebase.auth.GoogleAuthProvider();
         try {
           const result = await firebase.auth().signInWithPopup(provider);
           const user = result.user;
-          const token = await user.getIdToken(); // This is your JWT
-          console.log('JWT Token:', token);
+          const token = await user.getIdToken();
 
+          // Set Blacklink auth cookie
+          document.cookie = `${BLACKLINK_COOKIES.AUTH_TOKEN}=${token}; path=/; secure; samesite=strict`;
+
+          console.log('JWT Token:', token);
           appState.currentUser = user;
           UIManager.updateAccountButton(user);
-          applyFilters(); // Now filters can work with auth if needed
+          applyFilters();
         } catch (err) {
           Utils.showError('Login failed: ' + err.message, true);
         }
@@ -648,6 +911,12 @@
       async logout() {
         try {
           await firebase.auth().signOut();
+
+          // Clear Blacklink cookies
+          Object.values(BLACKLINK_COOKIES).forEach(cookie => {
+            document.cookie = `${cookie}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+          });
+
           appState.currentUser = null;
           UIManager.updateAccountButton(null);
         } catch (err) {
@@ -829,7 +1098,7 @@
           </div>
           <div class="source-meta">
             <span class="category-badge">${source.category}</span>
-            <a href="${source.visitUrl}" target="_blank" rel="noopener noreferrer" class="source-link">Visit</a>
+            <a href="redirect.html?url=${encodeURIComponent(source.visitUrl)}" target="_blank" rel="noopener noreferrer" class="source-link">Visit</a>
           </div>
         </div>
         <div class="trust-badge-container">
@@ -892,8 +1161,21 @@
     const dom = new DOMManager();
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Apply saved theme
-      const savedTheme = localStorage.getItem('theme') || 'dark';
+      // Load Blacklink settings first
+      const { settings, user, cookies } = loadBlacklinkSettings();
+
+      // Apply settings to Trust UI
+      applyBlacklinkSettings(settings);
+
+      // Use auth token if available
+      if (cookies.authToken) {
+        console.log('Trust: User authenticated via Blacklink');
+        // You can use cookies.authToken for API requests
+      }
+
+      // Apply saved theme (keep your existing logic but check settings first)
+      const savedTheme = settings.accessibility.darkMode ? 'dark' :
+        (localStorage.getItem('theme') || 'dark');
       if (savedTheme === 'light') document.body.classList.add('light');
 
       dom.elements.themeToggle.addEventListener('click', toggleTheme);
@@ -905,10 +1187,8 @@
         Utils.showError('Failed to initialize Firebase: ' + err.message, true);
       }
 
-      // Load sources from JSON
       loadSources();
     });
-
     // -------------------
     // Filter & Search Logic
     // -------------------
