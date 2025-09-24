@@ -34,21 +34,6 @@
             throw new Error("No URL specified");
         }
 
-        // Optional: whitelist domains
-        const allowedDomains = ["example.com", "another.com"];
-        function isAllowed(url) {
-            try {
-                const u = new URL(url);
-                return allowedDomains.includes(u.hostname);
-            } catch {
-                return false;
-            }
-        }
-
-        if (!isAllowed(targetURL)) {
-            alert("Redirect not allowed");
-            throw new Error("Redirect not allowed");
-        }
 
         // Get visitor IP
         async function getIP() {
