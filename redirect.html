@@ -5,6 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .manual-redirect {
+            margin-top: 2rem;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+            animation-delay: 3s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .redirect-btn {
+            background: #fff;
+            color: #667eea;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .redirect-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .redirect-btn:active {
+            transform: translateY(0);
+        }
+
+        .error {
+            background: #fff;
+            color: #e53e3e;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+
+        .error h1 {
+            color: #e53e3e;
+        }
+    </style>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
         import { getFirestore, doc, setDoc, getDoc, increment, serverTimestamp, updateDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
@@ -29,68 +126,158 @@
         // Get URL parameter
         const params = new URLSearchParams(window.location.search);
         const targetURL = params.get('url');
+
         if (!targetURL) {
-            alert("No URL specified!");
+            document.body.innerHTML = `
+                <div class="container">
+                    <div class="error">
+                        <h1>❌ No URL Specified</h1>
+                        <p>Please provide a valid URL parameter.</p>
+                    </div>
+                </div>
+            `;
             throw new Error("No URL specified");
         }
 
+        // Validate URL format
+        try {
+            new URL(targetURL);
+        } catch {
+            document.body.innerHTML = `
+                <div class="container">
+                    <div class="error">
+                        <h1>❌ Invalid URL</h1>
+                        <p>The provided URL is not valid.</p>
+                    </div>
+                </div>
+            `;
+            throw new Error("Invalid URL format");
+        }
 
-        // Get visitor IP
+        // Get visitor IP with fallback
         async function getIP() {
             try {
-                const res = await fetch("https://api.ipify.org?format=json");
+                const res = await fetch("https://api.ipify.org?format=json", {
+                    timeout: 5000
+                });
                 const data = await res.json();
                 return data.ip;
-            } catch {
+            } catch (error) {
+                console.warn("Failed to fetch IP:", error);
                 return "unknown";
             }
         }
 
-        // Log visit
-        async function logVisit(userId, ip) {
-            const docId = targetURL.replace(/[^a-zA-Z0-9]/g, "_"); // safe doc ID
-            const docRef = doc(db, "trust-redirect_logs", docId);
-            const docSnap = await getDoc(docRef);
-
-            if (!docSnap.exists()) {
-                await setDoc(docRef, {
-                    lastVisited: serverTimestamp(),
-                    visits: 1,
-                    byIP: { [ip]: 1 },
-                    byUser: userId ? { [userId]: 1 } : {}
-                });
-            } else {
-                const data = docSnap.data();
-
-                // Update visits
-                await updateDoc(docRef, {
-                    lastVisited: serverTimestamp(),
-                    visits: increment(1),
-                    [`byIP.${ip}`]: (data.byIP?.[ip] || 0) + 1,
-                    ...(userId ? { [`byUser.${userId}`]: (data.byUser?.[userId] || 0) + 1 } : {})
-                });
+        // Sanitize document ID
+        function sanitizeDocId(url) {
+            try {
+                const urlObj = new URL(url);
+                const identifier = urlObj.hostname + urlObj.pathname;
+                return identifier.replace(/[^a-zA-Z0-9]/g, "_").substring(0, 100);
+            } catch {
+                return url.replace(/[^a-zA-Z0-9]/g, "_").substring(0, 100);
             }
         }
 
-        // Handle redirect
+        // Log visit with error handling
+        async function logVisit(userId, ip) {
+            try {
+                const docId = sanitizeDocId(targetURL);
+                const docRef = doc(db, "trust-redirect_logs", docId);
+                const docSnap = await getDoc(docRef);
+
+                const visitData = {
+                    url: targetURL,
+                    lastVisited: serverTimestamp(),
+                    visits: increment(1),
+                    [`byIP.${ip}`]: increment(1)
+                };
+
+                if (userId) {
+                    visitData[`byUser.${userId}`] = increment(1);
+                }
+
+                if (!docSnap.exists()) {
+                    await setDoc(docRef, {
+                        url: targetURL,
+                        firstVisited: serverTimestamp(),
+                        lastVisited: serverTimestamp(),
+                        visits: 1,
+                        byIP: { [ip]: 1 },
+                        byUser: userId ? { [userId]: 1 } : {}
+                    });
+                } else {
+                    await updateDoc(docRef, visitData);
+                }
+            } catch (error) {
+                console.error("Failed to log visit:", error);
+                // Continue with redirect even if logging fails
+            }
+        }
+
+        // Handle redirect with timeout
         async function handleRedirect(user) {
-            const ip = await getIP();
-            await logVisit(user ? user.uid : null, ip);
+            try {
+                const ip = await getIP();
+                await Promise.race([
+                    logVisit(user ? user.uid : null, ip),
+                    new Promise((_, reject) =>
+                        setTimeout(() => reject(new Error("Logging timeout")), 3000)
+                    )
+                ]);
+            } catch (error) {
+                console.warn("Logging failed or timed out:", error);
+            } finally {
+                // Always redirect, even if logging fails
+                performRedirect();
+            }
+        }
+
+        // Perform the actual redirect
+        function performRedirect() {
             window.location.href = targetURL;
         }
 
-        // Wait for Firebase Auth state
-        onAuthStateChanged(auth, handleRedirect);
+        // Show manual redirect button after delay
+        setTimeout(() => {
+            const manualDiv = document.querySelector('.manual-redirect');
+            if (manualDiv) {
+                manualDiv.style.display = 'block';
+            }
+        }, 3000);
 
-        // If not signed in immediately
-        if (!auth.currentUser) {
-            handleRedirect(null);
-        }
+        // Set timeout for auth check
+        let authResolved = false;
+        const authTimeout = setTimeout(() => {
+            if (!authResolved) {
+                console.warn("Auth check timed out, redirecting without user data");
+                handleRedirect(null);
+            }
+        }, 2000);
+
+        // Wait for Firebase Auth state
+        onAuthStateChanged(auth, (user) => {
+            if (!authResolved) {
+                authResolved = true;
+                clearTimeout(authTimeout);
+                handleRedirect(user);
+            }
+        });
     </script>
 </head>
 
 <body>
-    <p>Redirecting... Please wait.</p>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>Redirecting</h1>
+        <p>Please wait while we redirect you...</p>
+        <div class="manual-redirect" style="display: none;">
+            <button class="redirect-btn"
+                onclick="window.location.href=new URLSearchParams(window.location.search).get('url')">
+                Click here if not redirected
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
